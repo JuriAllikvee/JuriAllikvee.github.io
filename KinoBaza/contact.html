@@ -2,24 +2,21 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <title>Главная страница</title>
+    <title>Контакты</title>
     <meta name="description" content="КиноБаза - это портал кино" />
     <meta name="keywords" content="фильмы, фильмы онлайн,hd"/>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <main class="main">
-        <nav>
-            <a href="index.html">Русский</a> | <a href="index_en.html">English</a>
-        </nav>
-    
+    <main>
+
         <header>
             <div class="logo">
                 <div class="logo_text">
                     <h1><a href="index.html">КиноБаза</a></h1>
                     <h2>Кино - наша страсть!</h2>
-                </div>  
+                </div>
             </div>
 
             <nav class="menubar">
@@ -28,14 +25,13 @@
                     <li><a href="films.html">Фильмы</a></li>
                     <li><a href="site.html">Сериалы</a></li>
                     <li><a href="rating.html">Рейтинг фильмов</a></li>
-                    <li><a href="contact.html">Контакты</a></li>
+                    <li class="selected"><a href="contact.html">Контакты</a></li>
                 </ul>
             </nav>
         </header>
 
         <section class="site_content">
             <aside class="sidebar_container">
-
                 <section class="sidebar">
                     <h2>Поиск</h2>
                     <form method="post" action="#" id="search_form">
@@ -68,49 +64,25 @@
                     <ul>
                         <li><a href="show.html">Интерстеллар</a><span class="rating_sidebar">8.1</span></li>
                         <li><a href="showmatrix.html">Матрица</a><span class="rating_sidebar">8.0</span></li>
-                        <li><a href="show copy.html">Безумный Макс</a><span class="rating_sidebar">7.5</span></li>
-                        <li><a href="showcloud.html">Облачный атлас</a><span class="rating_sidebar">7.4</span></li>
+                        <li><a href="showmax.html">Безумный Макс</a><span class="rating_sidebar">7.5</span></li>
+                        <li><a href="showcloud.html">Облачный Атлас</a><span class="rating_sidebar">7.4</span></li>
                     </ul>
                 </section>
-
             </aside>
 
             <article class="content">
-                <h1>Новые фильмы</h1>
+                <h1>Контакты</h1>
+                <p>Отправьте ваш отзыв о портале КиноМонстр</p>
 
-                <section class="films_block">
-                    <a href="showmatrix.html"><img src="assets/img/matrix.png" alt="Матрица"></a>
-                    <a href="showmax.html"><img src="assets/img/max.png" alt="Безумный Макс"></a>
-                    <a href="show.html"><img src="assets/img/inter.png" alt="Интерстеллар"></a>
-                    <a href="showcloud.html"><img src="assets/img/cloud.png" alt="Облачный атлас"></a>
+                <section class="send send_contact">
+                    <form method="post" action="#" id="contact">
+                        <input type="text" name="review_name" placeholder="Ваше имя">
+                        <input type="text" name="review_email" placeholder="Ваш email">
+                        <textarea name="review_text"></textarea>
+                        <input class="btn" type="submit" value="отправить">
+                    </form>
                 </section>
-
-                <h1>Новые сериалы</h1>
-
-                <section class="film_block">
-                    <a href="showwalk.html"><img src="assets/img/dead.png" alt="Ходячие мертвецы"></a>
-                    <a href="showsilicon.html"><img src="assets/img/silicon.png" alt="Кремниевая долина"></a>
-                    <a href="showbad.html"><img src="assets/img/breakingbad.png" alt="Во все тяжкие"></a>
-                    <a href="showxfiles.html"><img src="assets/img/xfiles.png" alt="Секретные материалы"></a>
-                </section>
-
-                <section class="posts">
-                    <hr>
-                    <h2><a href="#">Как снимали Интерстеллар</a></h2>
-                    <div class="posts_content">
-                        <p>45 лет исполнилось Кристоферу Нолану - одному из самых успешных режиссеров нашего времени...</p>
-                    </div>
-                    <p><a href="#">Читать</a></p>
-                    <hr>
-                    <h2><a href="#">Актер Том Хенкс поделился впечатлением о фестивале</a></h2>
-                    <div class="posts_content">
-                        <p>16 февраля в Лондоне состоялась 67-я церемония вручения наград Британской киноакадемии...</p>
-                    </div>
-                    <p><a href="#">читать</a></p>
-                </section>
-
             </article>
-
         </section>
 
         <footer>
