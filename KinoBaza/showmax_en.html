@@ -2,40 +2,37 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Contact</title>
-    <meta name="description" content="KinoBaza is a movie portal" />
-    <meta name="keywords" content="movies, watch movies online, HD"/>
+    <title>Mad Max Film</title>
+    <meta name="description" content="CinemaBase is a movie portal" />
+    <meta name="keywords" content="movies, movies online, HD"/>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
     <main>
-        <nav>
-            <a href="contact.html">Русский</a> | <a href="contact_en.html">English</a>
-        </nav>
-        
 
         <header>
             <div class="logo">
                 <div class="logo_text">
-                    <h1><a href="index_en.html">KinoBaza</a></h1>
+                    <h1><a href="index.html">CinemaBase</a></h1>
                     <h2>Cinema is our passion!</h2>
-                </div>
+                </div>  
             </div>
 
-            <nav class="menubar">
+            <nav class="menubar"> 
                 <ul class="menu">
-                    <li><a href="index_en.html">Home</a></li>
-                    <li><a href="films_en.html">Movies</a></li>
+                    <li class="selected"><a href="index.html">Home</a></li>
+                    <li><a href="films.html">Movies</a></li>
                     <li><a href="site.html">Series</a></li>
                     <li><a href="rating.html">Movie Ratings</a></li>
-                    <li class="selected"><a href="contact_en.html">Contact</a></li>
-                    <li><a href="contact.html" class="language-toggle">Russian</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="showmax.html" class="language-toggle">Russian</a></li>
                 </ul>
             </nav>
         </header>
 
         <section class="site_content">
+
             <aside class="sidebar_container">
                 <section class="sidebar">
                     <h2>Search</h2>
@@ -59,9 +56,9 @@
 
                 <section class="sidebar">
                     <h2>News</h2>
-                    <time datetime="2018-02-31">31.02.2018</time>
+                    <time datetime="2018-02-31">02/31/2018</time>
                     <p>We have launched advanced search</p>
-                    <a href="#">read</a>
+                    <a href="#">read more</a>
                 </section>
 
                 <section class="sidebar">
@@ -76,27 +73,45 @@
             </aside>
 
             <article class="content">
-                <h1>Contact</h1>
-                <p>Send your feedback about KinoMonster portal</p>
+                <h1>Mad Max</h1>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/-3ZoAp6owdk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                
+                <section class="info_film_page">
+                    <span class="label">Rating:</span><span class="value">7.5:10</span>
+                    <span class="label">Year:</span><span class="value">2015</span>
+                    <span class="label">Director:</span><span class="value">George Ogilvie, George Miller</span>
+                </section>
 
-                <section class="send send_contact">
-                    <form method="post" action="#" id="contact">
+                <hr>
+
+                <h2>Description of Mad Max</h2>
+                <section class="descriptions_film">
+                    <img src="assets/img/max.png" alt="Mad Max">
+                    Shortly after avenging the deaths of his wife and son, Max Rockatansky left the ranks of the “Main Force Patrol”...
+                </section>
+
+                <hr>
+
+                <h2>Reviews of Mad Max</h2>
+
+                <section class="send">
+                    <form method="post" action="#" id="review">
                         <input type="text" name="review_name" placeholder="Your name">
-                        <input type="text" name="review_email" placeholder="Your email">
                         <textarea name="review_text"></textarea>
-                        <input class="btn" type="submit" value="send">
+                        <input class="btn" type="submit" value="submit">
                     </form>
                 </section>
             </article>
+
         </section>
 
         <footer>
             <p>
-                <a href="index_en.html">Home</a>
-                <a href="films_en.html">Movies</a>
+                <a href="index.html">Home</a>
+                <a href="films.html">Movies</a>
                 <a href="site.html">Series</a>
                 <a href="rating.html">Movie Ratings</a>
-                <a href="contact_en.html">Contact</a>
+                <a href="contact.html">Contact</a>
             </p>
             <p>kinopoisk.ru</p>
         </footer>
