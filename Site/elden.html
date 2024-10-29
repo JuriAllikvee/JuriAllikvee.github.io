@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Фильм Интерстеллар</title>
+    <meta name="description" content="GameTrek - это портал кино" />
+    <meta name="keywords" content=""/>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <main>
+        <nav>
+            <a href="elden.html">Русский</a> | <a href="show_en.html">English</a>
+        </nav>
+        
+
+        <header>
+            <div class="logo">
+                <div class="logo_text">
+                    <h1><a href="index.html"> GameTrek </a></h1>
+                    <h2>Игры - наша страсть!</h2>
+                </div>  
+            </div>
+
+            <nav class="menubar"> 
+                <ul class="menu">
+                    <li class="selected"><a href="index.html">Главная</a></li>
+                    <li><a href="films.html">Фильмы</a></li>
+                    <li><a href="site.html">Сериалы</a></li>
+                    <li><a href="rating.html">Рейтинг игр</a></li>
+                    <li class="selected"><a href="contact.html">Контакты</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <section class="site_content">
+
+            <aside class="sidebar_container">
+                <section class="sidebar">
+                    <h2>Поиск</h2>
+                    <form method="post" action="#" id="search_form">
+                        <input type="search" name="search_field" placeholder="ваш запрос"/>
+                        <input type="submit" class="btn" value="найти"/>
+                    </form>
+                </section>
+
+                <section class="sidebar">
+                    <h2>Вход</h2>
+                    <form method="post" action="#" id="login">
+                        <input type="text" name="login_field" placeholder="логин"/>
+                        <input type="password" name="password_field" placeholder="пароль"/>
+                        <input type="submit" class="btn" value="вход"/>
+                        <div class="lables_passreg_text">
+                            <span><a href="#">забыл пароль?</a></span> | <span><a href="#">регистрация</a></span>
+                        </div>
+                    </form>
+                </section>
+
+                <section class="sidebar">
+                    <h2>Новости</h2>
+                    <time datetime="2018-02-31">31.02.2018</time>
+                    <p>«Cyberpunk 2077» получил обновление с новыми миссиями и улучшенной графикой.</p>
+                    <a href="#">читать</a>
+                </section>
+
+                <section class="sidebar">
+                    <h2>Рейтинг игр</h2>
+                    <ul>
+                        <li><a href="elden.html">Elden ring: Shadow of the erdtree</a><span class="rating_sidebar">8.1</span></li>
+                        <li><a href="blackmyth.html">Black Myth: Wukong</a><span class="rating_sidebar">8.0</span></li>
+                        <li><a href="csgo.html">Red Dead Redemption 2</a><span class="rating_sidebar">7.5</span></li>
+                        <li><a href="until.html">Until Dawn</a><span class="rating_sidebar">7.4</span></li>
+                    </ul>
+                </section>
+            </aside>
+
+            <article class="content">
+                <h1>Elden Ring</h1>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/E3Huy2cdih0?si=qFexpK_IqzX616DC" frameborder="0" allow full screen></iframe>
+
+                <div class="info_film_page">
+                    <span class="label">Рейтинг:</span><span class="value">9.1:10</span>
+                    <span class="label">Год:</span><span class="value">2022</span>
+                    <span class="label">компания:</span><span class="value">FromSoftware </span>
+                </div>
+
+                <hr>
+                <h2>Описание Elden Ring</h2>
+                <div class="decriptions_game">
+                    <img src="assets/img/Elden Ring Shadow of the Erdtree.jpg" alt="Elden Ring">
+                    компьютерная игра в жанре action/RPG с открытым миром, разработанная японской компанией
+                </div>
+
+                <hr>
+                <h2>Отзывы об Elden Ring</h2>
+                <section class="reviews">
+                    <div class="reviews_name"></div>
+                    <div class="review_text"></div>
+                </section>
+
+                <section class="reviews">
+                    <div class="reviews_name">Аноним</div>
+                    <div class="review_text">Топ</div>
+                </section>
+
+                <section class="send">
+                    <form method="post" action="#" id="review">
+                        <input type="text" name="review_name" placeholder="Ваше имя">
+                        <textarea name="review_text"></textarea>
+                        <input class="btn" type="submit" value="отправить"> 
+                    </form>
+                </section>
+            </article>
+        </section>
+
+        <footer>
+            <p>
+                <a href="index.html">Главная</a>
+                <a href="films.html">Фильмы</a>
+                <a href="site.html">Сериалы</a>
+                <a href="rating.html">Рейтинг игр</a>
+                <a href="contact.html">Контакты</a>
+            </p>
+            <p>kinopoisk.ru</p>
+        </footer>
+
+    </main>
+</body>
+</html>

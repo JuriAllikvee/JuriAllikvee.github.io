@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Главная страница</title>
+    <meta name="description" content="GameTrek - это портал кино" />
+    <meta name="keywords" content=""/>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <main class="main">
+    
+        <header>
+            <div class="logo">
+                <div class="logo_text">
+                    <h1><a href="index.html">GameTrek</a></h1>
+                    <h2>Игры - наша страсть!</h2>
+                </div>  
+            </div>
+
+            <nav class="menubar">
+                <ul class="menu">
+                    <li class="selected"><a href="index.html">Главная</a></li>
+                    <li><a href="games.html">Новинки</a></li>
+                    <li><a href="site.html">Игры</a></li>
+                    <li><a href="rating.html">Рейтинг Игр</a></li>
+                    <li><a href="contact.html">Контакты</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <section class="site_content">
+            <aside class="sidebar_container">
+
+                <section class="sidebar">
+                    <h2>Поиск</h2>
+                    <form method="post" action="#" id="search_form">
+                        <input type="search" name="search_field" placeholder="ваш запрос"/>
+                        <input type="submit" class="btn" value="найти"/>
+                    </form>
+                </section>
+
+                <section class="sidebar">
+                    <h2>Вход</h2>
+                    <form method="post" action="#" id="login">
+                        <input type="text" name="login_field" placeholder="логин"/>
+                        <input type="password" name="password_field" placeholder="пароль"/>
+                        <input type="submit" class="btn" value="вход"/>
+                        <div class="lables_passreg_text">
+                            <span><a href="#">забыл пароль?</a></span> | <span><a href="#">регистрация</a></span>
+                        </div>
+                    </form>
+                </section>
+
+                <section class="sidebar">
+                    <h2>Новости</h2>
+                    <time datetime="2018-02-31">31.02.2018</time>
+                    <p>«Cyberpunk 2077» получил обновление с новыми миссиями и улучшенной графикой.
+                    </p>
+                    <a href="#">читать</a>
+                </section>
+
+                <section class="sidebar">
+                    <h2>Рейтинг игр</h2>
+                    <ul>
+                        <li><a href="elden.html">Elden ring: Shadow of the erdtree</a><span class="rating_sidebar">8.1</span></li>
+                        <li><a href="blackmyth.html">Black Myth: Wukong</a><span class="rating_sidebar">8.0</span></li>
+                        <li><a href="csgo.html">Red Dead Redemption 2</a><span class="rating_sidebar">7.5</span></li>
+                        <li><a href="until.html">Until Dawn</a><span class="rating_sidebar">7.4</span></li>
+                    </ul>
+                </section>
+
+            </aside>
+
+            <article class="content">
+                <h1>Новые игры</h1>
+
+                <section class="games_block">
+                    <a href="blackmyth.html"><img src="assets/img/blackmyth.jpg" alt="Матрица"></a>
+                    <a href="csgo.html"><img src="assets/img/csgo.jpg" alt="Безумный Макс"></a>
+                    <a href="elden.html"><img src="assets/img/Elden Ring Shadow of the Erdtree.jpg" alt="Интерстеллар"></a>
+                    <a href="until.html"><img src="assets/img/until.jpg" alt="Облачный атлас"></a>
+                </section>
+
+                <h1>популярные игры</h1>
+
+                <section class="game_block">
+                    <a href="last.html"><img src="assets/img/last.jpg" alt="Ходячие мертвецы"></a>
+                    <a href="cyber.html"><img src="assets/img/phantom-liberty-title.png" alt="Кремниевая долина"></a>
+                    <a href="resdevil4.html"><img src="assets/img/resident-evil-4.jpg" alt="Во все тяжкие"></a>
+                    <a href="call.html"><img src="assets/img/call.jpg" alt="Секретные материалы"></a>
+                </section>
+
+                <section class="posts">
+                    <hr>
+                    <h2><a href="#">Как делают спецэффекты для Cyberpunk 2077</a></h2>
+                    <div class="posts_content">
+                        <p>Исследуйте процесс создания потрясающих визуальных эффектов в футуристическом мире...</p>
+                    </div>
+                    <p><a href="#">Читать</a></p>
+                    <hr>
+                    <h2><a href="#">Интервью с разработчиками Resident Evil: История культового хоррора</a></h2>
+                    <div class="posts_content">
+                        <p>Откройте для себя секреты и вдохновение, стоящие за созданием одного из самых пугающих хорроров...</p>
+                    </div>
+                    <p><a href="#">читать</a></p>
+                </section>
+
+            </article>
+
+        </section>
+
+        <footer>
+            <p>
+                <a href="index.html">Главная</a>
+                <a href="games.html">Новинки</a>
+                <a href="site.html">Игры</a>
+                <a href="rating.html">Рейтинг Игр</a>
+                <a href="contact.html">Контакты</a>
+            </p>
+            <p>kinopoisk.ru</p>
+        </footer>
+
+    </main>
+
+</body>
+</html>
