@@ -766,3 +766,181 @@ footer {
     bottom: 0;
     width: 100%;
 }
+/* Основные настройки для адаптивности */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-size: 1em;
+    background-color: #fff;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Адаптивные стили для экранов шириной до 768px */
+@media only screen and (max-width: 768px) {
+    /* Шапка */
+    header {
+        text-align: center;
+        padding: 15px;
+        background-color: #061814;
+    }
+
+    .logo {
+        width: 100%;
+        padding: 10px;
+        text-align: center;
+    }
+
+    .logo h1 {
+        font-size: 1.8em;
+        color: #fff;
+        margin-bottom: 5px;
+    }
+
+    .logo h2 {
+        font-size: 1em;
+        color: #ddd;
+    }
+
+    /* Меню */
+    nav ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        list-style: none;
+        padding: 0;
+        margin: 10px 0;
+    }
+
+    nav ul li {
+        margin: 5px 0;
+    }
+
+    nav ul li a {
+        color: #fff;
+        font-size: 1em;
+        padding: 8px 15px;
+        text-decoration: none;
+    }
+
+    /* Основной контент */
+    .site_content, .content {
+        width: 100%;
+        padding: 10px;
+        text-align: center;
+    }
+
+    .sidebar_container, .footer {
+        display: none; /* Отключение боковой панели и нижнего колонтитула для мобильных устройств */
+    }
+
+    .content h1, .content h2 {
+        font-size: 1.2em;
+        margin-top: 10px;
+    }
+
+    /* Игровые блоки */
+    .games_block, .films_block {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .games_block img, .films_block img {
+        width: 90%;
+        max-width: 300px;
+        margin: 10px auto;
+        border-radius: 8px;
+    }
+
+    /* Кнопки */
+    .button {
+        display: block;
+        width: 85%;
+        padding: 10px;
+        margin: 10px auto;
+        font-size: 1em;
+        text-align: center;
+        background-color: #7268ad;
+        color: #fff;
+        border-radius: 5px;
+        text-decoration: none;
+    }
+
+    /* Таблицы */
+    table {
+        width: 100%;
+        display: block;
+        overflow-x: auto;
+        border-collapse: collapse;
+        margin: 10px 0;
+    }
+
+    th, td {
+        font-size: 0.9em;
+        padding: 8px;
+    }
+
+    /* Описание игр/фильмов */
+    .descriptions_film {
+        width: 100%;
+        padding: 0 10px;
+    }
+
+    .descriptions_film img {
+        width: 80%;
+        margin: 0 auto 10px;
+        border-radius: 10px;
+    }
+
+    /* Отзывы */
+    .reviews {
+        width: 90%;
+        margin: 10px auto;
+        text-align: left;
+    }
+
+    .send input[type="text"], .send textarea {
+        width: 90%;
+        padding: 10px;
+        margin: 10px auto;
+        border-radius: 5px;
+    }
+
+    .send input[type="submit"] {
+        width: 90%;
+        padding: 10px;
+        margin: 10px auto;
+        background-color: #7268ad;
+        color: #fff;
+        border-radius: 5px;
+    }
+}
+
+/* Адаптивные стили для экранов шириной до 480px */
+@media only screen and (max-width: 480px) {
+    .logo h1 {
+        font-size: 1.5em;
+    }
+
+    .logo h2 {
+        font-size: 0.9em;
+    }
+
+    .content h1, .content h2 {
+        font-size: 1em;
+    }
+
+    .button {
+        font-size: 0.9em;
+        padding: 8px;
+    }
+
+    nav ul li a {
+        font-size: 0.9em;
+    }
+}
