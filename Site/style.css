@@ -429,7 +429,7 @@ th, td {
 }
 
 th {
-    background-color: darkslateblue;
+    background-color: #257965;
     color: white;
     font-weight: bold;
 }
@@ -766,181 +766,128 @@ footer {
     bottom: 0;
     width: 100%;
 }
-/* Основные настройки для адаптивности */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    font-size: 1em;
-    background-color: #fff;
-    color: #333;
-    line-height: 1.6;
-}
-
-/* Адаптивные стили для экранов шириной до 768px */
-@media only screen and (max-width: 768px) {
-    /* Шапка */
+/* CSS Mobile */
+@media only screen
+  and (min-device-width: 320px)
+  and (max-device-width: 568px) {
     header {
-        text-align: center;
-        padding: 15px;
-        background-color: #061814;
+      background-color: #257965;
+      min-width: 100%;
+      height: 20%;
+      text-align: center;
     }
-
     .logo {
-        width: 100%;
-        padding: 10px;
-        text-align: center;
+      width: 100%;
     }
-
+    .site_content {
+      width: 100%;
+    }
+    .menubar {
+      width: 100%;
+      height: 100%;
+    }
+    .content {
+      width: 100%;
+      text-align: center;
+    }
+    .site_content {
+      width: 100%;
+      text-align: center;
+    }
+    .sidebar_container {
+      display: none;
+    }
+    footer {
+      display: none;
+    }
+    ul.menu {
+      float: none;
+    }
+    ul.menu li {
+      margin: 0;
+      padding: 0;
+      float: none;
+    }
     .logo h1 {
-        font-size: 1.8em;
-        color: #fff;
-        margin-bottom: 5px;
+      font: normal 235% 'century gothic', arial, sans-serif;
     }
-
     .logo h2 {
-        font-size: 1em;
-        color: #ddd;
+      font: normal 100% 'century gothic', arial, sans-serif;
+      color: white;
     }
-
-    /* Меню */
-    nav ul {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        list-style: none;
-        padding: 0;
-        margin: 10px 0;
+    .content h1, h2 {
+      font: normal 110% 'century gothic', arial;
     }
-
-    nav ul li {
-        margin: 5px 0;
+    .games_block img {
+      width: 43%;
     }
-
-    nav ul li a {
-        color: #fff;
-        font-size: 1em;
-        padding: 8px 15px;
-        text-decoration: none;
+    .posts_content p {
+      line-height: 1.5em;
+      padding: 3%;
+      text-align: left;
     }
-
-    /* Основной контент */
-    .site_content, .content {
-        width: 100%;
-        padding: 10px;
-        text-align: center;
+    .posts p {
+      font-size: 120%;
     }
-
-    .sidebar_container, .footer {
-        display: none; /* Отключение боковой панели и нижнего колонтитула для мобильных устройств */
+    .info_film_page {
+      float: none;
+      height: 100%;
     }
-
-    .content h1, .content h2 {
-        font-size: 1.2em;
-        margin-top: 10px;
+    .game_film img {
+      width: 25%;
+      margin-bottom: 5%;
     }
-
-    /* Игровые блоки */
-    .games_block, .films_block {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .games_block img, .films_block img {
-        width: 90%;
-        max-width: 300px;
-        margin: 10px auto;
-        border-radius: 8px;
-    }
-
-    /* Кнопки */
     .button {
-        display: block;
-        width: 85%;
-        padding: 10px;
-        margin: 10px auto;
-        font-size: 1em;
-        text-align: center;
-        background-color: #7268ad;
-        color: #fff;
-        border-radius: 5px;
-        text-decoration: none;
+      float: none;
     }
-
-    /* Таблицы */
-    table {
-        width: 100%;
-        display: block;
-        overflow-x: auto;
-        border-collapse: collapse;
-        margin: 10px 0;
+    /* rating page */
+    th {
+      font-size: 75%;
     }
-
-    th, td {
-        font-size: 0.9em;
-        padding: 8px;
+    td {
+      padding: 0;
+      margin: 0;
+      font-size: 95%;
+      text-align: left;
+      
     }
-
-    /* Описание игр/фильмов */
-    .descriptions_film {
-        width: 100%;
-        padding: 0 10px;
+    iframe {
+      width: 88%;
+      height: 100%;
     }
-
-    .descriptions_film img {
-        width: 80%;
-        margin: 0 auto 10px;
-        border-radius: 10px;
-    }
-
-    /* Отзывы */
     .reviews {
-        width: 90%;
-        margin: 10px auto;
-        text-align: left;
+      text-align: left;
+      width: 96%;
     }
-
-    .send input[type="text"], .send textarea {
-        width: 90%;
-        padding: 10px;
-        margin: 10px auto;
-        border-radius: 5px;
+    .send input[type="text"] {
+      width: 80%;
     }
-
-    .send input[type="submit"] {
-        width: 90%;
-        padding: 10px;
-        margin: 10px auto;
+    .send textarea {
+      width: 85%;
+    }
+    .tbody{
+        left: 10px;
+    }
+    th {
+        background-color: #257965;
+        color: white;
+        font-weight: bold;
+    }
+    .send textarea{
+        width: 840px;
+        height: 200px;
+    }
+    .send input[type="text"] {
+        width: 30%;
+    }
+    .send [type="submit"] {
         background-color: #7268ad;
-        color: #fff;
+        padding: 3%;
+        color: white;
         border-radius: 5px;
     }
+
+
 }
 
-/* Адаптивные стили для экранов шириной до 480px */
-@media only screen and (max-width: 480px) {
-    .logo h1 {
-        font-size: 1.5em;
-    }
 
-    .logo h2 {
-        font-size: 0.9em;
-    }
-
-    .content h1, .content h2 {
-        font-size: 1em;
-    }
-
-    .button {
-        font-size: 0.9em;
-        padding: 8px;
-    }
-
-    nav ul li a {
-        font-size: 0.9em;
-    }
-}
