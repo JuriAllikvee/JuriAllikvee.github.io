@@ -1,0 +1,258 @@
+/* General Styles */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f0f2f5;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Header Styles */
+.header {
+    background: url('assets/img/header-background.jpg') no-repeat center center;
+    background-size: cover;
+    padding: 60px 0;
+    text-align: center;
+    color: white;
+    animation: fadeIn 2s ease-in-out;
+}
+
+.header a, .header a:hover {
+    color: #ffcc00;
+    text-decoration: none;
+}
+
+.header h1 {
+    letter-spacing: 5px;
+    font-size: 350%;
+    margin: 0;
+}
+
+.header p {
+    color: white !important;
+    font-size: 150%;
+    letter-spacing: 1px;
+    margin: 10px 0 0;
+}
+
+/* Navigation Styles */
+.navbar {
+    background-color: #333;
+    overflow: hidden;
+}
+
+.navbar a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 20px;
+    text-decoration: none;
+    font-size: 17px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.navbar a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+.navbar a.active {
+    background-color: #04AA6D;
+    color: white;
+}
+
+/* Badge Styles */
+.badge {
+    background-color: #e74c3c;
+    color: white;
+}
+
+/* Info Block Styles */
+.info-block {
+    font-size: 120%;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.info-block:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.info-block .badge {
+    font-size: 80%;
+}
+
+.info-block span {
+    margin-right: 3%;
+}
+
+/* Textarea Styles */
+textarea.form-control {
+    height: 200px;
+    border: 1px solid #bdc3c7;
+    border-radius: 5px;
+}
+
+/* Table Styles */
+.table {
+    width: 100%;
+    margin-bottom: 20px;
+    border-collapse: collapse;
+}
+
+.table th, .table td {
+    padding: 12px;
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+.table th {
+    background-color: #f8f8f8;
+}
+
+.table tbody>tr:nth-child(odd) {
+    background-color: #f9f9f9;
+}
+
+.table tbody>tr>td.vert-align {
+    vertical-align: middle;
+}
+
+/* Rating Image Styles */
+.rating-img {
+    width: 200px; /* Increased size */
+    height: auto;
+    margin-right: 10px;
+    vertical-align: middle;
+}
+
+/* Films Block Image Styles */
+.films_block img {
+    margin-bottom: 5%;
+    border-radius: 10px;
+    border: solid 5px #dad7d5;
+    width: 100%;
+    max-width: 300px; /* Increased size */
+    background: url('assets/img/default-film-image.jpg') no-repeat center center;
+    background-size: cover;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.films_block img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Footer Styles */
+footer {
+    color: #ccc;
+    background: #333;
+    padding: 30px 0;
+    border-top: 2px solid #444;
+    text-align: center;
+}
+
+footer a {
+    color: #bbb;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+footer a:hover {
+    color: #fff;
+}
+
+/* Media Queries */
+@media (max-width: 767px) {
+    .navbar a {
+        float: none;
+        display: block;
+        text-align: left;
+    }
+
+    .header h1 {
+        font-size: 200%;
+        letter-spacing: 2px;
+    }
+
+    .container {
+        padding: 10px;
+    }
+}
+
+/* Additional Styles */
+.clear {
+    clear: both;
+    height: 63px;
+}
+
+.wrapper {
+    min-height: 100%;
+}
+
+html, body {
+    height: 100%;
+}
+
+.film_label {
+    padding: 2%;
+    margin-bottom: 4%;
+}
+
+.margin-8 {
+    margin-top: 8%;
+}
+
+.panel {
+    border: none;
+}
+
+.panel-body {
+    background-color: #f9f9f9;
+}
+
+.panel-info>.panel-heading {
+    background-color: #04AA6D;
+    color: white;
+    border-color: transparent;
+}
+
+.sidebar-header {
+    font-size: 120%;
+    letter-spacing: 2px;
+}
+
+.form-control {
+    border-radius: 0px;
+}
+
+.input-lg {
+    font-size: 14px;
+}
+
+.list-group-item-warning {
+    color: #8a6d3b;
+    background-color: #f9f9f9;
+}
+
+/* Keyframes for animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
