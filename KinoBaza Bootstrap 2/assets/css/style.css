@@ -38,7 +38,7 @@
     }
 
     .nav-pills {
-        text-align: center;
+        text-align: center
     }
 
     .header h1 {
@@ -55,7 +55,7 @@
     clear: both;
     height: 63px;
 }
-
+    
 .wrapper {
     min-height: 100%;
 }
@@ -64,7 +64,7 @@ html, body {
     height: 100%;
 }
 
-.films_block {
+.films_block{
     text-align: center;
 }
 
@@ -72,7 +72,22 @@ html, body {
     margin-bottom: 5%;
     border-radius: 5px;
     border: solid 5px #dad7d5;
-    width: 100%;
+    transition: transform 0.3s ease; /* Smooth transition */
+}
+
+.films_block img:hover {
+    transform: scale(1.12); /* Slightly enlarges the image on hover */
+}
+
+.films_block.series img {
+    margin-bottom: 5%;
+    border-radius: 5px;
+    border: solid 5px #dad7d5;
+    transition: transform 0.3s ease;
+}
+
+.films_block.series img:hover {
+    transform: rotate(12deg) scale(1.05); /* Rotate and slightly enlarge on hover */
 }
 
 .film_label {
@@ -98,7 +113,7 @@ html, body {
     border-color: transparent;
 }
 
-.sidebar-header {
+.sitebar-header{
     font-size: 120%;
     letter-spacing: 2px;
 }
@@ -108,7 +123,7 @@ html, body {
 }
 
 .input-lg {
-    font-size: 14px;
+    font-size: 14px
 }
 
 .list-group-item-warning {
@@ -128,7 +143,7 @@ html, body {
     font-size: 80%;
 }
 
-.info-block span {
+.info-block span{
     margin-right: 3%;
 }
 
@@ -136,7 +151,7 @@ textarea.form-control {
     height: 200px;
 }
 
-.table tbody>tr>td.vert-align {
+.table tbody>tr>td.vert-alligng {
     vertical-align: middle;
 }
 

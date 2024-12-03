@@ -6,25 +6,75 @@
     <title>Minu portfoolio!</title>
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="style.css">
 </head>
 <body>
-    <header>
-        Olen algaja, kuid võimekas veebiarendaja!
-    </header>
-    <div class="container">
-        Minu tööd
-        <div class="my_projects">
-            <a href="KinoBaza/index.html">Перейти на сайт КиноБаза</a>
-
-            <a href="Site/index.html">Перейти на сайт GameTrack</a>
-
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">Minu Portfoolio</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="#projects">Minu tööd</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#contact">Kontakt</a>
+                </li>
+            </ul>
         </div>
-        <br>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="bg-primary text-white text-center py-5">
+        <h1>Olen algaja, kuid võimekas veebiarendaja!</h1>
+    </header>
+
+    <!-- Projects Section -->
+    <div class="container mt-5" id="projects">
+        <h2 class="text-center mb-4">Minu tööd</h2>
+        <div class="row">
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">KinoBaza</h5>
+                        <p class="card-text">Перейти на сайт КиноБаза</p>
+                        <a href="KinoBaza/index.html" class="btn btn-outline-primary btn-block">Vaata lähemalt</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">GameTrack</h5>
+                        <p class="card-text">Перейти на сайт GameTrack</p>
+                        <a href="Site/index.html" class="btn btn-outline-primary btn-block">Vaata lähemalt</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">GameNews</h5>
+                        <p class="card-text">Перейти на сайт GameNews</p>
+                        <a href="Site2/index.html" class="btn btn-outline-primary btn-block">Vaata lähemalt</a>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-    <footer>
-        Olen koostööks valmis!
-        <a id="mailme" href="mailto:example@gmail.com">Kirjuta mulle!</a>
+
+    <!-- Contact Section -->
+    <footer class="bg-light text-center py-5 mt-5" id="contact">
+        <h4>Olen koostööks valmis!</h4>
+        <a id="mailme" href="mailto:example@gmail.com" class="btn btn-primary mt-3">Kirjuta mulle!</a>
     </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>

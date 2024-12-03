@@ -1,31 +1,65 @@
-*{
+* {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
 
-html{
+html {
     font-family: 'Roboto', sans-serif;
     font-size: 50px;
     text-align: center;
-    color: #ffff;
-    background: #27353f;
+    color: #ffffff;
+    background: #1d2b34; /* Dark teal background */
 }
 
-.container{
+.container {
     min-height: 800px;
     background: url('blue-black-abstract-background_1340-17012.jpg') center/cover no-repeat;
 }
 
-.my_projects{
+.my_projects {
     display: block;
     left: 10px;
 }
 
-.my_projects a{
-    color: #39bedc;
+.my_projects a {
+    color: #20c997; /* Teal color */
 }
 
 #mailme {
-    color: aliceblue;
+    color: #ffffff;
+}
+
+.navbar {
+    background-color: #20c997; /* Teal color */
+}
+
+.navbar-brand, .nav-link {
+    color: #ffffff !important;
+}
+
+.bg-primary {
+    background-color: #20c997 !important; /* Teal color */
+}
+
+.card {
+    border: 1px solid #20c997; /* Teal border */
+}
+
+.card-title {
+    color: #20c997; /* Teal color */
+}
+
+.btn-outline-primary {
+    color: #20c997;
+    border-color: #20c997;
+}
+
+.btn-outline-primary:hover {
+    background-color: #20c997;
+    color: #ffffff;
+}
+
+footer {
+    background-color: #1d2b34; /* Dark teal background */
 }
