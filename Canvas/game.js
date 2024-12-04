@@ -28,6 +28,10 @@ let game = {
         this.ctx = document.getElementById("mycanvas").getContext("2d");
         this.setEvents();
     },
+    setTextFont() {
+              this.ctx.font = "20px Arial";
+              this.ctx.fillStyle = "#FFFFFF";
+    },
     setEvents() {
         window.addEventListener("keydown", e => {
             if (e.keyCode === KEYS.SPACE) {
@@ -44,17 +48,18 @@ let game = {
                 let loaded = 0;
                 let required = Object.keys(this.sprites).length;
                 required += Object.keys(this.sounds).length;
-      
+
                 let onResourceLoad = () => {
                 ++loaded;
                 if (loaded >= required) {
                           callback();
                 }
                 };
-      
+
                 this.preloadSprites(onResourceLoad);
                 this.preloadAudio(onResourceLoad);
       },
+
     preloadSprites(onResourceLoad) {
         for (let key in this.sprites) {
             this.sprites[key] = new Image();
@@ -126,6 +131,7 @@ let game = {
             this.ball.x, this.ball.y, this.ball.width, this.ball.height);
         this.ctx.drawImage(this.sprites.platform, this.platform.x, this.platform.y);
         this.renderBlocks();
+        this.ctx.fillText("Score: " + this.score, 15, 20);
     },
     renderBlocks() {
         for (let block of this.blocks) {
@@ -211,7 +217,7 @@ game.ball = {
             game.sounds.bump.play();
         } else if (ballBottom > worldBottom) {
             game.end("Вы проиграли!");
-            
+
         }
     },
     bumpBlock(block) {
