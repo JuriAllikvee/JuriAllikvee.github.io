@@ -72,6 +72,12 @@ let game = {
         this.platform.move();
         this.ball.move();
     },
+    addScore(){
+              ++this.score;
+              if (this.score >= this.blocks.length) {
+                  this.end("Вы выиграли");
+    }
+},
     collideBlocks() {
         for (let block of this.blocks) {
             if (block.active && this.ball.collide(block)) {
