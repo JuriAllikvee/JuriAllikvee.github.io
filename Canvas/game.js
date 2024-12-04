@@ -5,6 +5,7 @@ const KEYS = {
 };
 
 let game = {
+    running: true,
     ctx: null,
     platform: null,
     ball: null,
@@ -19,7 +20,7 @@ let game = {
         platform: null,
         block: null
     },
-    init: function() {
+    init: function () {
         this.ctx = document.getElementById("mycanvas").getContext("2d");
         this.setEvents();
     },
@@ -44,7 +45,6 @@ let game = {
                 callback();
             }
         };
-
         for (let key in this.sprites) {
             this.sprites[key] = new Image();
             this.sprites[key].src = "img/" + key + ".png";
@@ -85,17 +85,19 @@ let game = {
         }
     },
     run() {
-        window.requestAnimationFrame(() => {
-            this.update();
-            this.render();
-            this.run();
-        });
+        if (this.running) {
+            window.requestAnimationFrame(() => {
+                this.update();
+                this.render();
+                this.run();
+            });
+        }
     },
     render() {
         this.ctx.clearRect(0, 0, this.width, this.height);
         this.ctx.drawImage(this.sprites.background, 0, 0);
-        this.ctx.drawImage(this.sprites.ball, 0, 0, this.ball.width, this.ball.height, 
-                           this.ball.x, this.ball.y, this.ball.width, this.ball.height);
+        this.ctx.drawImage(this.sprites.ball, 0, 0, this.ball.width, this.ball.height,
+            this.ball.x, this.ball.y, this.ball.width, this.ball.height);
         this.ctx.drawImage(this.sprites.platform, this.platform.x, this.platform.y);
         this.renderBlocks();
     },
@@ -106,7 +108,7 @@ let game = {
             }
         }
     },
-    start: function() {
+    start: function () {
         this.init();
         this.preload(() => {
             this.create();
@@ -142,8 +144,10 @@ game.ball = {
         let x = this.x + this.dx;
         let y = this.y + this.dy;
 
-        if (x + this.width > element.x && x < element.x + element.width &&
-            y + this.height > element.y && y < element.y + element.height) {
+        if (x + this.width > element.x &&
+            x < element.x + element.width &&
+            y + this.height > element.y &&
+            y < element.y + element.height) {
             return true;
         }
         return false;
@@ -172,7 +176,9 @@ game.ball = {
             this.y = 0;
             this.dy = this.velocity;
         } else if (ballBottom > worldBottom) {
-            console.log('game over');
+            game.running = false;
+            alert("Вы проиграли");
+            window.location.reload();
         }
     },
     bumpBlock(block) {
@@ -181,7 +187,7 @@ game.ball = {
     },
     bumpPlatform(platform) {
         if (platform.dx) {
-            this.x -= platform.dx;
+            this.x += platform.dx;
         }
 
         if (this.dy > 0) {
