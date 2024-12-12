@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Веб-сайт для Monovision Studio">
+    <meta name="author" content="Отличный студент">
+    <title>Monovision Studio</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="stylesheet" href="css/modern-normalize.min.css">
+    <link 
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="video-bg">
+        <video autoplay muted loop id="bg-video">
+            <source src="video/Animated Wallpaper Rust - Imgur.mp4" type="video/mp4">
+        </video>
+    </div>
+    <main>
+        <section class="promo">
+            <div class="container">
+                <h1 class="promo__title">Студия Facepunch</h1>
+                <h2 class="promo__subtitle">Инновационные игры, безграничные приключения</h2>
+                <a href="#portfolio" class="btn">Игры</a>
+                <button id="language-toggle" class="btn2">English</button>
+                <div class="promo__address">
+                    <address>
+                        Местоположение: Создаем отовсюду, для всех.
+                    </address>
+                </div>
+            </div>
+            <ul class="keywords">
+                <li>Исследование</li>
+                <li>Выживание</li>
+                <li>Многопользовательский</li>
+                <li>Стратегия</li>
+                <li>Песочница</li>
+                <li>Экшен</li>
+                <li>Крафтинг</li>
+                <li>Бой</li>
+                <li>Приключение</li>
+                <li>Открытый мир</li>
+                <li>Сообщество</li>
+                <li>Анимация</li>
+            </ul>
+        </section>
+        <section class="about">
+            <div class="container">
+                <h2 class="about__title">Чего вы можете ожидать от нас:</h2>
+                <p class="about__text">
+                    В студии Facepunch мы увлечены созданием захватывающих миров и незабываемых впечатлений.
+                    От разработки новаторских игр, таких как Rust и Garry's Mod, до расширения границ инноваций, наша цель - вдохновлять и развлекать миллионы игроков по всему миру.
+                    Присоединяйтесь к нам в этом путешествии и увидьте, как мир игр переосмысливается.
+                    <span>каждое фото</span>.
+                </p>
+                <div class="services">
+                    <div class="services__items">
+                        <div class="services__item-subtitle">Наша миссия:</div>
+                        <ul>
+                            <li>Студия Facepunch стремится создавать высококачественные игры, которые объединяют людей.
+                            </li>
+                            <li>С акцентом на инновации, креативность и ориентированные на игрока впечатления, мы формируем будущее игр.</li>
+                        </ul>
+                    </div>
+                    <p class="services__text">
+                        В студии Facepunch каждый проект - это труд любви. С такими играми, как Rust и Garry's Mod, мы изменили способ, которым игроки переживают открытый мир выживания и песочницу творчества.
+                    </p>
+                </div>
+            </div>
+        </section>
+        <section class="works">
+            <div class="container">
+                <h2 id="portfolio" class="title"><span>Наши игры доступны на ПК, Steam и консолях</span></h2>
+                <div class="works__grid">
+                    <div class="works__item">
+                        <img src="img/rust-artwork.jpg" alt="Rust">
+                        <p class="works__description">Единственная цель в Rust - выжить. Все хочет, чтобы вы умерли - дикая природа острова и другие обитатели, окружающая среда, другие выжившие.</p>
+                    </div>
+                    <div class="works__item">
+                        <img src="img/chippy-artwork.jpg" alt="Chippy">
+                        <p class="works__description">Шутер в стиле bullet-hell против разрушаемых боссов. Уничтожайте гигантских боссов, этап за этапом, пиксель за пикселем.</p>
+                    </div>
+                    <div class="works__item">
+                        <img src="img/gmod-artwork.jpg" alt="Garry's Mod">
+                        <p class="works__description">Созданная на модифицированной версии движка Source от Valve, Garry's Mod (или GMod) - это игра-песочница с физикой.</p>
+                    </div>
+                    <div class="works__item">
+                        <img src="img/sandbox-artwork.jpg" alt="S&box">
+                        <p class="works__description">S&box не будет Garry's Mod 2. Она превзойдет возможности Garry's Mod, а не просто станет его современной версией.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="inspiration">
+            <div class="container">
+                <h2 class="title"><span>Фотографии</span></h2>
+                <div class="inspiration__grid">
+                    <img src="img/games/rust1.jpg" alt="человек">
+                    <img src="img/games/rust2.jpg" alt="лошади">
+                    <img src="img/games/rust3.jpg" alt="мост">
+                    <img id="tenement" src="img/games/rust4.jpg" alt="многоквартирный дом">
+                    <img src="img/games/ss_2166031b7e6eaedae3dfd8966421c.jpg" alt="кот">
+                    <img id="sky" src="img/games/garrys1.jpg" alt="небо">
+                </div>
+            </div>
+        </section>
+        <section class="office">
+            <div class="container">
+                <h2 class="title"><span>Наш офис</span></h2>
+                <div class="office__grid">
+                    <div class="office__item">
+                        <img src="img/office/1office.jpg" alt="1 офис">
+                    </div>
+                    <div class="office__item">
+                        <img src="img/office/2office.jpg" alt="2 офис">
+                    </div>
+                    <div class="office__item">
+                        <img src="img/office/3office.jpg" alt="3 офис">
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="customers">
+            <div class="container">
+                <h2 class="title"><span>О нас</span></h2>
+                <p class="customers__description">
+                    Мы - Facepunch, независимый разработчик игр, издающий свои игры самостоятельно, базирующийся в Бирмингеме, Великобритания.<br><br>
+                    Мы создали Garry’s Mod и Rust, две из самых популярных игр на Steam за все время.<br><br>
+                    Именно Garry’s Mod положила начало всему в 2004 году, став одной из первых инди-игр на Steam в 2006 году. Затем в 2013 году появилась Rust, официально выпущенная в 2018 году. А затем Chippy в 2019 году. И скоро S&box…<br><br>
+                    Мы стараемся быть ориентированными на игроков и учиться у вас.<br><br>
+                    У нас нет традиционного менеджмента, и мы стараемся избегать бюрократии - команда вместе решает, что лучше для игры. Мы ожидаем неудач, учимся и улучшаемся. Мы строим наши игры и отношения с сообществом на долгосрочную перспективу. Мы считаем, что у нас довольно открытая, совместная и гостеприимная рабочая среда, и сейчас нас около 70 человек, и мы растем - у нас еще много планов. Мы ориентированы на ПК, но интересуемся и другими платформами, и VR.
+                </p>
+                <div class="logoface">
+                    <img src="img/logo.jpg" alt="логотип">
+                </div>
+            </div>
+        </section>
+        <footer class="footer">
+            <ul class="footer__social">
+                <li>
+                    <a href="#" class="footer__link">
+                        <img src="icons/facebook.svg" alt="ссылка на facebook">
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="footer__link">
+                        <img src="icons/tg.svg" alt="ссылка на Telegram">
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="footer__link">
+                        <img src="icons/whatsapp.svg" alt="ссылка на WhatsApp">
+                    </a>
+                </li>
+            </ul>
+            <address class="footer__addr">
+                Everton Park, Block 2, Singapore 081002
+            </address>
+            <a class="footer__tel" href="tel:+6596994725">+6596994725</a>
+        </footer>
+        
+    </main>
+    <script>
+        document.getElementById('language-toggle').addEventListener('click', function() {
+            window.location.href = 'index.html';
+        });
+    </script>
+</body>
+</html>
