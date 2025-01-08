@@ -1,0 +1,567 @@
+/* Global Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #0070ba;
+    color: white;
+}
+
+.logo {
+    font-size: 24px;
+}
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+.logo-image {
+    width: 40px; /* Adjust the size as needed */
+    height: auto;
+    margin-right: 10px; /* Add some space between the image and the text */
+}
+
+
+
+.login {
+    background-color: white;
+    color: #0070ba;
+    border: none;
+    padding: 5px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-right: 10px;
+    transition: background-color 0.3s ease;
+}
+.tagline {
+    font-size: 16px;
+}
+
+.login:hover {
+    background-color: #e7e7e7;
+}
+.login {
+    background-color: white;
+    color: #0070ba;
+    border: none;
+    padding: 5px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.hero {
+    position: relative;
+    text-align: center;
+    padding: 20px;
+    background-color: #f3f3f3;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add shadow */
+}
+
+.hero-image {
+    width: 100%;
+    max-width: 1400px;
+    height: 400px;
+    margin-bottom: 20px;
+    object-fit: cover;
+    border-radius: 8px;
+    
+}
+.hero-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.video-section {
+    text-align: center;
+    padding: 40px 20px;
+    background-color: #f3f3f3;
+}
+
+.video-section h2 {
+    margin-bottom: 20px;
+    font-size: 28px;
+    color: #0070ba;
+}
+
+.video-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #0070ba;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    
+}
+
+.video-container iframe {
+    width: 100%;
+    max-width: 800px;
+    height: 450px;
+    border-radius: 8px;
+}
+
+.testimonials {
+    text-align: center;
+    padding: 40px 20px;
+    background-color: #f9f9f9;
+}
+
+.testimonials h2 {
+    margin-bottom: 20px;
+    font-size: 28px;
+    color: #0070ba;
+}
+
+.testimonial-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.testimonial {
+    flex: 1 1 300px;
+    max-width: 400px;
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: left;
+}
+
+.testimonial p {
+    font-size: 16px;
+    color: #333;
+}
+
+.testimonial h3 {
+    margin-top: 10px;
+    font-size: 18px;
+    color: #0070ba;
+}
+
+.review-slider {
+    position: relative;
+    max-width: 800px;
+    margin: auto;
+    overflow: hidden;
+}
+
+.review-container {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.review {
+    min-width: 100%;
+    box-sizing: border-box;
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    display: flex;
+    align-items: center;
+}
+
+.avatar {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    margin-right: 20px;
+}
+
+.review-text {
+    flex: 1;
+}
+
+.review p {
+    font-size: 16px;
+    color: #333;
+}
+
+.review h3 {
+    margin-top: 10px;
+    font-size: 18px;
+    color: #0070ba;
+}
+
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: auto;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 3px;
+    user-select: none;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+.next {
+    right: 10px;
+}
+
+.prev {
+    left: 10px;
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.reviews h2 {
+    text-align: center;
+    color: #0070ba;
+}
+
+    .features {
+        text-align: center;
+        padding: 40px 20px;
+        background-color: #f3f3f3;
+    }
+
+    .features h2 {
+        margin-bottom: 20px;
+        font-size: 28px;
+        color: #0070ba;
+    }
+
+    .feature-container {
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+
+    .features {
+        text-align: center;
+        padding: 40px 20px;
+        background-color: #f3f3f3;
+    }
+    
+    .features h2 {
+        margin-bottom: 20px;
+        font-size: 28px;
+        color: #0070ba;
+    }
+    
+    .feature-container {
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+    
+    .feature {
+        flex: 1 1 300px;
+        max-width: 300px;
+        background-color: white;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        text-align: center; /* Center text and image */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .feature-image {
+        width: 100%;
+        height: auto;
+        border-radius: 8px;
+        margin-bottom: 10px;
+        max-width: 100px; /* Adjust the size as needed */
+    }
+    
+    .feature h3 {
+        font-size: 18px;
+        color: #0070ba;
+        margin-bottom: 10px;
+    }
+    
+    .feature p {
+        font-size: 16px;
+        color: #333;
+    }
+    
+    /* ...existing code... */
+
+.signup {
+    text-align: center;
+    padding: 40px 20px;
+    background-color: #0070ba;
+    color: white;
+}
+
+.signup form {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.signup input {
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    width: 200px;
+}
+
+.signup button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    background-color: white;
+    color: #0070ba;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.signup button:hover {
+    background-color: #e7e7e7;
+}
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #f3f3f3;
+}
+
+.footer-menu ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-menu li {
+    margin: 0 10px;
+}
+
+.footer-menu a {
+    text-decoration: none;
+    color: #0070ba;
+}
+
+.social-media a {
+    color: #0070ba;
+    text-decoration: none;
+}
+.review-container {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    gap: 10px; /* Между отзывами */
+}
+.review:hover {
+    transform: scale(1.05); /* Легкое увеличение при наведении */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Эффект тени */
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10; /* Стрелки всегда поверх контента */
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    background-color: #0070ba;
+    border: none;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+.next {
+    right: 10px;
+}
+.prev {
+    left: 10px;
+}
+/* ...existing code... */
+
+.review-slider {
+    position: relative;
+    max-width: 800px;
+    margin: auto;
+    overflow: hidden;
+}
+
+.slides {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    width: 500%;
+}
+
+.review {
+    flex: 1 0 100%;
+    box-sizing: border-box;
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    display: flex;
+    align-items: center;
+}
+
+.avatar {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    margin-right: 20px;
+}
+
+.review-text {
+    flex: 1;
+}
+
+.review p {
+    font-size: 16px;
+    color: #333;
+}
+
+.review h3 {
+    margin-top: 10px;
+    font-size: 18px;
+    color: #0070ba;
+}
+
+input[type="radio"] {
+    display: none;
+}
+
+input#slide1:checked ~ .slides {
+    transform: translateX(0);
+}
+
+input#slide2:checked ~ .slides {
+    transform: translateX(-100%);
+}
+
+input#slide3:checked ~ .slides {
+    transform: translateX(-200%);
+}
+
+input#slide4:checked ~ .slides {
+    transform: translateX(-300%);
+}
+
+input#slide5:checked ~ .slides {
+    transform: translateX(-400%);
+}
+
+.navigation {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+}
+
+.navigation label {
+    cursor: pointer;
+    font-size: 24px;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 10px;
+    border-radius: 50%;
+    transition: background-color 0.3s ease;
+}
+
+.navigation label:hover {
+    background-color: rgba(0, 68, 255, 0.8);
+}
+/* Общий стиль для заголовка */
+.testimonials h2 {
+    text-align: center;
+    color: #0070ba;
+    margin-bottom: 20px;
+  }
+  
+  /* ===== Статическая верстка (ПК) ===== */
+  .desktop-testimonials {
+    display: flex;          /* Отзывы в ряд */
+    gap: 20px;
+    justify-content: center;
+  }
+  .testimonial {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    max-width: 300px;
+  }
+  
+  /* ===== Мобильный слайдер ===== */
+  .mobile-testimonials {
+    /* По умолчанию пусть будет скрыт (включим через media-запрос) */
+    display: none;
+  }
+  
+  .slider-wrapper {
+    display: flex;          /* Горизонтальная лента */
+    gap: 20px;
+    overflow-x: auto;       /* Горизонтальная прокрутка */
+    scroll-snap-type: x mandatory; /* Для “прилипания” к слайдам по желанию */
+  }
+  
+  .slide {
+    flex: 0 0 80%;          /* Каждому слайду примерно 80% ширины экрана */
+    min-width: 250px;       /* Чтобы на совсем узких экранах элемент имел минимальную ширину */
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    scroll-snap-align: start; /* При прокрутке будет “прилипать” к началу */
+  }
+  
+  /* ======= Медиа-запросы ======= */
+  
+  /* Показываем desktop-версию только на >= 768px */
+  @media (max-width: 767px) {
+    .desktop-testimonials {
+      display: none; /* На телефонах скрываем "просто" сетку */
+    }
+    .mobile-testimonials {
+      display: block; /* На телефонах показываем слайдер */
+    }
+  }
+  
+  /* На экранах от 768px и выше: оставляем desktop-версию */
+  @media (min-width: 768px) {
+    .desktop-testimonials {
+      display: flex; /* Показываем */
+    }
+    .mobile-testimonials {
+      display: none; /* Прячем мобильный слайдер */
+    }
+  }
+  
