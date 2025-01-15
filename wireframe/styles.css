@@ -1,4 +1,3 @@
-/* Global Styles */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -13,24 +12,24 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 10px 20px;
-    background-color: #0070ba;
+    background-color: #0066ff;
     color: white;
 }
 
 .logo {
     font-size: 24px;
 }
+
 .logo-container {
     display: flex;
     align-items: center;
 }
+
 .logo-image {
-    width: 40px; /* Adjust the size as needed */
+    width: 40px;
     height: auto;
-    margin-right: 10px; /* Add some space between the image and the text */
+    margin-right: 10px; 
 }
-
-
 
 .login {
     background-color: white;
@@ -41,13 +40,13 @@ header {
     cursor: pointer;
     margin-right: 10px;
     transition: background-color 0.3s ease;
-}
-.tagline {
-    font-size: 16px;
-}
-
+}  transition: background-color 0.3s ease;
 .login:hover {
     background-color: #e7e7e7;
+}
+
+.tagline {
+    font-size: 16px;
 }
 .login {
     background-color: white;
@@ -74,7 +73,7 @@ header {
     margin-bottom: 20px;
     object-fit: cover;
     border-radius: 8px;
-    
+    border: 5px solid #0070ba;
 }
 .hero-text {
     position: absolute;
@@ -91,6 +90,7 @@ header {
     text-align: center;
     padding: 40px 20px;
     background-color: #f3f3f3;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add shadow */
 }
 
 .video-section h2 {
@@ -103,16 +103,15 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #0070ba;
+    background-color: white;
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    
+    opacity: 0.8; /* Add transparency */
 }
 
 .video-container iframe {
     width: 100%;
-    max-width: 800px;
     height: 450px;
     border-radius: 8px;
 }
