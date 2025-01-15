@@ -1,0 +1,618 @@
+/* Базовые стили */
+body {
+    font-family: Arial, sans-serif; /* Устанавливаем шрифт для всего документа */
+    margin: 0; /* Убираем отступы по краям */
+    padding: 0; /* Убираем внутренние отступы */
+    box-sizing: border-box; /* Устанавливаем box-sizing для корректного расчета размеров элементов */
+    background-color: #f9f9f9; /* Устанавливаем цвет фона */
+    color: #333; /* Устанавливаем цвет текста */
+}
+
+/* HEADER */
+header {
+    display: flex; /* Используем flexbox для выравнивания элементов */
+    justify-content: space-between; /* Разделяем элементы на лево и право */
+    align-items: center; /* Вертикальное выравнивание элементов */
+    padding: 10px 20px; /* Внутренние отступы */
+    background-color: #0066ff; /* Цвет фона */
+    color: white; /* Цвет текста */
+}
+
+.header-left {
+    display: flex; /* Используем flexbox для выравнивания элементов */
+    align-items: center; /* Вертикальное выравнивание элементов */
+    gap: 20px; /* Расстояние между логотипом и другими элементами */
+}
+
+.logo-container {
+    display: flex; /* Используем flexbox для выравнивания элементов */
+    align-items: center; /* Вертикальное выравнивание элементов */
+}
+
+.logo-image {
+    width: 40px; /* Ширина логотипа */
+    height: auto; /* Автоматическая высота */
+    margin-right: 10px; /* Отступ справа */
+}
+
+.logo {
+    font-size: 24px; /* Размер шрифта */
+    font-weight: bold; /* Жирный шрифт */
+}
+
+/* Кнопки справа */
+.header-right {
+    display: flex; /* Используем flexbox для выравнивания элементов */
+    align-items: center; /* Вертикальное выравнивание элементов */
+    gap: 10px; /* Расстояние между кнопками */
+}
+
+/* Кнопка Login */
+.login {
+    background-color: white; /* Цвет фона */
+    color: #0070ba; /* Цвет текста */
+    border: none; /* Без границы */
+    padding: 5px 15px; /* Внутренние отступы */
+    border-radius: 4px; /* Скругленные углы */
+    cursor: pointer; /* Курсор в виде руки */
+    transition: background-color 0.3s ease; /* Плавный переход цвета фона */
+}
+.login:hover {
+    background-color: #e7e7e7; /* Цвет фона при наведении */
+}
+
+/* Кнопка переключения темы */
+.toggle-theme {
+    padding: 10px 20px; /* Внутренние отступы */
+    background-color: #0070ba; /* Цвет фона */
+    color: #ffffff; /* Цвет текста */
+    border: none; /* Без границы */
+    border-radius: 5px; /* Скругленные углы */
+    cursor: pointer; /* Курсор в виде руки */
+    transition: background-color 0.3s; /* Плавный переход цвета фона */
+}
+.toggle-theme:hover {
+    background-color: #005f99; /* Цвет фона при наведении */
+}
+
+/* HERO */
+.hero {
+    position: relative; /* Относительное позиционирование */
+    width: 100%; /* Ширина 100% */
+    height: auto; /* Автоматическая высота */
+    overflow: hidden; /* Обрезаем содержимое, выходящее за пределы */
+}
+.hero-image {
+    width: 100%; /* Ширина 100% */
+    height: 500px; /* Фиксированная высота */
+    display: block; /* Блочный элемент */
+    padding: 30px; /* Внутренние отступы */
+}
+.hero-text {
+    position: absolute; /* Абсолютное позиционирование */
+    top: 50%; /* Отступ сверху 50% */
+    left: 50%; /* Отступ слева 50% */
+    transform: translate(-50%, -50%); /* Центрирование по горизонтали и вертикали */
+    color: white; /* Цвет текста */
+    font-size: 2em; /* Размер шрифта */
+    text-align: center; /* Центрирование текста */
+    background-color: rgba(0, 0, 0, 0.5); /* Полупрозрачный черный фон */
+    padding: 10px 20px; /* Внутренние отступы */
+    border-radius: 10px; /* Скругленные углы */
+}
+
+/* VIDEO */
+.video-section {
+    width: 100%; /* Ширина 100% */
+    padding: 0; /* Без отступов */
+    margin: 0; /* Без внешних отступов */
+}
+.video-container {
+    width: 100%; /* Ширина 100% */
+    height: 600px; /* Фиксированная высота */
+    display: flex; /* Используем flexbox для выравнивания элементов */
+    justify-content: center; /* Центрирование по горизонтали */
+    align-items: center; /* Центрирование по вертикали */
+    background-color: #000; /* Черный фон */
+    overflow: hidden; /* Обрезаем содержимое, выходящее за пределы */
+}
+
+.video-frame {
+    width: 100%; /* Ширина 100% */
+    height: 100%; /* Высота 100% */
+    object-fit: cover; /* Масштабируем видео, обрезая лишнее */
+    display: block; /* Блочный элемент */
+}
+
+/* TESTIMONIALS */
+.testimonials {
+    text-align: center; /* Центрирование текста */
+    padding: 40px 20px; /* Внутренние отступы */
+    background-color: #f9f9f9; /* Цвет фона */
+}
+.testimonials h2 {
+    margin-bottom: 20px; /* Отступ снизу */
+    font-size: 28px; /* Размер шрифта */
+    color: #0070ba; /* Цвет текста */
+}
+.testimonials-container-wrapper {
+    position: relative; /* Относительное позиционирование для стрелок */
+}
+.testimonials-container {
+    display: flex; /* Используем flexbox для выравнивания элементов */
+    flex-wrap: nowrap; /* Элементы не переносятся */
+    gap: 20px; /* Расстояние между элементами */
+    justify-content: center; /* Центрирование по горизонтали */
+    transition: transform 0.5s ease-in-out; /* Плавный переход трансформации */
+    overflow: hidden; /* Обрезаем содержимое, выходящее за пределы */
+    scroll-behavior: smooth; /* Плавная прокрутка */
+}
+.testimonial {
+    flex: 0 0 100%; /* Один слайд на весь контейнер */
+    max-width: 300px; /* Максимальная ширина */
+    background-color: white; /* Цвет фона */
+    padding: 20px; /* Внутренние отступы */
+    border-radius: 8px; /* Скругленные углы */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Тень */
+    text-align: center; /* Центрирование текста */
+    box-sizing: border-box; /* Учитываем отступы в размерах */
+}
+
+/* REVIEW SLIDER */
+.review-slider {
+    position: relative; /* Относительное позиционирование */
+    max-width: 100%; /* Максимальная ширина 100% */
+    margin: auto; /* Центрирование */
+    overflow: hidden; /* Обрезаем содержимое, выходящее за пределы */
+}
+.slides {
+    display: flex; /* Используем flexbox для выравнивания элементов */
+    transition: transform 0.5s ease-in-out; /* Плавный переход трансформации */
+}
+.review {
+    display: flex; /* Используем flexbox для выравнивания элементов */
+    align-items: center; /* Вертикальное выравнивание элементов */
+    justify-content: flex-start; /* Выравнивание по началу */
+    gap: 20px; /* Расстояние между элементами */
+    min-width: 100%; /* Минимальная ширина 100% */
+    box-sizing: border-box; /* Учитываем отступы в размерах */
+    padding: 20px; /* Внутренние отступы */
+    text-align: left; /* Выравнивание текста по левому краю */
+}
+.avatar {
+    width: 100px; /* Ширина аватара */
+    height: 100px; /* Высота аватара */
+    border-radius: 50%; /* Скругленные углы */
+    margin-left: 20px; /* Отступ слева */
+    flex-shrink: 0; /* Запрещаем уменьшение размера */
+    margin-bottom: 50px; /* Отступ снизу */
+}
+/* Текст отзыва */
+.review-text {
+    flex: 1; /* Занимает оставшееся пространство */
+}
+.review-text p {
+    font-size: 16px; /* Размер шрифта */
+    margin-bottom: 40px; /* Отступ снизу */
+}
+.review h3 {
+    margin-top: 10px; /* Отступ сверху */
+    font-size: 18px; /* Размер шрифта */
+    color: #0070ba; /* Цвет текста */
+}
+.review-text h3 {
+    margin-top: 10px; /* Отступ сверху */
+    font-size: 18px; /* Размер шрифта */
+    color: #cce4ff; /* Цвет текста */
+}
+/* Кнопки слайдера */
+.prev, .next {
+    cursor: pointer; /* Курсор в виде руки */
+    position: absolute; /* Абсолютное позиционирование */
+    top: 35%; /* Отступ сверху 35% */
+    width: auto; /* Автоматическая ширина */
+    padding: 16px; /* Внутренние отступы */
+    margin-top: -22px; /* Отрицательный отступ сверху */
+    color: rgb(0, 0, 0); /* Цвет текста */
+    font-weight: bold; /* Жирный шрифт */
+    font-size: 18px; /* Размер шрифта */
+    transition: 0.6s ease; /* Плавный переход */
+    border-radius: 0 3px 3px 0; /* Скругленные углы */
+    user-select: none; /* Запрет выделения текста */
+    background: rgba(0, 0, 0, 0.7); /* Полупрозрачный черный фон */
+    color: #fff; /* Белый цвет текста */
+}
+.next {
+    right: 0; /* Позиционирование справа */
+    border-radius: 3px 0 0 3px; /* Скругленные углы */
+}
+.prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.9); /* Цвет фона при наведении */
+}
+.review:hover {
+    transform: scale(1.05); /* Увеличение при наведении */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Тень при наведении */
+    transition: transform 0.3s, box-shadow 0.3s; /* Плавный переход */
+}
+
+/* ОСОБЕННОСТИ */
+.features {
+    text-align: center; /* Центрирование текста */
+    padding: 40px 20px; /* Внутренние отступы */
+    background-color: #f3f3f3; /* Цвет фона */
+}
+.feature-container {
+    display: flex; /* Используем flexbox для выравнивания элементов */
+    flex-wrap: wrap; /* Перенос элементов */
+    justify-content: space-around; /* Распределение элементов */
+    gap: 20px; /* Расстояние между элементами */
+}
+.feature {
+    flex: 1 1 calc(33.333% - 40px); /* Размер элемента */
+    max-width: 300px; /* Максимальная ширина */
+    background-color: white; /* Цвет фона */
+    padding: 20px; /* Внутренние отступы */
+    border-radius: 8px; /* Скругленные углы */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Тень */
+    text-align: center; /* Центрирование текста */
+    display: flex; /* Используем flexbox для выравнивания элементов */
+    flex-direction: column; /* Вертикальное выравнивание */
+    align-items: center; /* Центрирование элементов */
+}
+.feature-image {
+    width: 100%; /* Ширина 100% */
+    height: auto; /* Автоматическая высота */
+    border-radius: 8px; /* Скругленные углы */
+    margin-bottom: 10px; /* Отступ снизу */
+    max-width: 100px; /* Максимальная ширина */
+}
+.feature h3 {
+    font-size: 18px; /* Размер шрифта */
+    color: #0070ba; /* Цвет текста */
+    margin-bottom: 10px; /* Отступ снизу */
+}
+.feature p {
+    font-size: 16px; /* Размер шрифта */
+    color: #333; /* Цвет текста */
+}
+
+/* РЕГИСТРАЦИЯ */
+.signup {
+    text-align: center; /* Центрирование текста */
+    padding: 40px 20px; /* Внутренние отступы */
+    background-color: #0070ba; /* Цвет фона */
+    color: white; /* Цвет текста */
+}
+.signup form {
+    display: flex; /* Используем flexbox для выравнивания элементов */
+    justify-content: center; /* Центрирование по горизонтали */
+    gap: 10px; /* Расстояние между элементами */
+    flex-wrap: wrap; /* Перенос элементов */
+}
+.signup input {
+    padding: 10px; /* Внутренние отступы */
+    border: none; /* Без границы */
+    border-radius: 4px; /* Скругленные углы */
+    width: 1300px; /* Ширина */
+    max-width: 1300px; /* Максимальная ширина */
+}
+.signup button {
+    padding: 10px 20px; /* Внутренние отступы */
+    border: none; /* Без границы */
+    border-radius: 4px; /* Скругленные углы */
+    background-color: white; /* Цвет фона */
+    color: #0070ba; /* Цвет текста */
+    cursor: pointer; /* Курсор в виде руки */
+    width: 200px; /* Ширина */
+    transition: background-color 0.3s ease; /* Плавный переход цвета фона */
+}
+.signup button:hover {
+    background-color: #e7e7e7; /* Цвет фона при наведении */
+}
+
+/* FOOTER */
+footer {
+    display: flex; /* Используем flexbox для выравнивания элементов */
+    justify-content: space-between; /* Разделяем элементы на лево и право */
+    align-items: center; /* Вертикальное выравнивание элементов */
+    padding: 10px 20px; /* Внутренние отступы */
+    background-color: #0070ba; /* Цвет фона */
+}
+.footer-menu ul {
+    display: flex; /* Используем flexbox для выравнивания элементов */
+    list-style: none; /* Убираем маркеры списка */
+    padding: 0; /* Убираем внутренние отступы */
+    margin: 0; /* Убираем внешние отступы */
+}
+.footer-menu li {
+    margin: 0 10px; /* Отступы между элементами списка */
+}
+.footer-menu a {
+    text-decoration: none; /* Убираем подчеркивание текста */
+    color: #f8f8f8; /* Цвет текста */
+}
+.social-media {
+    display: flex; /* Используем flexbox для выравнивания элементов */
+    justify-content: center; /* Центрирование по горизонтали */
+    gap: 20px; /* Расстояние между элементами */
+    margin-top: 20px; /* Отступ сверху */
+}
+.social-icon {
+    width: 40px; /* Ширина иконки */
+    height: 40px; /* Высота иконки */
+    transition: transform 0.3s ease; /* Плавный переход трансформации */
+}
+.social-icon:hover {
+    transform: scale(1.1); /* Увеличение при наведении */
+}
+
+/* Адаптивность */
+@media (max-width: 767px) {
+    .testimonials-container {
+        flex-wrap: nowrap; /* Элементы не переносятся */
+        transform: translateX(0); /* Сброс трансформации */
+    }
+    .testimonial {
+        flex: 0 0 100%; /* Один слайд на весь контейнер */
+        max-width: 100%; /* Максимальная ширина 100% */
+    }
+}
+@media (min-width: 768px) {
+    .desktop-testimonials {
+        display: flex; /* Отображаем элементы на десктопе */
+    }
+    .mobile-testimonials {
+        display: none; /* Скрываем элементы на десктопе */
+    }
+}
+
+/* Скрываем полосы прокрутки в testimonials-container */
+.testimonials-container {
+    scrollbar-width: none; /* Firefox */
+}
+.testimonials-container::-webkit-scrollbar {
+    display: none; /* Chrome, Safari */
+}
+
+/* Стрелки показываем только на мобильных (<=768px) */
+.arrow {
+    position: absolute; /* Абсолютное позиционирование */
+    top: 50%; /* Отступ сверху 50% */
+    transform: translateY(-50%); /* Центрирование по вертикали */
+    z-index: 9999; /* Поверх всего */
+    background: rgba(0, 0, 0, 0.7); /* Полупрозрачный черный фон */
+    color: #fff; /* Белый цвет текста */
+    border: none; /* Без границы */
+    border-radius: 50%; /* Скругленные углы */
+    padding: 10px; /* Внутренние отступы */
+    font-size: 16px; /* Размер шрифта */
+    cursor: pointer; /* Курсор в виде руки */
+    transition: background-color 0.3s ease; /* Плавный переход цвета фона */
+    display: none; /* по умолчанию скрыты */
+}
+.arrow.left {
+    left: 10px; /* Позиционирование слева */
+}
+.arrow.right {
+    right: 10px; /* Позиционирование справа */
+}
+.arrow:hover {
+    background-color: rgba(0,0,0,0.9); /* Цвет фона при наведении */
+}
+@media (max-width: 768px) {
+    .arrow {
+        display: block; /* Отображаем стрелки на мобильных */
+    }
+}
+
+/* DARK THEME */
+body.dark-theme {
+    background-color: #121212; /* Цвет фона */
+    color: #ffffff; /* Цвет текста */
+}
+body.dark-theme header,
+body.dark-theme footer,
+body.dark-theme .signup,
+body.dark-theme .hero-text,
+body.dark-theme .testimonial,
+body.dark-theme .testimonials,
+body.dark-theme .video-container,
+body.dark-theme .features {
+    background-color: #1e1e1e; /* Цвет фона */
+    color: #ffffff; /* Цвет текста */
+}
+
+/* Чтобы текст в синей секции тоже менялся (используем !important для перебить bootstrap .bg-primary) */
+body.dark-theme .p-3.mb-2.bg-primary.text-white {
+    background-color: #2b2b2b !important; /* Цвет фона */
+    color: #ffffff !important; /* Цвет текста */
+}
+
+/* Тёмная тема для карточек features */
+body.dark-theme .feature {
+    background-color: #2b2b2b !important; /* Цвет фона */
+    color: #ffffff !important; /* Цвет текста */
+}
+body.dark-theme .feature h3,
+body.dark-theme .feature p {
+    color: #ffffff !important; /* Убедимся, что текст белый */
+}
+
+/* Тёмная тема для кнопки Login */
+body.dark-theme .login {
+    background-color: #000000; /* Цвет фона */
+    color: #ffffff; /* Цвет текста */
+}
+body.dark-theme .login:hover {
+    background-color: #333333; /* Цвет фона при наведении */
+}
+
+/* Тёмная тема для кнопки Toggle Theme */
+body.dark-theme .toggle-theme {
+    background-color: #333333; /* Цвет фона */
+    color: #ffffff; /* Цвет текста */
+}
+body.dark-theme .toggle-theme:hover {
+    background-color: #444444; /* Цвет фона при наведении */
+}
+
+/* Тёмные ссылки */
+body.dark-theme a {
+    color: #66c0ff; /* Цвет текста */
+}
+
+/* Тёмные изображения в feature (инверсия цветов) */
+body.dark-theme .feature-image {
+    filter: invert(1) brightness(0.8); /* Инверсия и яркость */
+}
+
+/* МОДАЛЬНОЕ ОКНО */
+.modal {
+    display: none; /* Скрыто по умолчанию */
+    position: fixed; /* Окно фиксируется в viewport */
+    z-index: 99999; /* Поверх всего */
+    left: 0; /* Позиционирование слева */
+    top: 0; /* Позиционирование сверху */
+    width: 100%; /* Ширина 100% */
+    height: 100%; /* Высота 100% */
+    overflow: auto; /* Если контента будет много */
+    background-color: rgba(0, 0, 0, 0.5); /* Тёмная подложка */
+}
+.modal-content {
+    background-color: #fff; /* Цвет фона */
+    margin: 10% auto; /* Отступы сверху и снизу */
+    padding: 20px; /* Внутренние отступы */
+    border-radius: 8px; /* Скругленные углы */
+    width: 80%; /* Ширина 80% */
+    max-width: 400px; /* Максимальная ширина */
+    position: relative; /* Относительное позиционирование */
+}
+.closeModal {
+    position: absolute; /* Абсолютное позиционирование */
+    top: 10px; /* Отступ сверху */
+    right: 15px; /* Отступ справа */
+    font-size: 24px; /* Размер шрифта */
+    font-weight: bold; /* Жирный шрифт */
+    cursor: pointer; /* Курсор в виде руки */
+}
+.modal-content form {
+    display: flex; /* Используем flexbox для выравнивания элементов */
+    flex-direction: column; /* Вертикальное выравнивание */
+    gap: 10px; /* Расстояние между элементами */
+}
+.modal-content input {
+    padding: 8px; /* Внутренние отступы */
+    border-radius: 4px; /* Скругленные углы */
+    border: 1px solid #ccc; /* Граница */
+}
+.modal-submit {
+    padding: 10px; /* Внутренние отступы */
+    border: none; /* Без границы */
+    border-radius: 4px; /* Скругленные углы */
+    background-color: #0070ba; /* Цвет фона */
+    color: #fff; /* Цвет текста */
+    cursor: pointer; /* Курсор в виде руки */
+}
+.modal-submit:hover {
+    background-color: #005f99; /* Цвет фона при наведении */
+}
+
+/* Тёмная тема для модального окна */
+body.dark-theme .modal-content {
+    background-color: #2b2b2b; /* Цвет фона */
+    color: #ffffff; /* Цвет текста */
+}
+body.dark-theme .modal-content input {
+    background-color: #3a3a3a; /* Цвет фона */
+    color: #fff; /* Цвет текста */
+    border: 1px solid #555; /* Граница */
+}
+body.dark-theme .closeModal {
+    color: #ffffff; /* Цвет текста */
+}
+body.dark-theme .modal-submit {
+    background-color: #555555; /* Цвет фона */
+}
+body.dark-theme .modal-submit:hover {
+    background-color: #666666; /* Цвет фона при наведении */
+}
+
+@media (max-width: 768px) {
+    .signup button {
+        width: 100%; /* На экранах шириной до 768px кнопка занимает 100% ширины родительского элемента */
+    }
+}
+
+.modal-content {
+    background-color: #fff; /* Белый фон модального окна */
+    margin: 10% auto; /* Располагаем окно по центру экрана с отступом 10% сверху */
+    padding: 20px; /* Внутренние отступы внутри модального окна */
+    border-radius: 8px; /* Скругленные углы окна */
+    width: 80%; /* Ширина окна составляет 80% от ширины экрана */
+    max-width: 400px; /* Максимальная ширина окна — 400px */
+    position: relative; /* Позиционируем относительно родительского контейнера */
+}
+
+.closeModal {
+    position: absolute; /* Абсолютное позиционирование внутри модального окна */
+    top: 10px; /* Располагаем кнопку закрытия в верхней части окна */
+    right: 15px; /* Отступ от правого края */
+    font-size: 24px; /* Размер шрифта кнопки закрытия */
+    font-weight: bold; /* Жирный шрифт для кнопки */
+    cursor: pointer; /* Изменяем указатель мыши при наведении */
+}
+
+.modal-content form {
+    display: flex; /* Используем flexbox для размещения полей формы */
+    flex-direction: column; /* Располагаем элементы формы в столбик */
+    gap: 10px; /* Расстояние между элементами формы */
+}
+
+.modal-content input {
+    padding: 8px; /* Внутренние отступы для поля ввода */
+    border-radius: 4px; /* Скругленные углы поля ввода */
+    border: 1px solid #ccc; /* Светло-серая рамка поля ввода */
+}
+
+.modal-submit {
+    padding: 10px; /* Внутренние отступы кнопки отправки формы */
+    border: none; /* Убираем рамку */
+    border-radius: 4px; /* Скругленные углы кнопки */
+    background-color: #0070ba; /* Синий фон кнопки */
+    color: #fff; /* Белый текст на кнопке */
+    cursor: pointer; /* Изменяем указатель мыши при наведении */
+}
+
+.modal-submit:hover {
+    background-color: #005f99; /* Темно-синий фон при наведении на кнопку */
+}
+
+/* Тёмная тема для модального окна */
+body.dark-theme .modal-content {
+    background-color: #2b2b2b; /* Тёмно-серый фон модального окна */
+    color: #ffffff; /* Белый текст внутри окна */
+}
+
+body.dark-theme .modal-content input {
+    background-color: #3a3a3a; /* Темный фон полей ввода */
+    color: #fff; /* Белый текст в полях ввода */
+    border: 1px solid #555; /* Тёмно-серая рамка для полей ввода */
+}
+
+body.dark-theme .closeModal {
+    color: #ffffff; /* Белый цвет кнопки закрытия */
+}
+
+body.dark-theme .modal-submit {
+    background-color: #555555; /* Тёмно-серый фон кнопки отправки */
+}
+
+body.dark-theme .modal-submit:hover {
+    background-color: #666666; /* Светло-серый фон при наведении на кнопку отправки */
+}
+
+@media (max-width: 768px) {
+    .signup button {
+        width: 100%; /* Кнопка в секции signup занимает всю ширину родителя на экранах до 768px */
+    }
+}
