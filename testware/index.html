@@ -11,6 +11,8 @@
     <script src="scriptmedia.js" defer></script>
     <script src="scripts.js" defer></script>
     <script src="imgslider.js" defer></script>
+    <script src="theme.js" defer></script>
+
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
@@ -29,8 +31,11 @@
         </div>
         <div class="header-right">
             <button class="login">Log In</button>
-            <!-- Кнопка переключения темы -->
-            <button class="toggle-theme" onclick="toggleTheme()">Toggle Dark Theme</button>
+            <a href="index.html" class="btn btn-light">Home</a>
+            <a href="about.html" class="btn btn-light">About Us</a>
+            <a href="cart.html" class="btn btn-light">Cart</a>
+            <button class="btn btn-dark toggle-theme">Dark Mode</button>
+
         </div>
     </header>
 
@@ -172,7 +177,6 @@
         </form>
     </section>
 
-    <!-- Footer Section -->
     <footer>
         <nav class="footer-menu">
             <ul>
@@ -192,7 +196,6 @@
         </div>
     </footer>
 
-    <!-- Модальное окно (скрыто по умолчанию) -->
     <div id="popupModal" class="modal">
         <div class="modal-content">
             <span class="closeModal">&times;</span>
@@ -209,7 +212,6 @@
         </div>
     </div>
 
-    <!-- Скрипты. Можно объединить в один файл или оставить здесь -->
     <script>
         // Переключение темы
         function toggleTheme() {

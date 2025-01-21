@@ -782,3 +782,417 @@ body {
 h1, h2, h3, h4, h5, h6 {
     font-family: 'Oswald', sans-serif;
 }
+/* styles.css */
+body {
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+
+
+.header-left .logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.header-left .logo-image {
+    width: 40px;
+    height: 40px;
+}
+
+.header-left .logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.cart-container {
+    margin-bottom: 20px;
+}
+
+.cart-summary {
+    background-color: #f8f9fa;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.cart-summary h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+footer {
+    background-color: #0070ba;
+    color: white;
+    padding: 10px 0;
+    width: 100%;
+    bottom: 0;
+}
+/* About Section */
+.about-section {
+    padding: 40px 20px;
+    background-color: #f3f3f3;
+}
+
+.about-content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.about-video {
+    flex: 1;
+    max-width: 500px;
+}
+
+.about-text {
+    flex: 1;
+    max-width: 500px;
+}
+
+.about-text h3 {
+    font-size: 24px;
+    color: #0070ba;
+}
+
+.about-text p {
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+/* Team Section */
+.team-section {
+    padding: 40px 20px;
+    background-color: #fff;
+    text-align: center;
+}
+
+.team-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.team-member {
+    flex: 1 1 calc(33.333% - 20px);
+    max-width: 250px;
+    text-align: center;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+
+.team-photo {
+    width: 100%;
+    height: auto;
+    border-radius: 50%;
+    margin-bottom: 15px;
+}
+
+.team-member h3 {
+    font-size: 18px;
+    color: #0070ba;
+}
+
+.team-member p {
+    font-size: 14px;
+    color: #333;
+}
+.related-products .card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.related-products .card-img-top {
+    height: 200px;
+    object-fit: cover;
+}
+/* Тёмная тема */
+body.dark-theme {
+    background-color: #121212; /* Тёмный фон */
+    color: #ffffff; /* Белый текст */
+}
+
+body.dark-theme header {
+    background-color: #1f1f1f; /* Тёмный фон для шапки */
+    color: #ffffff; /* Белый текст */
+}
+
+body.dark-theme .btn {
+    background-color: #333333; /* Тёмная кнопка */
+    color: #ffffff;
+}
+
+body.dark-theme .btn:hover {
+    background-color: #444444; /* Более светлый оттенок при наведении */
+}
+
+body.dark-theme .hero-text {
+    background-color: rgba(0, 0, 0, 0.6); /* Полупрозрачный фон */
+    color: #ffffff;
+}
+
+body.dark-theme .about-section, 
+body.dark-theme .team-section {
+    background-color: #1e1e1e; /* Тёмный фон */
+    color: #ffffff;
+}
+
+body.dark-theme .card {
+    background-color: #2b2b2b; /* Тёмный фон для карточек */
+    color: #ffffff;
+}
+
+body.dark-theme .footer-menu a {
+    color: #ffffff; /* Белый текст для ссылок в футере */
+}
+
+body.dark-theme footer {
+    background-color: #1f1f1f; /* Тёмный фон для футера */
+}
+/* Тёмная тема для команды */
+body.dark-theme .team-section {
+    background-color: #1e1e1e; /* Тёмный фон для всей секции */
+}
+
+body.dark-theme .team-grid {
+    background-color: transparent; /* Убираем белый фон */
+}
+
+body.dark-theme .team-member {
+    background-color: #2b2b2b; /* Тёмный фон карточек команды */
+    color: #ffffff; /* Белый текст */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5); /* Добавляем небольшую тень */
+}
+
+body.dark-theme .team-member h3,
+body.dark-theme .team-member p {
+    color: #ffffff; /* Белый текст для заголовков и описаний */
+}
+
+body.dark-theme .team-member img {
+    border: 2px solid #ffffff; /* Белая рамка вокруг изображения */
+}
+/* Основные стили для тёмной темы */
+body.dark-theme {
+    background-color: #121212; /* Тёмный фон */
+    color: #ffffff; /* Белый текст */
+}
+
+body.dark-theme header {
+    background-color: #1f1f1f; /* Тёмный фон для шапки */
+    color: #ffffff;
+}
+
+body.dark-theme .btn {
+    background-color: #333333; /* Тёмные кнопки */
+    color: #ffffff;
+}
+
+body.dark-theme .btn:hover {
+    background-color: #444444; /* Более светлый оттенок при наведении */
+}
+
+body.dark-theme .table {
+    background-color: #1e1e1e; /* Тёмный фон для таблицы */
+    color: #ffffff;
+}
+
+body.dark-theme .table-primary {
+    background-color: #333333; /* Тёмный фон заголовков таблицы */
+    color: #ffffff;
+}
+
+body.dark-theme .cart-summary {
+    background-color: #1e1e1e; /* Тёмный фон для общей суммы */
+    color: #ffffff;
+}
+
+body.dark-theme .related-products .card {
+    background-color: #1e1e1e; /* Тёмный фон карточек */
+    color: #ffffff;
+    border: 1px solid #333333; /* Добавляем границу */
+}
+
+body.dark-theme .related-products .btn {
+    background-color: #333333; /* Тёмные кнопки в карточках */
+    color: #ffffff;
+}
+
+body.dark-theme .related-products .btn:hover {
+    background-color: #444444; /* Более светлый оттенок при наведении */
+}
+/* Тёмный фон для строк корзины */
+body.dark-theme #cart-items {
+    background-color: #121212; /* Чёрный фон */
+    color: #ffffff; /* Белый текст */
+}
+
+/* Для каждой строки внутри таблицы */
+body.dark-theme #cart-items tr {
+    background-color: #1e1e1e; /* Тёмно-серый фон для строк */
+    color: #ffffff; /* Белый текст */
+}
+
+/* При наведении на строку */
+body.dark-theme #cart-items tr:hover {
+    background-color: #2a2a2a; /* Более светлый серый при наведении */
+}
+.hero-image {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+    transition: transform 0.5s ease, filter 0.5s ease;
+}
+
+.hero-image:hover {
+    transform: scale(1.05); /* Увеличение */
+    filter: brightness(0.8); /* Затемнение */
+}
+
+.hero-text {
+    animation: fadeIn 2s ease-out; /* Анимация появления */
+}
+
+/* Эффекты для видео */
+.video-frame {
+    border: 4px solid #0070ba;
+    border-radius: 8px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.video-frame:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Эффекты для карточек команды */
+.team-member {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.team-member:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+}
+
+.team-photo {
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.team-photo:hover {
+    transform: scale(1.1);
+    filter: brightness(0.8);
+}
+
+/* Эффекты для ссылок в футере */
+.footer-menu a {
+    position: relative;
+    color: #ffffff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-menu a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 0;
+    height: 2px;
+    background-color: #ffffff;
+    transition: width 0.3s ease;
+}
+
+.footer-menu a:hover {
+    color: #cce4ff;
+}
+
+.footer-menu a:hover::after {
+    width: 100%;
+}
+.facts {
+    padding: 40px 20px;
+    background-color: #f3f3f3;
+    text-align: center;
+}
+
+.facts-grid {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+.fact {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    flex: 1 1 30%;
+}
+
+.fact h3 {
+    font-size: 2em;
+    color: #0070ba;
+}
+
+.fact p {
+    font-size: 1.2em;
+    color: #333;
+}
+/* Тёмная тема для блока .facts */
+body.dark-theme .facts {
+    background-color: #1e1e1e; /* Тёмный фон */
+    color: #ffffff; /* Белый текст */
+}
+
+body.dark-theme .facts-grid .fact {
+    background-color: #2b2b2b; /* Тёмный фон для карточек */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5); /* Более глубокая тень */
+}
+
+body.dark-theme .facts-grid .fact h3 {
+    color: #66c0ff; /* Светло-синий текст */
+}
+
+body.dark-theme .facts-grid .fact p {
+    color: #cccccc; /* Светло-серый текст */
+}
+/* Увеличение видео */
+.about-video {
+    flex: 1; /* Видео занимает больше пространства */
+    max-width: 800px; /* Увеличенная ширина */
+}
+
+.video-frame {
+    width: 100%; /* Видео занимает всю ширину контейнера */
+    height: 450px; /* Увеличенная высота */
+    border: 4px solid #0070ba; /* Синяя рамка */
+    border-radius: 8px; /* Скругленные углы */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Анимация при наведении */
+}
+
+.video-frame:hover {
+    transform: scale(1.05); /* Увеличение при наведении */
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3); /* Тень */
+}
+
+/* Текст секции "Кто мы" */
+.about-text p {
+    font-size: 18px; /* Увеличенный размер текста */
+    line-height: 1.8; /* Интерлиньяж для читабельности */
+    margin-bottom: 15px; /* Отступ между абзацами */
+}
+
+.about-text h3 {
+    font-size: 24px; /* Заголовок крупнее */
+    color: #0070ba; /* Цвет PayPal */
+    margin-bottom: 20px; /* Отступ снизу */
+}
+
+
+
+
+
