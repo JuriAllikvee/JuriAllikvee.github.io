@@ -1,0 +1,228 @@
+.Main {
+    position: relative; /* Контейнер должен быть позиционирован */
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.rectangle-1 {
+    width: 500px;
+    height: 391px;
+    border-radius: 0px 59px 0px 0px;
+    border: 0.5px solid var(--white, #FFF);
+    background: rgba(0, 0, 0, 0.10);
+    backdrop-filter: blur(5.2px);
+    
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: 40px; /* Добавили больше отступа */
+    color: var(--white, #FFF);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.rectangle-content {
+    display: flex;
+    flex-direction: column; /* Размещаем элементы в столбик */
+    align-items: flex-start; /* Выравниваем текст строго влево */
+    position: relative;
+}
+
+.rectangle-texts {
+    flex-direction: column;
+    text-align: left;
+}
+
+.rectangle-title1 {
+    width: 249px;
+    height: 17px;
+    color: var(--white, #FFF);
+    top: 73px;
+    left: 92px;
+    font-family: Jomolhari;
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    position: absolute;
+}
+.rectangle-title2{
+    width: 297px;
+    height:77px;
+    top: 136px;
+    left: 92px;
+    color: var(--white, #FFF);
+    font-family: Jomolhari;
+   font-size: 48px;
+   font-style: normal;
+   font-weight: 400;
+   line-height: normal;
+   position: absolute;
+}
+
+.rectangle-text1 {
+    width: 291px;
+    height: 22px;
+    top: 233px;
+    left: 92px;
+    color: var(--white, #FFF);
+
+    /* MainUp3 */
+    font-family: Jomolhari;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    position: absolute;
+}
+.rectangle-text2 {
+    width: 304px;
+    height: 22px;
+    top: 255px;
+    left: 92px;
+    color: var(--white, #FFF);
+    /* MainUp3 */
+    font-family: Jomolhari;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    position: absolute;
+}
+
+.vector-icon {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    padding: 10px;
+    cursor: pointer;
+    position: absolute;
+    right: 20px;
+
+}
+.rectangle-2{
+    width: 248px;
+    height: 188px;
+    flex-shrink: 0;
+    border-radius: 40px;
+    border: 0.5px solid var(--white, #FFF);
+    background: rgba(0, 0, 0, 0.21);
+    backdrop-filter: blur(5.199999809265137px);
+    position: absolute;
+    top: 753px;
+    left: 1415px;
+    border-radius: 40px;
+    border: 0.5px solid var(--white, #FFF);
+}
+.text_200 {
+    font-family: Roboto;
+    font-size: 55px;
+    font-weight: 400;
+    color: var(--white, #ffffff);
+    width: 93px;
+    height: 64px;
+    position: absolute;
+    bottom: 60px;
+    margin-left: 15px;
+}
+.text_Unite{
+    color: var(--white, #ffffff);
+    text-align: left;
+    font-family: var(--robottext-font-family, "Roboto-Regular", sans-serif);
+    font-size: var(--robottext-font-size, 14px);
+    font-weight: var(--robottext-font-weight, 400);
+    position: absolute;
+    top: 100px;
+    margin-left: 15px;
+}
+.text_months{
+    color: var(--white, #ffffff);
+    text-align: left;
+    font-family: var(--robottext-font-family, "Roboto-Regular", sans-serif);
+    font-size: var(--robottext-font-size, 14px);
+    font-weight: var(--robottext-font-weight, 400);
+    position: absolute;
+    top: 120px;
+    margin-left: 15px;
+}
+.ellipse{
+    background: var(--pink, #fcc4dd);
+    border-radius: 50%;
+    width: 42px;
+    height: 42px;
+    position: absolute;
+    left: 170px;
+    top: 15px;
+    position: relative;
+    
+}
+.vector-icon-1{
+    width: 22px;
+    height: 18px;
+    position: relative;
+    object-fit: cover;
+    aspect-ratio: 22/18;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Центрируем */
+}
+.rectangle-3{
+    width: 248px;
+    height: 188px;
+    flex-shrink: 0;
+    border-radius: 40px;
+    border: 0.5px solid var(--white, #FFF);
+    background: rgba(0, 0, 0, 0.21);
+    backdrop-filter: blur(5.199999809265137px);
+    position: absolute;
+    top: 519px;
+    left: 1167px;
+    border-radius: 40px;
+    border: 0.5px solid var(--white, #FFF);
+}
+.text_15years{
+    color: var(--white, #ffffff);
+    text-align: left;
+    font-family: var(--robottext-font-family, "Roboto-Regular", sans-serif);
+    font-size: var(--robottext-font-size, 14px);
+    font-weight: var(--robottext-font-weight, 400);
+    position: relative;
+    top: 100px;
+    margin-left: 15px;
+}
+.text_of_experience{
+    color: var(--white, #ffffff);
+    text-align: left;
+    font-family: var(--robottext-font-family, "Roboto-Regular", sans-serif);
+    font-size: var(--robottext-font-size, 14px);
+    font-weight: var(--robottext-font-weight, 400);
+    position: absolute;
+    top: 120px;
+    margin-left: 15px;
+
+}
+.ellipse_2{
+    background: var(--blue, #9dd6ff);
+    border-radius: 50%;
+    width: 42px;
+    height: 42px;
+    left: 170px;
+    top: 15px;
+    position: absolute;
+}
+.vector-icon-2{
+    width: 25px;
+    height: 22px;
+    position: relative;
+    object-fit: cover;
+    aspect-ratio: 22/18;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Центрируем */
+}

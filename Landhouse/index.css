@@ -1,0 +1,1150 @@
+:root {
+  --default-font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Ubuntu, "Helvetica Neue", Helvetica, Arial, "PingFang SC",
+    "Hiragino Sans GB", "Microsoft Yahei UI", "Microsoft Yahei",
+    "Source Han Sans CN", sans-serif;
+}
+
+.main-container {
+  overflow: hidden;
+}
+
+.main-container,
+.main-container * {
+  box-sizing: border-box;
+}
+
+input,
+select,
+textarea,
+button {
+  outline: 0;
+}
+
+.main-container {
+  position: relative;
+  width: 2133px;
+  height: 5683px;
+  margin: 0 auto;
+  background: #ffffff;
+  overflow: hidden;
+}
+.flex-row-daa {
+  position: relative;
+  width: 1263px;
+  height: 57px;
+  margin: 36px 0 0 756px;
+  z-index: 30;
+}
+.home {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  position: absolute;
+  height: 48px;
+  top: 0;
+  left: 0;
+  color: #ffffff;
+  font-family: Adobe Myungjo Std, var(--default-font-family);
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 48px;
+  text-align: left;
+  white-space: nowrap;
+  z-index: 26;
+}
+.services {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  position: absolute;
+  height: 48px;
+  top: 0;
+  left: 103px;
+  color: #ffffff;
+  font-family: Adobe Myungjo Std, var(--default-font-family);
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 48px;
+  text-align: left;
+  white-space: nowrap;
+  z-index: 25;
+}
+.about-us {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  position: absolute;
+  height: 48px;
+  top: 0;
+  left: 242px;
+  color: #ffffff;
+  font-family: Adobe Myungjo Std, var(--default-font-family);
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 48px;
+  text-align: left;
+  white-space: nowrap;
+  z-index: 27;
+}
+.contact-us {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  position: absolute;
+  height: 48px;
+  top: 0;
+  left: 389px;
+  color: #ffffff;
+  font-family: Adobe Myungjo Std, var(--default-font-family);
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 48px;
+  text-align: left;
+  white-space: nowrap;
+  z-index: 28;
+}
+.regroup {
+  position: absolute;
+  width: 143px;
+  height: 57px;
+  top: 0;
+  left: 1120px;
+  z-index: 30;
+}
+.eng {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  position: absolute;
+  height: 48px;
+  top: 9px;
+  left: 0;
+  color: #000000;
+  font-family: Adobe Myungjo Std, var(--default-font-family);
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 48px;
+  text-align: left;
+  white-space: nowrap;
+  z-index: 29;
+}
+.est {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  position: absolute;
+  height: 48px;
+  top: 9px;
+  left: 91px;
+  color: #000000;
+  font-family: Adobe Myungjo Std, var(--default-font-family);
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 48px;
+  text-align: left;
+  white-space: nowrap;
+  z-index: 30;
+}
+.flex-row {
+  position: relative;
+  width: 344px;
+  height: 370px;
+  margin: 55px 0 0 375px;
+  z-index: 21;
+}
+.the {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  position: absolute;
+  height: 192px;
+  top: 0;
+  left: 72px;
+  color: #000000;
+  font-family: Adobe Myungjo Std, var(--default-font-family);
+  font-size: 96px;
+  font-weight: 500;
+  line-height: 192px;
+  text-align: left;
+  white-space: nowrap;
+  z-index: 16;
+}
+.perfect {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  position: absolute;
+  height: 192px;
+  top: 87px;
+  left: 0;
+  color: #000000;
+  font-family: Adobe Myungjo Std, var(--default-font-family);
+  font-size: 96px;
+  font-weight: 500;
+  line-height: 192px;
+  text-align: left;
+  white-space: nowrap;
+  z-index: 21;
+}
+.home-1 {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  position: absolute;
+  height: 192px;
+  top: 178px;
+  left: 30px;
+  color: #000000;
+  font-family: Adobe Myungjo Std, var(--default-font-family);
+  font-size: 96px;
+  font-weight: 500;
+  line-height: 192px;
+  text-align: left;
+  white-space: nowrap;
+  z-index: 18;
+}
+.we-build-custome-home {
+  display: block;
+  position: relative;
+  height: 48px;
+  margin: 16px 0 0 403px;
+  color: #ffffff;
+  font-family: Adobe Myungjo Std, var(--default-font-family);
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 48px;
+  text-align: left;
+  white-space: nowrap;
+  z-index: 22;
+}
+.flex-row-fc {
+  position: relative;
+  width: 130px;
+  height: 48px;
+  margin: 0 0 0 462px;
+  z-index: 24;
+}
+.start {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  position: absolute;
+  height: 48px;
+  top: 0;
+  left: 36px;
+  color: #ffffff;
+  font-family: Adobe Myungjo Std, var(--default-font-family);
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 48px;
+  text-align: left;
+  white-space: nowrap;
+  z-index: 24;
+}
+.rectangle {
+  position: absolute;
+  width: 130px;
+  height: 40px;
+  top: 5px;
+  left: 0;
+  background: #3c5556;
+  z-index: 23;
+  border-radius: 14px;
+}
+.flex-row-db {
+  position: relative;
+  width: 1895px;
+  height: 155px;
+  margin: 162px 0 0 115px;
+  z-index: 20;
+}
+.we-can-combine-nature-home-comfort {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  position: absolute;
+  width: 460px;
+  height: 134px;
+  top: 0;
+  left: 1435px;
+  color: #ffffff;
+  font-family: Adobe Hebrew, var(--default-font-family);
+  font-size: 36px;
+  font-weight: 400;
+  line-height: 45px;
+  text-align: left;
+  z-index: 17;
+}
+.m-plus {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  position: absolute;
+  height: 94px;
+  top: 41px;
+  left: 0;
+  color: #ffffff;
+  font-family: Adobe Myungjo Std, var(--default-font-family);
+  font-size: 48px;
+  font-weight: 500;
+  line-height: 94px;
+  text-align: left;
+  white-space: nowrap;
+  z-index: 19;
+}
+.customers {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  position: absolute;
+  height: 40px;
+  top: 115px;
+  left: 14px;
+  color: #ffffff;
+  font-family: Adobe Myungjo Std, var(--default-font-family);
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 40px;
+  text-align: left;
+  white-space: nowrap;
+  opacity: 0.74;
+  z-index: 20;
+}
+.line {
+  position: relative;
+  width: 311.01px;
+  height: 4.02px;
+  margin: -4px 0 0 1549.99px;
+  background: url(./assets/images/106ce55f-1431-40e3-995c-215f37b26ef2.png)
+    no-repeat center;
+  background-size: cover;
+  z-index: 31;
+}
+.flex-row-e {
+  position: relative;
+  width: 1373.411px;
+  height: 1532px;
+  margin: 643.98px 0 0 380px;
+  z-index: 8;
+}
+.jp-valery-obpopgvhu-unsplash {
+  position: absolute;
+  width: 634.423px;
+  height: 423px;
+  top: 0;
+  left: 737px;
+  background: url(./assets/images/b008e14a8014cb842c6e85d2f34230b855108b95.png)
+    no-repeat center;
+  background-size: cover;
+  z-index: 5;
+}
+.find-your-dream-home {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  position: absolute;
+  height: 96px;
+  top: 2px;
+  left: 22px;
+  color: #000000;
+  font-family: Adobe Myungjo Std, var(--default-font-family);
+  font-size: 48px;
+  font-weight: 500;
+  line-height: 96px;
+  text-align: left;
+  white-space: nowrap;
+}
+.searching-for-a-cozy-retreat {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  position: absolute;
+  width: 715px;
+  height: 1028px;
+  top: 207px;
+  left: 22px;
+  color: #000000;
+  font-family: Adobe Myungjo Std, var(--default-font-family);
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 48px;
+  text-align: left;
+  opacity: 0.94;
+  z-index: 2;
+}
+.faizan-nazir-lxabccdqi-unsplash {
+  position: absolute;
+  width: 678px;
+  height: 904px;
+  top: 386px;
+  left: 0;
+  background: url(./assets/images/01a6b31e25d172a3d306529ebdfe0791da0c411d.png)
+    no-repeat center;
+  background-size: cover;
+  z-index: 4;
+}
+.here {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  position: absolute;
+  height: 96px;
+  top: 357px;
+  left: 22px;
+  color: #000000;
+  font-family: Adobe Myungjo Std, var(--default-font-family);
+  font-size: 48px;
+  font-weight: 500;
+  line-height: 96px;
+  text-align: left;
+  white-space: nowrap;
+  z-index: 1;
+}
+.mikel-ibarluzea-zycbbjvch-unsplash {
+  position: absolute;
+  width: 639.411px;
+  height: 959px;
+  top: 443px;
+  left: 734px;
+  background: url(./assets/images/744e7bda5a2fa9706df1ab416697b7c0bd7ff64b.png)
+    no-repeat center;
+  background-size: cover;
+  z-index: 6;
+}
+.custom-designed-homes {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  position: absolute;
+  width: 715px;
+  height: 215px;
+  top: 1317px;
+  left: 22px;
+  color: #000000;
+  font-family: Adobe Myungjo Std, var(--default-font-family);
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 48px;
+  text-align: left;
+  opacity: 0.94;
+  z-index: 3;
+}
+.rectangle-2 {
+  position: absolute;
+  width: 9.47%;
+  height: 2.61%;
+  top: 93.08%;
+  left: 90.36%;
+  background: #3c5556;
+  z-index: 8;
+  border-radius: 14px;
+}
+.learn-more {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  position: absolute;
+  height: 90%;
+  top: 2.5%;
+  left: 11.54%;
+  color: #ffffff;
+  font-family: Adobe Myungjo Std, var(--default-font-family);
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 36px;
+  text-align: left;
+  white-space: nowrap;
+  z-index: 9;
+}
+.line-3 {
+  position: relative;
+  width: 1432px;
+  height: 3px;
+  margin: 97px 0 0 319px;
+  background: url(./assets/images/662fd1b1-6441-4ad9-a078-e5eac79e2107.png)
+    no-repeat center;
+  background-size: cover;
+  z-index: 40;
+}
+.desktop-4 {
+  position: relative;
+  width: 1440px;
+  height: 699px;
+  margin: 62px 0 0 313px;
+  font-size: 0px;
+  background: #ffffff;
+  z-index: 32;
+  overflow: hidden;
+}
+.recent-project {
+  display: block;
+  position: relative;
+  height: 128px;
+  margin: 15px 0 0 13px;
+  color: #000000;
+  font-family: Adobe Myungjo Std, var(--default-font-family);
+  font-size: 64px;
+  font-weight: 500;
+  line-height: 128px;
+  text-align: left;
+  white-space: nowrap;
+  z-index: 33;
+}
+.flex-row-a {
+  position: relative;
+  width: 1432px;
+  height: 622px;
+  margin: 0 0 0 6px;
+  z-index: 41;
+}
+.line-5 {
+  position: absolute;
+  width: 2px;
+  height: 483px;
+  top: 0;
+  left: 466px;
+  background: url(./assets/images/efb1a199-99a4-47a2-a4dd-926264f0ee32.png)
+    no-repeat center;
+  background-size: cover;
+  z-index: 36;
+}
+.sustainable-homes {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  position: absolute;
+  width: 386px;
+  height: 587px;
+  top: 35px;
+  left: 982px;
+  color: #000000;
+  font-family: Adobe Myungjo Std, var(--default-font-family);
+  font-size: 25px;
+  font-weight: 500;
+  line-height: 50px;
+  text-align: left;
+  opacity: 0.94;
+  z-index: 39;
+}
+.rectangle-6 {
+  position: absolute;
+  width: 444px;
+  height: 321px;
+  top: 46px;
+  left: 481px;
+  background: url(./assets/images/ccd29429cd099aabcb317fd3fc565b4b7c4e5148.png)
+    no-repeat center;
+  background-size: cover;
+  z-index: 38;
+}
+.rectangle-7 {
+  position: absolute;
+  width: 444px;
+  height: 321px;
+  top: 49px;
+  left: 7px;
+  background: url(./assets/images/5fdb7f9912164780f62ed07a4f734cbee2037ccc.png)
+    no-repeat center;
+  background-size: cover;
+  z-index: 37;
+}
+.green-living-spaces {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  position: absolute;
+  width: 715px;
+  height: 215px;
+  top: 375px;
+  left: 7px;
+  color: #000000;
+  font-family: Adobe Myungjo Std, var(--default-font-family);
+  font-size: 25px;
+  font-weight: 500;
+  line-height: 50px;
+  text-align: left;
+  opacity: 0.94;
+  z-index: 34;
+}
+.serene-forest-retreats {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  position: absolute;
+  height: 52px;
+  top: 375px;
+  left: 484px;
+  color: #000000;
+  font-family: Adobe Myungjo Std, var(--default-font-family);
+  font-size: 25px;
+  font-weight: 500;
+  line-height: 50px;
+  text-align: left;
+  white-space: nowrap;
+  opacity: 0.94;
+  z-index: 35;
+}
+.line-8 {
+  position: absolute;
+  width: 1432px;
+  height: 3px;
+  top: 553px;
+  left: 0;
+  background: url(./assets/images/cc7a1528-0bb1-437f-972d-17cce589984e.png)
+    no-repeat center;
+  background-size: cover;
+  z-index: 41;
+}
+.desktop-9 {
+  position: relative;
+  width: 1440px;
+  height: 1024px;
+  margin: 27px 0 0 319px;
+  background: #ffffff;
+  z-index: 42;
+  overflow: hidden;
+}
+.flex-row-c {
+  position: relative;
+  width: 292px;
+  height: 324px;
+  margin: -24px 0 0 514px;
+  z-index: 44;
+}
+.our {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  position: absolute;
+  height: 192px;
+  top: 0;
+  left: 60px;
+  color: #000000;
+  font-family: Adobe Myungjo Std, var(--default-font-family);
+  font-size: 96px;
+  font-weight: 500;
+  line-height: 192px;
+  text-align: left;
+  white-space: nowrap;
+  z-index: 43;
+}
+.vision {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  position: absolute;
+  height: 192px;
+  top: 132px;
+  left: 0;
+  color: #000000;
+  font-family: Adobe Myungjo Std, var(--default-font-family);
+  font-size: 96px;
+  font-weight: 500;
+  line-height: 192px;
+  text-align: left;
+  white-space: nowrap;
+  z-index: 44;
+}
+.goal-eco-friendly {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  position: absolute;
+  width: 715px;
+  height: 215px;
+  top: 297px;
+  left: 514px;
+  color: #000000;
+  font-family: Adobe Myungjo Std, var(--default-font-family);
+  font-size: 25px;
+  font-weight: 500;
+  line-height: 50px;
+  text-align: left;
+  opacity: 0.94;
+  z-index: 49;
+}
+.flex-row-bd {
+  position: absolute;
+  width: 1259px;
+  height: 675px;
+  top: 300px;
+  left: 24px;
+  z-index: 55;
+}
+.photo {
+  position: absolute;
+  width: 450.608px;
+  height: 675px;
+  top: 0;
+  left: 0;
+  background: url(./assets/images/16f722a08dbbef9745498a6bf5693afa1e82c00d.png)
+    no-repeat center;
+  background-size: cover;
+  z-index: 52;
+}
+.modern-eco-homes {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  position: absolute;
+  height: 64px;
+  top: 212px;
+  left: 490px;
+  color: #000000;
+  font-family: Adobe Myungjo Std, var(--default-font-family);
+  font-size: 32px;
+  font-weight: 500;
+  line-height: 64px;
+  text-align: left;
+  white-space: nowrap;
+  z-index: 45;
+  -webkit-text-stroke: 0.5px #000000;
+}
+.line-a {
+  position: absolute;
+  width: 2px;
+  height: 368px;
+  top: 212px;
+  left: 861px;
+  background: url(./assets/images/558b41f4-b2ff-457c-96e4-33b891a2c84f.png)
+    no-repeat center;
+  background-size: cover;
+  z-index: 53;
+}
+.quality-reliability {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  position: absolute;
+  height: 64px;
+  top: 212px;
+  left: 944px;
+  color: #000000;
+  font-family: Adobe Myungjo Std, var(--default-font-family);
+  font-size: 32px;
+  font-weight: 500;
+  line-height: 64px;
+  text-align: left;
+  white-space: nowrap;
+  z-index: 48;
+  -webkit-text-stroke: 0.5px #000000;
+}
+.component {
+  position: absolute;
+  width: 48px;
+  height: 49px;
+  top: 492px;
+  left: 484px;
+  background: url(./assets/images/65db3b1d-d540-4b86-92bf-ae7171d1cc96.png)
+    no-repeat center;
+  background-size: cover;
+  z-index: 54;
+}
+.component-b {
+  position: absolute;
+  width: 48px;
+  height: 49px;
+  top: 492px;
+  left: 957px;
+  background: url(./assets/images/8f5463b9-2256-494b-9534-2cd00f9ea09f.png)
+    no-repeat center;
+  background-size: cover;
+  z-index: 55;
+}
+.flex-row-c {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: absolute;
+  width: 798px;
+  height: 116px;
+  top: 576px;
+  left: 514px;
+  z-index: 51;
+}
+.cutting-edge-technology {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-shrink: 0;
+  position: relative;
+  width: 344px;
+  height: 116px;
+  color: #000000;
+  font-family: Adobe Myungjo Std, var(--default-font-family);
+  font-size: 25px;
+  font-weight: 500;
+  line-height: 50px;
+  text-align: left;
+  opacity: 0.94;
+  z-index: 50;
+}
+.high-quality-materials {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-shrink: 0;
+  position: relative;
+  width: 344px;
+  height: 116px;
+  color: #000000;
+  font-family: Adobe Myungjo Std, var(--default-font-family);
+  font-size: 25px;
+  font-weight: 500;
+  line-height: 50px;
+  text-align: left;
+  opacity: 0.94;
+  z-index: 51;
+}
+.flex-row-a-d {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: absolute;
+  width: 578px;
+  height: 40px;
+  top: 797px;
+  left: 572px;
+  z-index: 47;
+}
+.learn-more-e {
+  flex-shrink: 0;
+  position: relative;
+  height: 40px;
+  color: #000000;
+  font-family: Adobe Myungjo Std, var(--default-font-family);
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 40px;
+  text-align: left;
+  white-space: nowrap;
+  z-index: 46;
+  -webkit-text-stroke: 0.5px #000000;
+}
+.learn-more-f {
+  flex-shrink: 0;
+  position: relative;
+  height: 40px;
+  color: #000000;
+  font-family: Adobe Myungjo Std, var(--default-font-family);
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 40px;
+  text-align: left;
+  white-space: nowrap;
+  z-index: 47;
+  -webkit-text-stroke: 0.5px #000000;
+}
+.wireframe {
+  position: relative;
+  width: 1440px;
+  height: 512px;
+  margin: 136px 0 0 321px;
+  font-size: 0px;
+  background: #ffffff;
+  z-index: 56;
+  overflow: hidden;
+}
+.home-10 {
+  display: block;
+  position: relative;
+  height: 48px;
+  margin: 847px 0 0 506px;
+  color: #ffffff;
+  font-family: Adobe Myungjo Std, var(--default-font-family);
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 48px;
+  text-align: left;
+  white-space: nowrap;
+  z-index: 62;
+}
+.flex-row-f {
+  position: absolute;
+  width: 1456px;
+  height: 512px;
+  top: 0;
+  left: 0;
+  z-index: 70;
+}
+.rectangle-11 {
+  position: absolute;
+  width: 1456px;
+  height: 512px;
+  top: 0;
+  left: 0;
+  background: url(./assets/images/dc7847355274f4837925aa66067e245f99118323.png)
+    no-repeat center;
+  background-size: cover;
+  z-index: 57;
+}
+.sustainable-homes-12 {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  position: absolute;
+  height: 82px;
+  top: 6px;
+  left: 91px;
+  color: #ffffff;
+  font-family: Adobe Myungjo Std, var(--default-font-family);
+  font-size: 36px;
+  font-weight: 500;
+  line-height: 72px;
+  text-align: left;
+  white-space: nowrap;
+  z-index: 66;
+}
+.nature-in-mind {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  position: absolute;
+  height: 82px;
+  top: 68px;
+  left: 91px;
+  color: #ffffff;
+  font-family: Adobe Myungjo Std, var(--default-font-family);
+  font-size: 36px;
+  font-weight: 500;
+  line-height: 72px;
+  text-align: left;
+  white-space: nowrap;
+  opacity: 0.76;
+  z-index: 67;
+}
+.check-solid {
+  position: absolute;
+  width: 65px;
+  height: 78px;
+  top: 159px;
+  left: 98px;
+  background: url(./assets/images/02b41098-06f4-4ab5-a403-b2dd84b90571.png)
+    no-repeat center;
+  background-size: cover;
+  z-index: 64;
+  overflow: hidden;
+}
+.experienced-10-years {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  position: absolute;
+  height: 48px;
+  top: 183px;
+  left: 194px;
+  color: #ffffff;
+  font-family: Adobe Myungjo Std, var(--default-font-family);
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 48px;
+  text-align: left;
+  white-space: nowrap;
+  z-index: 68;
+}
+.check-solid-13 {
+  position: absolute;
+  width: 65px;
+  height: 78px;
+  top: 243px;
+  left: 98px;
+  background: url(./assets/images/74e51ca8-14f6-4c32-b1c2-7cf48c9b55ce.png)
+    no-repeat center;
+  background-size: cover;
+  z-index: 65;
+  overflow: hidden;
+}
+.eco-friendly-technologies {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  position: absolute;
+  height: 48px;
+  top: 263px;
+  left: 194px;
+  color: #ffffff;
+  font-family: Adobe Myungjo Std, var(--default-font-family);
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 48px;
+  text-align: left;
+  white-space: nowrap;
+  z-index: 69;
+}
+.home-14 {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  position: absolute;
+  height: 48px;
+  top: 363px;
+  left: 487px;
+  color: #ffffff;
+  font-family: Adobe Myungjo Std, var(--default-font-family);
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 48px;
+  text-align: left;
+  white-space: nowrap;
+  z-index: 58;
+}
+.services-15 {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  position: absolute;
+  height: 48px;
+  top: 363px;
+  left: 579px;
+  color: #ffffff;
+  font-family: Adobe Myungjo Std, var(--default-font-family);
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 48px;
+  text-align: left;
+  white-space: nowrap;
+  z-index: 59;
+}
+.about-us-16 {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  position: absolute;
+  height: 48px;
+  top: 363px;
+  left: 705px;
+  color: #ffffff;
+  font-family: Adobe Myungjo Std, var(--default-font-family);
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 48px;
+  text-align: left;
+  white-space: nowrap;
+  z-index: 60;
+}
+.contact-us-17 {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  position: absolute;
+  height: 48px;
+  top: 363px;
+  left: 839px;
+  color: #ffffff;
+  font-family: Adobe Myungjo Std, var(--default-font-family);
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 48px;
+  text-align: left;
+  white-space: nowrap;
+  z-index: 61;
+}
+.line-18 {
+  position: absolute;
+  width: 1270px;
+  height: 1px;
+  top: 449px;
+  left: 60px;
+  background: url(./assets/images/69df7f4e-f16c-4449-aa9d-201eaae6115d.png)
+    no-repeat center;
+  background-size: cover;
+  z-index: 63;
+}
+.terms-privacy-policy {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  position: absolute;
+  height: 40px;
+  top: 450px;
+  left: 992px;
+  color: #ffffff;
+  font-family: Adobe Myungjo Std, var(--default-font-family);
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 40px;
+  text-align: left;
+  white-space: nowrap;
+  z-index: 70;
+}
+.luxurious-villa {
+  position: absolute;
+  width: 2133px;
+  height: 1080px;
+  top: -1px;
+  left: 0;
+  background: url(./assets/images/d6c1ae90487a3b1aa1cb8804dcd854f3c3104f06.png)
+    no-repeat center;
+  background-size: cover;
+  z-index: 15;
+}
+.desktop-19 {
+  position: absolute;
+  width: 2133px;
+  height: 425px;
+  top: 1056px;
+  left: 0;
+  font-size: 0px;
+  background: url(./assets/images/01dea789e389a01f35449260e20e63273849cb89.png)
+    no-repeat center;
+  background-size: cover;
+  z-index: 10;
+  overflow: hidden;
+}
+.quality-life {
+  display: block;
+  position: relative;
+  height: 96px;
+  margin: 21px 0 0 706px;
+  color: #ffffff;
+  font-family: Adobe Myungjo Std, var(--default-font-family);
+  font-size: 48px;
+  font-weight: 500;
+  line-height: 96px;
+  text-align: left;
+  white-space: nowrap;
+  z-index: 11;
+}
+.our-houses {
+  display: block;
+  position: relative;
+  height: 96px;
+  margin: 0 0 0 861px;
+  color: #ffffff;
+  font-family: Adobe Myungjo Std, var(--default-font-family);
+  font-size: 48px;
+  font-weight: 500;
+  line-height: 96px;
+  text-align: left;
+  white-space: nowrap;
+  z-index: 12;
+}
+.home-belief {
+  display: block;
+  position: relative;
+  height: 48px;
+  margin: 0 0 0 728px;
+  color: #ffffff;
+  font-family: Adobe Myungjo Std, var(--default-font-family);
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 48px;
+  text-align: left;
+  white-space: nowrap;
+  z-index: 13;
+}
+.memories-life-unfolds {
+  display: block;
+  position: relative;
+  height: 48px;
+  margin: 0 0 0 739px;
+  color: #ffffff;
+  font-family: Adobe Myungjo Std, var(--default-font-family);
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 48px;
+  text-align: left;
+  white-space: nowrap;
+  z-index: 14;
+}

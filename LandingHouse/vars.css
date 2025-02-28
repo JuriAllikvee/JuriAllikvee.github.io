@@ -1,0 +1,69 @@
+/* Figma Styles of your File */
+:root {
+  /* Colors */
+  --black: #000000;
+  --white: #ffffff;
+  --blue: #9dd6ff;
+  --pink: #fcc4dd;
+  --green: #154d1a;
+  --purple: #deadff;
+
+  /* Fonts */
+  --mainup-font-family: Jomolhari-Regular, sans-serif;
+  --mainup-font-size: 48px;
+  --mainup-line-height: normal;
+  --mainup-font-weight: 400;
+  --mainup-font-style: normal;
+  --mainup2-font-family: Jomolhari-Regular, sans-serif;
+  --mainup2-font-size: 48px;
+  --mainup2-line-height: normal;
+  --mainup2-font-weight: 400;
+  --mainup2-font-style: normal;
+  --mainup3-font-family: Jomolhari-Regular, sans-serif;
+  --mainup3-font-size: 14px;
+  --mainup3-line-height: normal;
+  --mainup3-font-weight: 400;
+  --mainup3-font-style: normal;
+  --robottext-font-family: Roboto-Regular, sans-serif;
+  --robottext-font-size: 14px;
+  --robottext-line-height: normal;
+  --robottext-font-weight: 400;
+  --robottext-font-style: normal;
+  --robothuge-font-family: Roboto-Regular, sans-serif;
+  --robothuge-font-size: 55px;
+  --robothuge-line-height: normal;
+  --robothuge-font-weight: 400;
+  --robothuge-font-style: normal;
+  --robot2-font-family: Roboto-Regular, sans-serif;
+  --robot2-font-size: 20px;
+  --robot2-line-height: normal;
+  --robot2-font-weight: 400;
+  --robot2-font-style: normal;
+  --stylejamol-font-family: Jomolhari-Regular, sans-serif;
+  --stylejamol-font-size: 64px;
+  --stylejamol-line-height: normal;
+  --stylejamol-font-weight: 400;
+  --stylejamol-font-style: normal;
+  --jomolstylemain-font-family: Jomolhari-Regular, sans-serif;
+  --jomolstylemain-font-size: 40px;
+  --jomolstylemain-line-height: normal;
+  --jomolstylemain-font-weight: 400;
+  --jomolstylemain-font-style: normal;
+  --robot4-font-family: Roboto-Regular, sans-serif;
+  --robot4-font-size: 30px;
+  --robot4-line-height: normal;
+  --robot4-font-weight: 400;
+  --robot4-font-style: normal;
+  --robot5-font-family: Roboto-Regular, sans-serif;
+  --robot5-font-size: 24px;
+  --robot5-line-height: normal;
+  --robot5-font-weight: 400;
+  --robot5-font-style: normal;
+  --robot6-font-family: Roboto-Regular, sans-serif;
+  --robot6-font-size: 36px;
+  --robot6-line-height: normal;
+  --robot6-font-weight: 400;
+  --robot6-font-style: normal;
+
+  /* Effects */
+}
