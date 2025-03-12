@@ -1,0 +1,177 @@
+/* ======== Основные стили ========== */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background: url('img/kelen-loewen-hq-rh-3-nrua-2-w-unsplash-10.png') no-repeat center center/cover;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* ======== Хедер (верхняя панель) ========== */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+}
+
+/* Меню, поиск и профиль */
+.menu img, .profile-icon img {
+    width: 30px;
+    height: 30px;
+}
+
+.search-bar {
+    display: flex;
+    align-items: center;
+    width: 40%;
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 20px;
+    padding: 10px;
+}
+
+.search-bar input {
+    width: 100%;
+    border: none;
+    background: transparent;
+    color: white;
+    font-size: 14px;
+    outline: none;
+}
+
+.search-icon img {
+    width: 24px;
+    height: 24px;
+}
+
+/* ======== Основной контейнер ========== */
+.landing-page {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px;
+    height: 100vh;
+}
+
+/* ======== Текстовый блок (слева) ========== */
+.text-box {
+    background: rgba(0, 0, 0, 0.6);
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    width: 350px;
+    position: relative;
+    left: 5%;
+}
+
+/* ======== Карточки справа ========== */
+.info-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, auto);
+    gap: 20px;
+    position: absolute;
+    right: 10%;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.info-box:nth-child(1) {
+    transform: translateX(25px) translateY(-5px);
+}
+
+.info-box:nth-child(2) {
+    transform: translateX(-40px) translateY(15px);
+}
+
+.info-box:nth-child(3) {
+    transform: translateX(15px) translateY(25px);
+}
+
+/* ======== Стиль карточек ========== */
+.info-box {
+    width: 248px;
+    height: 188px;
+    flex-shrink: 0;
+    border-radius: 40px;
+    border: 0.5px solid rgba(255, 255, 255, 0.8);
+    background: rgba(0, 0, 0, 0.21);
+    backdrop-filter: blur(5.2px);
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    color: white;
+    position: relative;
+}
+
+/* Текст в карточках */
+.info-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 5px;
+}
+
+.info-content h2 {
+    font-size: 55px;
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin: 0;
+    white-space: nowrap;
+    letter-spacing: -1px;
+}
+
+.info-content p {
+    font-size: 14px;
+    margin: 0;
+    white-space: nowrap;
+}
+
+/* Иконки */
+.info-icon {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.info-icon img {
+    width: 38px;
+    height: 38px;
+    display: block;
+}
+
+/* ======== Адаптивность ========== */
+@media (max-width: 1024px) {
+    .landing-page {
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+    }
+
+    .text-box {
+        width: 90%;
+        text-align: center;
+        left: 0;
+    }
+
+    .info-grid {
+        position: static;
+        transform: none;
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+}
