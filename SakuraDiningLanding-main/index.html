@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sakura Dining</title>
+    <link rel="stylesheet" href="./styles.css">
+    <link rel="stylesheet" href="./est.js">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <a class="logo" href="#">
+                <img src="./img/logo.png" alt="Logo">
+                <span class="logo-text" data-en="Sakura Dining" data-et="Sakura Söögikoht">Sakura Dining</span>
+            </a>
+    
+            <nav class="header_nav">
+                <ul class="header__list">
+                    <li><a href="#!" data-en="HOME" data-et="AVALEHT">HOME</a></li>
+                    <li><a href="#!" data-en="ABOUT" data-et="MEIST">ABOUT</a></li>
+                    <li><a href="#!" data-en="MENU" data-et="MENÜÜ">MENU</a></li>
+                    <li><a href="#!" data-en="EVENTS" data-et="ÜRITUSED">EVENTS</a></li>
+                    <li><a href="#!" data-en="CONTACT" data-et="KONTAKT">CONTACT</a></li>
+                </ul>
+            </nav>
+    
+            <div class="language-switch">
+                <button onclick="switchLanguage('en')">EN</button>
+                <button onclick="switchLanguage('et')">ET</button>
+            </div>
+    
+            <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+        </div>
+    </header>
+    
+    <main class="main">
+        <section class="welcome">
+            <div class="container">
+                <div class="welcome__text">
+                    <h1 class="welcome__title" data-i18n="welcomeTitle">The Art of Japanese Cuisine</h1>
+                    <p class="welcome__desc" data-i18n="welcomeDesc">Experience the harmony of flavors and the refined aesthetics of Japanese cuisine.</p>
+                    <img src="./img/button.png" alt="" class="button-opacity">
+                </div>
+            </div>
+            <div id="bookingModal" class="modal">
+                <div class="modal-content">
+                    <span class="close">&times;</span>
+                    <h2>Book a Table</h2>
+                    <form>
+                        <label for="name">Name:</label>
+                        <input type="text" id="name" name="name" required>
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" required>
+                        <label for="date">Date:</label>
+                        <input type="date" id="date" name="date" required>
+                        <label for="time">Time:</label>
+                        <input type="time" id="time" name="time" required>
+                        <label for="guests">Number of Guests:</label>
+                        <input type="number" id="guests" name="guests" required>
+                        <button type="submit">Book Now</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+        <section class="section-sakura">
+            <div class="sakura__images">
+                <img src="./img/food-list-1.png" alt="Food 1" class="sakura__food">
+                <img src="./img/food-list-2.png" alt="Food 2" class="sakura__food2">
+            </div>
+            <div class="section__text__sakura">
+                <h1 class="section__sakura__title" data-i18n="sectionTitle">Welcome to Sakura Dining</h1>
+                <p class="section__sakura__desc" data-i18n="sectionDesc">
+                    Experience the harmony of flavors and the refined aesthetics of Japanese cuisine. 
+                    At Sakura Dining, we blend tradition with innovation to create an unforgettable dining experience.
+                    Enjoy handcrafted sushi, authentic ramen, and exquisite cocktails in a warm and elegant setting inspired by Japan’s timeless beauty.
+                </p>
+                <img src="./img/buutonblack.png" alt="button">
+            </div>
+        </section>
+        
+<!-- specials #1
+============================================= -->
+<section id="specials1" class="specials specials-1 menu-simple bg-overlay bg-parallax bg-overlay-dark">
+    <div class="container">
+        <div class="divider--shape-1up"></div>
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-10 col-md-offset-1">
+                <div class="dishes-wrapper">
+                    <div class="dishes-bordered">
+                        <div class="row">
+                            <div class="col-xs-12 col-sm-12 col-md-8 col-md-offset-2">
+                                <div class="heading heading-1 mb-50 text--center">
+                                    <h2 class="heading--title" data-i18n="specialDishes">Our Special Dishes</h2>
+                                    <div class="divider--shape-4"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-xs-12 col-sm-12 col-md-6">
+                                <div class="dish-panel">
+                                    <div class="dish--img">
+                                        <img src="./img/dish.png" alt="dish">
+                                    </div>
+                                    <div class="dish--content">
+                                        <div class="dish--content-bio">
+                                            <h3 class="dish--title" data-i18n="dish1">Sakura Sushi</h3>
+                                            <div class="dish--price">$26.95</div>
+                                        </div>
+                                        <p class="dish--desc" data-i18n="dish1Desc">Sashimi and signature rolls served with soy sauce.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-xs-12 col-sm-12 col-md-6">
+                                <div class="dish-panel">
+                                    <div class="dish--img">
+                                        <img src="./img/dish-1.png" alt="dish">
+                                    </div>
+                                    <div class="dish--content">
+                                        <div class="dish--content-bio">
+                                            <h3 class="dish--title" data-i18n="dish2">Ebi Nigiri</h3>
+                                            <div class="dish--price">$44.95</div>
+                                        </div>
+                                        <p class="dish--desc" data-i18n="dish2Desc">Freshly boiled and butterflied shrimp over seasoned sushi rice.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-xs-12 col-sm-12 col-md-6">
+                                <div class="dish-panel">
+                                    <div class="dish--img">
+                                        <img src="./img/dish-2.png" alt="dish">
+                                    </div>
+                                    <div class="dish--content">
+                                        <div class="dish--content-bio">
+                                            <h3 class="dish--title" data-i18n="dish3">Special Roll</h3>
+                                            <div class="dish--price">$28.95</div>
+                                        </div>
+                                        <p class="dish--desc" data-i18n="dish3Desc">Signature roll with fresh tuna, salmon, avocado, and cucumber.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-xs-12 col-sm-12 col-md-6">
+                                <div class="dish-panel">
+                                    <div class="dish--img">
+                                        <img src="./img/dish-3.png" alt="dish">
+                                    </div>
+                                    <div class="dish--content">
+                                        <div class="dish--content-bio">
+                                            <h3 class="dish--title" data-i18n="dish4">Beef Tataki</h3>
+                                            <div class="dish--price">$40.95</div>
+                                        </div>
+                                        <p class="dish--desc" data-i18n="dish4Desc">Thinly sliced beef sashimi served with signature soy sauce.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="divider--shape-1down"></div>
+    </div>
+</section>
+<section class="events-section">
+    <div class="container">
+        <h2 class="section-title" data-i18n="eventsTitle">Our New & Events</h2>
+        <div class="events-wrapper">
+            <div class="event-item">
+                <img src="./img/New-Food-1 .png" alt="The Art of Sushi Crafting">
+                <h3 class="event-title" data-i18n="event1Title">The Art of Sushi Crafting</h3>
+                <p class="event-desc" data-i18n="event1Desc">Sushi is more than just food—it's an experience. At Sakura Dining, we meticulously craft each roll, blending traditional flavors with modern artistry.</p>
+            </div>
+            <div class="event-item">
+                <img src="./img/New-Food-2.png" alt="Warm Your Soul with Ramen">
+                <h3 class="event-title" data-i18n="event2Title">Warm Your Soul with Ramen</h3>
+                <p class="event-desc" data-i18n="event2Desc">Nothing soothes the soul like a steaming bowl of authentic ramen. Our Tonkotsu Ramen is slow-cooked to perfection, topped with tender chashu pork and a soft-boiled egg.</p>
+            </div>
+            <div class="event-item">
+                <img src="./img/New-Food-3.png" alt="Seasonal Menu, Spring Specials">
+                <h3 class="event-title" data-i18n="event3Title">Seasonal Menu, Spring Specials</h3>
+                <p class="event-desc" data-i18n="event3Desc">Celebrate the beauty of spring with our limited-time Sakura Blossom Menu, featuring delicate seasonal ingredients. Enjoy dishes like Sakura Sushi Rolls.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="reviews-section">
+    <div class="container">
+        <h2 class="section-titles" data-i18n="reviewsTitle">Happy Customers</h2>
+        <div class="reviews-wrapper">
+            <div class="review-item">
+                <p class="review-text" data-i18n="review1">An unforgettable experience! The sushi was incredibly fresh, and the presentation was stunning. The atmosphere is warm and inviting, making it the perfect place for a special night out. Highly recommend!</p>
+                <div class="review-author">
+                    <img src="./img/Testimonial Author-1.png" alt="Daniel Morris">
+                    <p class="author-name">Daniel Morris</p>
+                </div>
+            </div>
+            <div class="review-item">
+                <p class="review-text" data-i18n="review2">I've been to many Japanese restaurants, but Sakura Dining stands out! The ramen broth was rich and flavorful, and the service was exceptional. Can't wait to come back!</p>
+                <div class="review-author">
+                    <img src="./img/Testimonial Author-2.png" alt="James Mitchell">
+                    <p class="author-name">James Mitchell</p>
+                </div>
+            </div>
+            <div class="review-item">
+                <p class="review-text" data-i18n="review3">Best ramen I've had outside of Japan! The broth was deep and flavorful, and the chashu pork was incredibly tender. I'll be back for more!</p>
+                <div class="review-author">
+                    <img src="./img/Testimonial Author.png" alt="David Thompson">
+                    <p class="author-name">David Thompson</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+    
+<!-- #specials1 end -->
+    </main>
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-wrapper">
+                <div class="footer-column">
+                    <h3 class="footer-title"></h3>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="footer-column footer-center">
+                    <h3 class="footer-brand">Sakura Dining</h3>
+                    <p class="footer-desc">Sakura Dining invites you to experience the authentic flavors of Japan in a refined and welcoming atmosphere. Enjoy handcrafted sushi, flavorful ramen, and expertly curated sake, all prepared with the finest ingredients.</p>
+                </div>
+                <div class="footer-column">
+                    <h3 class="footer-title">Contact Us</h3>
+                    <div class="newsletter">
+                        <input type="email" placeholder="Your email address">
+                        <button>Join</button>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-nav">
+                <a href="#">HOME</a>
+                <a href="#">ABOUT</a>
+                <a href="#">MENU</a>
+                <a href="#">BLOG</a>
+                <a href="#">SHOP</a>
+                <a href="#">ELEMENTS</a>
+            </div>
+        </div>
+    </footer>
+    <script>
+        function toggleMenu() {
+            document.querySelector(".header_nav").classList.toggle("active");
+        }
+        function switchLanguage(lang) {
+    document.querySelectorAll('[data-en], [data-et]').forEach(el => {
+        if (el.getAttribute(`data-${lang}`)) {
+            el.textContent = el.getAttribute(`data-${lang}`);
+        }
+    });
+}
+const translations = {
+    en: {
+        logo: "Sakura Dining",
+        home: "HOME",
+        about: "ABOUT",
+        menu: "MENU",
+        events: "EVENTS",
+        contact: "CONTACT",
+        welcomeTitle: "The Art of Japanese Cuisine",
+        welcomeDesc: "Experience the harmony of flavors and the refined aesthetics of Japanese cuisine.",
+        sectionTitle: "Welcome to Sakura Dining",
+        sectionDesc: "Experience the harmony of flavors and the refined aesthetics of Japanese cuisine. At Sakura Dining, we blend tradition with innovation to create an unforgettable dining experience. Enjoy handcrafted sushi, authentic ramen, and exquisite cocktails in a warm and elegant setting inspired by Japan’s timeless beauty.",
+        specialDishes: "Our Special Dishes",
+        dish1: "Sakura Sushi",
+        dish1Desc: "Sashimi and signature rolls served with soy sauce.",
+        dish2: "Ebi Nigiri",
+        dish2Desc: "Freshly boiled and butterflied shrimp over seasoned sushi rice.",
+        dish3: "Special Roll",
+        dish3Desc: "Signature roll with fresh tuna, salmon, avocado, and cucumber.",
+        dish4: "Beef Tataki",
+        dish4Desc: "Thinly sliced beef sashimi served with signature soy sauce.",
+        eventsTitle: "Our New & Events",
+                event1Title: "The Art of Sushi Crafting",
+                event1Desc: "Sushi is more than just food—it's an experience. At Sakura Dining, we meticulously craft each roll, blending traditional flavors with modern artistry.",
+                event2Title: "Warm Your Soul with Ramen",
+                event2Desc: "Nothing soothes the soul like a steaming bowl of authentic ramen. Our Tonkotsu Ramen is slow-cooked to perfection, topped with tender chashu pork and a soft-boiled egg.",
+                event3Title: "Seasonal Menu, Spring Specials",
+                event3Desc: "Celebrate the beauty of spring with our limited-time Sakura Blossom Menu, featuring delicate seasonal ingredients. Enjoy dishes like Sakura Sushi Rolls."
+        
+        
+    },
+    et: {
+        logo: "Sakura Söögikoht",
+        home: "AVALEHT",
+        about: "MEIST",
+        menu: "MENÜÜ",
+        events: "ÜRITUSED",
+        contact: "KONTAKT",
+        welcomeTitle: "Jaapani köögi kunst",
+        welcomeDesc: "Koge maitsete harmooniat ja Jaapani köögi rafineeritud esteetikat.",
+        sectionTitle: "Tere tulemast Sakura Söögikohta",
+        sectionDesc: "Koge maitsete harmooniat ja Jaapani köögi rafineeritud esteetikat. Sakura Söögikohas ühendame traditsiooni innovatsiooniga, et pakkuda unustamatut toiduelamust. Naudi käsitsi valmistatud sushit, autentset ramenit ja eksklusiivseid kokteile elegantses atmosfääris, mis on inspireeritud Jaapani ajatust ilust.",
+        specialDishes: "Meie eriroad",
+                dish1: "Sakura Sushi",
+                dish1Desc: "Sashimi ja erirullid serveeritud sojakastmega.",
+                dish2: "Ebi Nigiri",
+                dish2Desc: "Värskelt keedetud ja lõhestatud krevett maitsestatud sushi riisil.",
+                dish3: "Eriline rull",
+                dish3Desc: "Erirull värske tuunikala, lõhe, avokaado ja kurgiga.",
+                dish4: "Veiseliha Tataki",
+                dish4Desc: "Õhukeselt viilutatud veiseliha sashimi erilise sojakastmega.",
+                eventsTitle: "Uudised ja üritused",
+                event1Title: "Sushi valmistamise kunst",
+                event1Desc: "Sushi pole lihtsalt toit, vaid kogemus. Sakura söögikohas valmistame hoolikalt iga sushi-rulli, ühendades traditsioonilised maitsed kaasaegse kunstiga.",
+                event2Title: "Soojenda hinge Rameniga",
+                event2Desc: "Miski ei soojenda hinge paremini kui aurav kausitäis autentset ramenit. Meie Tonkotsu ramen on aeglaselt valminud täiuslikkuseni, kaunistatud õrna chashu sealihaga ja pehmeks keedetud munaga.",
+                event3Title: "Hooajaline menüü, kevadised eriroad",
+                event3Desc: "Tähista kevade ilu meie piiratud aja Sakura õite menüüga, mis sisaldab õrnu hooajalisi koostisosi. Naudi roogi nagu Sakura sushi-rullid."
+    }
+};
+
+function switchLanguage(lang) {
+    document.querySelectorAll('[data-i18n]').forEach(el => {
+        const key = el.getAttribute('data-i18n');
+        if (translations[lang][key]) {
+            el.textContent = translations[lang][key];
+        }
+    });
+}
+
+switchLanguage('en');
+
+function toggleMenu() {
+    document.querySelector(".header_nav").classList.toggle("active");
+}
+// Get the modal
+var modal = document.getElementById("bookingModal");
+
+// Get the button that opens the modal
+var btn = document.querySelector(".button-opacity");
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks the button, open the modal 
+btn.onclick = function() {
+    modal.style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+    modal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+        </script>
+        
+</body>
+</html>

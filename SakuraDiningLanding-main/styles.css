@@ -1,0 +1,895 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Redressed&family=Roboto:ital,wght@0,100..900;1,100..900&family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&display=swap');
+
+
+body{
+    background-color: black;
+    margin: 0;
+}
+a{
+    color: white;
+    text-decoration: none;
+}
+ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+h1, h2, h3, h4, h5, h6{
+    margin: 0;
+}
+.container{
+    max-width: 1400px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.header {
+    padding: 25px 0;
+
+}
+.header .container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header__logo {
+
+}
+
+.header_nav a {
+    color: #FFF;
+    font-family: Poppins;
+    font-size: 23px;
+    font-style: normal;
+    font-weight: 400;
+
+}
+.header_nav a:hover {
+    opacity: 0.9;
+
+}
+
+.header__list {
+    display: flex;
+    gap: 37px;
+
+}
+
+.btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 190px;
+    height: 42px;
+    background: linear-gradient(91deg, #9A809D 1.18%, #937A96 40.47%, #362D37 74.63%);
+    color: #FFF;
+    font-family: Poppins;
+    font-size: 23px;
+    font-style: normal;
+    font-weight: 400;
+    border-radius: 5px;
+    transition: opacity 0.3s;
+}
+.btn:hover{
+    opacity: 0.8;
+
+}
+
+.logo-text{
+    color: #FFF;
+    font-family: Redressed;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.main {
+
+}
+/*- Welcome section */
+
+
+
+
+.header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    padding: 20px 0;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 1000;
+    display: flex;
+    justify-content: center; /* Центрируем меню */
+    align-items: center;
+}
+
+.header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1400px;
+    width: 100%;
+    padding: 0 20px;
+}
+
+/* ✅ Логотип */
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo img {
+    width: 50px;
+    height: auto;
+}
+
+.logo-text {
+    color: #FFF;
+    font-family: Redressed, serif;
+    font-size: 40px;
+    font-weight: 400;
+}
+
+/* ✅ Меню */
+.header_nav {
+    display: flex;
+    justify-content: center;
+    flex: 1;
+}
+
+.header_nav .header__list {
+    display: flex;
+    gap: 30px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.header_nav a {
+    color: white;
+    font-size: 18px;
+    font-weight: 500;
+    text-decoration: none;
+    transition: opacity 0.3s;
+}
+
+.header_nav a:hover {
+    opacity: 0.8;
+}
+
+/* ✅ Кнопка-гамбургер */
+.menu-toggle {
+    display: none;
+    font-size: 24px;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+/* ✅ Центрированная секция welcome */
+.welcome {
+    background-image: url("./img/welcome-bg.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: flex-start; /* Поднимаем контент вверх */
+    justify-content: center;
+    text-align: center;
+    height: 100vh;
+    padding-top: 120px; /* Поднимаем текст */
+    position: relative;
+}
+
+/* ✅ Центрируем текст */
+.welcome__text {
+    max-width: 800px;
+    text-align: center;
+    margin-top: -293px;
+}
+
+/* ✅ Заголовок */
+.welcome__title {
+    color: #FFF;
+    font-family: "Source Serif Pro", serif;
+    font-size: 64px;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
+
+/* ✅ Описание */
+.welcome__desc {
+    color: #FFF;
+    font-family: Roboto, sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 1.5;
+    margin-bottom: 30px;
+}
+
+/* ✅ Кнопка */
+.button-opacity {
+    display: inline-block;
+    width: 220px;
+    height: auto;
+    cursor: pointer;
+}
+
+/* ✅ Медиа-запросы для мобильных */
+@media (max-width: 992px) {
+    .header .container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .header_nav {
+        display: none;
+        position: absolute;
+        top: 60px;
+        right: 20px;
+        background: rgba(0, 0, 0, 0.9);
+        width: 200px;
+        border-radius: 10px;
+        padding: 10px;
+    }
+
+    /* ✅ Показываем кнопку-гамбургер */
+    .menu-toggle {
+        display: block;
+        position: absolute;
+        top: 20px;
+        right: 20px;
+    }
+
+    /* ✅ Делаем меню видимым при активном классе */
+    .header_nav.active {
+        display: block;
+    }
+
+    /* ✅ Стили для списка */
+    .header__list {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        padding: 0;
+    }
+
+    .header__list li {
+        text-align: center;
+    }
+
+    .header__list a {
+        font-size: 18px;
+    }
+
+    .welcome {
+        height: auto;
+        padding: 150px 20px;
+    }
+
+    .welcome__text {
+        text-align: center;
+        margin-top: 50px;
+    }
+
+    .welcome__title {
+        font-size: 40px;
+    }
+
+    .welcome__desc {
+        font-size: 18px;
+    }
+
+    .button-opacity {
+        width: 180px;
+    }
+}
+/*- sakura section */
+/* ✅ Основные стили секции */
+.section-sakura {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px; /* Отступы между изображениями и текстом */
+    padding: 100px 0;
+    background-color: white;
+}
+
+/* ✅ Контейнер для изображений */
+.sakura__images {
+    display: flex;
+    gap: 20px; /* Расстояние между изображениями */
+}
+
+/* ✅ Размер изображений */
+.sakura__food, .sakura__food2 {
+    width: 260px;
+    height: auto;
+    max-width: 100%;
+    border-radius: 10px; /* Закругление краев */
+}
+
+/* ✅ Контейнер для текста */
+.section__text__sakura {
+    max-width: 500px;
+    text-align: left;
+}
+
+/* ✅ Заголовок */
+.section__sakura__title {
+    color: #000;
+    font-family: "Source Serif Pro";
+    font-size: 43px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    
+}
+
+/* ✅ Описание */
+.section__sakura__desc {
+color: #000;
+text-align: center;
+font-family: Roboto;
+font-size: 20px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+}
+
+
+.sakura__button:hover {
+    background-color: black;
+    color: white;
+}
+.section__text__sakura img {
+    display: block;
+    margin-top: 20px; /* Отступ сверху */
+    margin-left: auto; /* Сдвиг вправо */
+    margin-right: 162px;
+    width: 180px; /* Можно задать ширину для контроля */
+}
+
+
+
+@media (max-width: 992px) {
+    .section-sakura {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 60px 20px;
+    }
+
+    .sakura__images {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .sakura__food, .sakura__food2 {
+        width: 80%;
+        max-width: 300px;
+    }
+
+    .section__text__sakura {
+        max-width: 90%;
+        text-align: center;
+    }
+
+    .section__sakura__title, .section__sakura__desc {
+        text-align: center;
+    }
+}
+
+
+
+.buttun__opacity__sakura{
+    padding-top: 18px;
+}
+.specials {
+    padding: 60px 0;
+    text-align: center;
+    position: relative;
+    background: url('./img/gb__sec__3.png') no-repeat center center/cover;
+}
+
+.specials .dishes-wrapper {
+    background-color: #ffffff;
+    border-radius: 2px;
+    -webkit-box-shadow: 0 2px 3px rgba(0, 0, 0, 0.26);
+    -moz-box-shadow: 0 2px 3px rgba(0, 0, 0, 0.26);
+    -ms-box-shadow: 0 2px 3px rgba(0, 0, 0, 0.26);
+    box-shadow: 0 2px 3px rgba(0, 0, 0, 0.26);
+    padding: 10px;
+    display: inline-block;
+    width: auto;
+    max-width: 80%;
+    margin: auto;
+}
+
+.specials .dishes-wrapper .dishes-bordered {
+    border: 1px dashed #cdaf80;
+    padding: 70px 70px 20px 70px;
+}
+
+.heading--subtitle {
+    font-size: 22px;
+    font-weight: 400;
+    color: #c89f65;
+    font-style: italic;
+}
+
+.heading--title {
+    font-size: 42px;
+    font-weight: 700;
+    color: #222;
+}
+
+.dish-panel {
+    display: flex;
+    align-items: center;
+    background: #fff;
+    border: 1px solid #eee;
+    border-radius: 8px;
+    margin: 15px 0;
+    padding: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+.dish--img img {
+    width: 90px;
+    height: 90px;
+    border-radius: 10px;
+    object-fit: cover;
+    margin-right: 20px;
+}
+
+.dish--content {
+    flex: 1;
+    text-align: left;
+}
+
+.dish--title {
+    color: #333;
+    font-family: Poppins;
+    font-size: 17px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 29px; /* 170.588% */
+}
+
+.dish--price {
+    font-size: 18px;
+    font-weight: bold;
+    color: #c89f65;
+    float: right;
+}
+
+.dish--desc {
+    font-size: 14px;
+    color: #777;
+    margin-top: 5px;
+    color: #A5A5A5;
+font-family: Poppins;
+font-size: 13px;
+font-style: normal;
+font-weight: 400;
+line-height: 23px; /* 176.923% */
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    flex-direction: column-reverse;
+
+}
+@media (max-width: 768px) {
+    .dishes-wrapper {
+        max-width: 95%;
+        padding: 20px;
+    }
+    .row {
+        flex-direction: column;
+    }
+}
+/* General Styles */
+.events-section {
+    background-color: #ffffff;
+    padding: 40px 0;
+    text-align: center;
+    color: #fff;
+}
+
+.container {
+    max-width: 1100px;
+    margin: auto;
+    padding: 0 20px;
+}
+
+.section-title {
+    color: #000;
+    font-family: "Source Serif Pro";
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    
+}
+
+.events-wrapper {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.event-item {
+    background-color: #fff;
+    color: #000;
+    padding: 15px;
+    border-radius: 5px;
+    text-align: left;
+    width: 30%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.event-item img {
+    width: 100%;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.event-title {
+    color: #000;
+    font-family: Roboto;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.event-desc {
+    color: #000;
+    font-family: Roboto;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    opacity: 0.55;
+}
+
+@media (max-width: 768px) {
+    .events-wrapper {
+        flex-direction: column;
+        align-items: center;
+    }
+    .event-item {
+        width: 90%;
+    }
+}
+/* General Styles */
+.reviews-section {
+    background: url('./img/bg__img__4.png') no-repeat center center/cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Центрирует по горизонтали */
+    justify-content: center; /* Центрирует по вертикали */
+    min-height: 100vh; /* Чтобы заняло всю высоту экрана */
+    padding: 100px 0; 
+}
+
+.container {
+    max-width: 1100px;
+    margin: auto;
+    padding: 0 20px;
+}
+.section-titles {
+    font-size: 42px;
+    font-weight: bold;
+    margin-bottom: 60px;
+    text-align: center;
+}
+
+.reviews-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px; /* Добавляет пространство между отзывами */
+    flex-wrap: wrap; /* Позволяет отзывам переноситься на новую строку на маленьких экранах */
+    width: 100%;
+    max-width: 1100px;
+}
+
+.review-item {
+    background-color: rgba(255, 255, 255, 0.9);
+    color: #000;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    width: 30%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.review-text {
+    color: #000;
+    font-family: Roboto;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    opacity: 0.55;
+}
+
+.review-author {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.review-author img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-bottom: 5px;
+    color: #000;
+    font-family: Roboto;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    
+}
+
+.author-name {
+    font-size: 14px;
+    font-weight: bold;
+}
+
+@media (max-width: 768px) {
+    .reviews-wrapper {
+        flex-direction: column;
+        align-items: center;
+    }
+    .review-item {
+        width: 90%;
+    }
+}
+.footer {
+    background-color: #333;
+    color: #fff;
+    padding: 40px 0;
+    text-align: center;
+    padding: 60px 0;
+}
+
+.container {
+    max-width: 1100px;
+    margin: auto;
+    padding: 0 20px;
+}
+
+.footer-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.footer-column {
+    flex: 1;
+    padding: 20px;
+    text-align: center;
+}
+
+.footer-center {
+    max-width: 400px;
+}
+
+.footer-title {
+    color: #FFF;
+    font-family: "Source Serif Pro";
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.social-icons a {
+    display: inline-block;
+    margin: 0 5px;
+    color: #fff;
+    font-size: 16px;
+    transition: color 0.3s;
+}
+
+.social-icons a:hover {
+    color: #c89f65;
+}
+
+.newsletter input {
+    width: 240px;
+    height: 54px;
+    flex-shrink: 0;
+    background: #1C1C1C;
+}
+.footer-brand{
+    color: #FFF;
+font-family: Redressed;
+font-size: 40px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+}
+
+.newsletter button {
+    padding: 10px 15px;
+    border: none;
+    background-color: #1C1C1C;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.footer-desc{
+    color: #FFF;
+text-align: center;
+font-family: Roboto;
+font-size: 20px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+opacity: 0.55;
+}
+.newsletter button:hover {
+    background-color: #a57942;
+}
+
+.footer-nav {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.footer-nav a {
+    color: #fff;
+    font-size: 14px;
+    text-decoration: none;
+    transition: color 0.3s;
+    color: #FFF;
+font-family: Poppins;
+font-size: 16px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+gap: 60px;
+}
+.language-switch {
+    display: flex;
+    gap: 10px;
+}
+
+.language-switch button {
+    background: none;
+    border: none;
+    color: white;
+    font-family: Poppins;
+    cursor: pointer;
+    font-size: 16px;
+    transition: opacity 0.3s;
+}
+
+.language-switch button:hover {
+    opacity: 0.7;
+}
+
+.footer-nav a:hover {
+    color: #c89f65;
+}
+
+
+@media (max-width: 768px) {
+    .footer-wrapper {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+/* Modal Styles */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.8);
+    padding-top: 60px;
+    font-family: 'Poppins', sans-serif; /* Add your custom font here */
+}
+
+.modal-content {
+    background-color: #fff;
+    margin: 5% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 500px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    animation: fadeIn 0.3s;
+    font-family: 'Poppins', sans-serif; /* Add your custom font here */
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.modal-content h2 {
+    margin-top: 0;
+    font-size: 24px;
+    text-align: center;
+    font-family: 'Poppins', sans-serif; /* Add your custom font here */
+}
+
+.modal-content form {
+    display: flex;
+    flex-direction: column;
+    font-family: 'Poppins', sans-serif; /* Add your custom font here */
+}
+
+.modal-content label {
+    margin-top: 10px;
+    font-weight: bold;
+    font-family: 'Poppins', sans-serif; /* Add your custom font here */
+}
+
+.modal-content input {
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-family: 'Poppins', sans-serif; /* Add your custom font here */
+}
+
+.modal-submit {
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #333;
+    color: #ff0000;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    font-family: 'Poppins', sans-serif; /* Add your custom font here */
+}
+
+.modal-submit:hover {
+    background-color: #555;
+}
+
+
+

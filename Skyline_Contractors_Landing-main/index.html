@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skyline Contractors Landing</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="scripts.js"></script>
+</head>
+<body>
+    <header class="header">
+        <div class="logo-container">
+            <img src="./img/Logo.png" alt="Skyline Contractors Logo" class="logo-img">
+            <span class="company-name">SKYLINE CONTRACTORS</span>
+        </div>
+    
+        <nav class="nav-container">
+            <ul class="nav-menu">
+                <li><a href="#home">HOME</a></li>
+                <li><a href="#services">SERVICES</a></li>
+                <li><a href="#work">WORK</a></li>
+                <li><a href="#skills">SKILLS</a></li>
+                <li><a href="#testimonials">TESTIMONIALS</a></li>
+            </ul>
+        </nav>
+    
+        <div class="right-spacer"></div>
+    </header>
+    
+    <section class="hero-section">
+        <div class="hero-content">
+            <h1 class="hero-title">We're Building Your Future</h1>
+            <p class="hero-subtitle">Take a step towards the future of construction with Skyline</p>
+            <a href="#quote" class="cta-button">Get a Quote</a>
+        </div>
+    </section>
+    <div id="quoteModal" class="modal">
+        <div class="modal-content">
+            <span class="close-button" id="closeModal">&times;</span>
+            <h2>Contact Us</h2>
+            <form class="modal-form">
+                <div class="form-group">
+                    <label for="modal-name">Name</label>
+                    <input type="text" id="modal-name" name="name" placeholder="Your Name" required>
+                </div>
+                <div class="form-group">
+                    <label for="modal-email">Email</label>
+                    <input type="email" id="modal-email" name="email" placeholder="Your Email" required>
+                </div>
+                <div class="form-group">
+                    <label for="modal-phone">Phone</label>
+                    <input type="tel" id="modal-phone" name="phone" placeholder="Your Phone" required>
+                </div>
+                <div class="form-group">
+                    <label for="modal-description">Description</label>
+                    <textarea id="modal-description" name="description" placeholder="What do you want?" required></textarea>
+                </div>
+                <button type="submit" class="btn-submit">Send Message</button>
+            </form>
+        </div>
+    </div>
+    <section class="services-section" id="services">
+        <div class="services-container">
+            <h2 class="services-title">Our Services</h2>
+            <p class="services-description">
+            Duis odio est, non auctor nibh vulputate eu. 
+            Nam ac tellus sed tortor auctor a mauris vehicula.
+            </p>
+            
+            <div class="services-grid">
+            <!-- Карточка 1 -->
+            <div class="service-card">
+                <img src="./img/our__services1.png" alt="Efficient Construction Icon" class="service-icon">
+                <h3 class="service-card-title">Efficient Construction</h3>
+                <p class="service-card-text">
+                Donec vitae erat non turpis fringilla commodo. 
+                Aenean eget consequat nisl.
+                </p>
+            </div>
+            
+            <!-- Карточка 2 -->
+            <div class="service-card">
+                <img src="./img/our__services2.png" alt="Modern Renovation Icon" class="service-icon">
+                <h3 class="service-card-title">Modern Renovation</h3>
+                <p class="service-card-text">
+                Transforming spaces with innovative solutions 
+                tailored to your style and needs.
+                </p>
+            </div>
+            
+            <!-- Карточка 3 -->
+            <div class="service-card">
+                <img src="./img/our__services3.png" alt="Expert Consultation Icon" class="service-icon">
+                <h3 class="service-card-title">Expert Consultation</h3>
+                <p class="service-card-text">
+                Professional advice on a range of construction 
+                to bring your vision to life.
+                </p>
+            </div>
+            
+            <!-- Карточка 4 -->
+            <div class="service-card">
+                <img src="./img/our__services4.png" alt="Innovative Architecture Icon" class="service-icon">
+                <h3 class="service-card-title">Innovative Architecture</h3>
+                <p class="service-card-text">
+                Creative and functional designs that redefine 
+                modern living and working spaces.
+                </p>
+            </div>
+            </div>
+        </div>
+        </section>
+        <section class="featured-work" id="work">
+            <div class="featured-container">
+                <h2 class="featured-title">Featured Work</h2>
+                <p class="featured-description">
+                We provide top-quality construction and renovation services, ensuring efficiency, 
+                durability, and innovation in every project.
+                </p>
+                
+                <div class="featured-grid">
+                <!-- Элемент 1 -->
+                <div class="featured-item">
+                    <img src="./img/Work (4).png" alt="Construction Workers" />
+                </div>
+                
+                <!-- Элемент 2 -->
+                <div class="featured-item">
+                    <img src="./img/Work (6).png" alt="Scaffolding Work" />
+                </div>
+                
+                <!-- Элемент 3 -->
+                <div class="featured-item">
+                    <img src="./img/Work (5).png" alt="Building Under Construction" />
+                </div>
+                
+                <!-- Элемент 4 -->
+                <div class="featured-item">
+                    <img src="./img/Work (1).png" alt="Interior Renovation" />
+                </div>
+                
+                <!-- Элемент 5 -->
+                <div class="featured-item">
+                    <img src="./img/Work (3).png" alt="Modern Architecture" />
+                </div>
+                
+                <!-- Элемент 6 -->
+                <div class="featured-item">
+                    <img src="./img/Work (6).png" alt="Woodworking" />
+                </div>
+                </div>
+            </div>
+            </section>
+            <section class="testimonials-section" id="testimonials">
+                <div class="testimonials-container">
+                    <h2 class="testimonials-title">Our Clients Say</h2>
+                    <p class="testimonials-description">
+                    We provide top-quality construction and renovation services, ensuring efficiency, 
+                    durability, and innovation in every project.
+                    </p>
+                
+                    <div class="testimonials-grid">
+                    <!-- Отзыв 1 -->
+                    <div class="testimonial-card">
+                        <img src="./img/avatar (1).png" alt="Client Avatar" class="testimonial-avatar">
+                        <p class="testimonial-quote">
+                        "It's just brilliant. I will recommend Skyline to everyone I know! 
+                        I'm really glad these guys got Skyline out there."
+                        </p>
+                        <h4 class="testimonial-name">Gene Stevens</h4>
+                    </div>
+                
+                    <!-- Отзыв 2 -->
+                    <div class="testimonial-card">
+                        <img src="./img/avatar (2).png" alt="Client Avatar" class="testimonial-avatar">
+                        <p class="testimonial-quote">
+                        "We are so excited to launch our new company. By using Skyline it has 
+                        great features. I think you are all about to make me happy."
+                        </p>
+                        <h4 class="testimonial-name">Gene Stevens</h4>
+                    </div>
+                
+                    <!-- Отзыв 3 -->
+                    <div class="testimonial-card">
+                        <img src="img/avatar (1).png"Client Avatar" class="testimonial-avatar">
+                        <p class="testimonial-quote">
+                        "The results were beyond my expectations. Skyline made the whole 
+                        construction process seamless and efficient."
+                        </p>
+                        <h4 class="testimonial-name">Michael Brown</h4>
+                    </div>
+                    </div>
+                </div>
+                </section>
+                <section class="contact-section" id="contact">
+                    <div class="contact-container">
+                        <!-- Левая колонка: картинка + логотип -->
+                        <div class="contact-image">
+                        <!-- Картинка -->
+                        <img 
+                            src="./img/bg__last.png" 
+                            alt="Skyline Contractors" 
+                            class="contact-img"
+                        />
+                    
+                        <!-- Логотип внизу картинки -->
+                        <div class="contact-logo">
+                            <img 
+                            src="./img/Logo.png" 
+                            alt="Skyline Contractors Logo" 
+                            class="logo-img"
+                            />
+                            <span class="logo-text">Skyline Contractors</span>
+                        </div>
+                        </div>
+                        <div class="contact-form-wrapper">
+                        <h2 class="contact-title">Write To Us</h2>
+                        <form class="contact-form">
+                            <div class="form-group">
+                            <label for="name">Name</label>
+                            <input 
+                                type="text" 
+                                id="name" 
+                                name="name" 
+                                placeholder="Your Name" 
+                                required 
+                            />
+                            </div>
+                        
+                            <div class="form-group">
+                            <label for="email">Email</label>
+                            <input 
+                                type="email" 
+                                id="email" 
+                                name="email" 
+                                placeholder="Your Email" 
+                                required 
+                            />
+                            </div>
+                        
+                            <button type="submit" class="btn-submit">Send Message</button>
+                        </form>
+                        </div>
+                    </div>
+                    </section>
+                    <footer class="footer">
+                        <!-- Верхняя часть футера -->
+                        <div class="footer-top">
+                          <!-- Логотип слева -->
+                          <div class="footer-logo">
+                            <img src="./img/Logo.png" alt="Skyline Contractors Logo" class="logo-img" />
+                            <span class="company-name">SKYLINE CONTRACTORS</span>
+                          </div>
+                      
+                          <!-- Контактные данные по центру -->
+                          <div class="footer-contacts">
+                            <div class="footer-contact-item">
+                              <img src="./img/Icon.png" alt="Address Icon" class="contact-icon" />
+                              <span>123 Main Street, City</span>
+                            </div>
+                            <div class="footer-contact-item">
+                              <img src="./img/Icon-1.png" alt="Phone Icon" class="contact-icon" />
+                              <span>+1 (555) 123-4567</span>
+                            </div>
+                            <div class="footer-contact-item">
+                              <img src="./img/Icon-2.png" alt="Email Icon" class="contact-icon" />
+                              <span>info@skyline.com</span>
+                            </div>
+                          </div>
+                        </div>
+                      
+                        <!-- Нижняя часть футера -->
+                        <div class="footer-bottom">
+                          <!-- Навигация -->
+                          <ul class="footer-nav">
+                            <li><a href="#home">HOME</a></li>
+                            <li><a href="#services">SERVICES</a></li>
+                            <li><a href="#work">WORK</a></li>
+                            <li><a href="#skills">SKILLS</a></li>
+                            <li><a href="#testimonials">TESTIMONIALS</a></li>
+                          </ul>
+                      
+                          <!-- Соцсети справа (через <img>) -->
+                          <div class="footer-socials">
+                            <!-- Замените src="..." на реальные пути к вашим иконкам соцсетей -->
+                            <a href="#">
+                              <img src="./img/Link-1.png" alt="Facebook Icon" class="social-icon" />
+                            </a>
+                            <a href="#">
+                              <img src="./img/Link.png" alt="Twitter Icon" class="social-icon" />
+                            </a>
+                            <a href="#">
+                              <img src="./img/Link-2.png" alt="Instagram Icon" class="social-icon" />
+                            </a>
+                          </div>
+                        </div>
+                      </footer>
+                        
+                
+
+</body>
+
+</html>
