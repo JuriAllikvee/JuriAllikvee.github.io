@@ -4,186 +4,947 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Minu portfoolio!</title>
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-    <link href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
+
+    <style>
+        :root {
+            --primary: #6366f1;
+            --primary-dark: #4f46e5;
+            --secondary: #f43f5e;
+            --dark: #111827;
+            --light: #f9fafb;
+            --gray: #6b7280;
+            --card-bg: #ffffff;
+            --gradient-start: #6366f1;
+            --gradient-end: #8b5cf6;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            font-family: 'Inter', sans-serif;
+            font-size: 16px;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background-color: var(--light);
+            color: var(--dark);
+            line-height: 1.6;
+        }
+
+        /* Navigation */
+        .navbar {
+            background-color: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 1px 10px rgba(0, 0, 0, 0.05);
+            padding: 1rem 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            transition: all 0.3s ease;
+        }
+
+        .navbar-brand {
+            font-weight: 700;
+            color: var(--primary) !important;
+            font-size: 1.5rem;
+        }
+
+        .nav-link {
+            font-weight: 500;
+            color: var(--dark) !important;
+            margin: 0 10px;
+            position: relative;
+            transition: all 0.3s ease;
+        }
+
+        .nav-link:after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -2px;
+            left: 0;
+            background-color: var(--primary);
+            transition: width 0.3s ease;
+        }
+
+        .nav-link:hover:after {
+            width: 100%;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end));
+            color: white;
+            text-align: center;
+            padding: 10rem 0 6rem 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero:before {
+            content: '';
+            position: absolute;
+            width: 200%;
+            height: 200%;
+            top: -50%;
+            left: -50%;
+            background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+            transform: rotate(10deg);
+            z-index: 0;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero h1 {
+            font-weight: 700;
+            font-size: 3rem;
+            margin-bottom: 1.5rem;
+            text-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 600px;
+            margin: 0 auto 2rem;
+            opacity: 0.9;
+        }
+
+        /* Section styles */
+        section {
+            padding: 6rem 0;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 3rem;
+            position: relative;
+        }
+
+        .section-title:after {
+            content: '';
+            display: block;
+            width: 50px;
+            height: 3px;
+            background: var(--primary);
+            margin: 1rem auto 0;
+        }
+
+        .section-title h2 {
+            font-weight: 700;
+            font-size: 2.5rem;
+            color: var(--dark);
+        }
+
+        /* Project Cards */
+        .card {
+            border: none;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+            background-color: var(--card-bg);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            height: 100%;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+        }
+
+        .card-body {
+            padding: 1.5rem;
+        }
+
+        .card-title {
+            font-weight: 600;
+            color: var(--dark);
+            font-size: 1.25rem;
+            margin-bottom: 0.75rem;
+        }
+
+        .card-text {
+            color: var(--gray);
+            margin-bottom: 1.5rem;
+            font-size: 0.95rem;
+        }
+
+        .card-img-top {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            transition: transform 0.6s ease;
+        }
+
+        .card:hover .card-img-top {
+            transform: scale(1.05);
+        }
+
+        /* Buttons */
+        .btn {
+            border-radius: 50px;
+            padding: 0.6rem 1.5rem;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+
+        .btn-primary {
+            background-color: var(--primary);
+            border-color: var(--primary);
+        }
+
+        .btn-primary:hover {
+            background-color: var(--primary-dark);
+            border-color: var(--primary-dark);
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(99, 102, 241, 0.4);
+        }
+
+        .btn-outline-primary {
+            color: var(--primary);
+            border-color: var(--primary);
+        }
+
+        .btn-outline-primary:hover {
+            background-color: var(--primary);
+            border-color: var(--primary);
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(99, 102, 241, 0.4);
+        }
+
+        .btn-outline-success {
+            color: #10b981;
+            border-color: #10b981;
+        }
+
+        .btn-outline-success:hover {
+            background-color: #10b981;
+            border-color: #10b981;
+            color: white;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(16, 185, 129, 0.4);
+        }
+
+        .btn-outline-info {
+            color: #06b6d4;
+            border-color: #06b6d4;
+        }
+
+        .btn-outline-info:hover {
+            background-color: #06b6d4;
+            border-color: #06b6d4;
+            color: white;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(6, 182, 212, 0.4);
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--dark);
+            color: white;
+            padding: 5rem 0;
+            text-align: center;
+        }
+
+        footer h4 {
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+            font-size: 1.5rem;
+        }
+
+        .social-icons {
+            margin-bottom: 2rem;
+        }
+
+        .social-icons a {
+            color: white;
+            font-size: 1.5rem;
+            margin: 0 10px;
+            transition: all 0.3s ease;
+        }
+
+        .social-icons a:hover {
+            color: var(--primary);
+            transform: translateY(-5px);
+        }
+
+        #mailme {
+            background-image: linear-gradient(to right, var(--gradient-start), var(--gradient-end));
+            color: white;
+            border: none;
+            padding: 0.75rem 2rem;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        #mailme:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(99, 102, 241, 0.4);
+        }
+
+        /* Modal styling */
+        .modal-content {
+            border-radius: 16px;
+            border: none;
+            overflow: hidden;
+        }
+
+        .modal-header {
+            background-color: var(--primary);
+            color: white;
+            border-bottom: none;
+            padding: 1.5rem;
+        }
+
+        .modal-title {
+            font-weight: 600;
+        }
+
+        .modal-body {
+            padding: 0;
+        }
+
+        .btn-close {
+            color: white;
+            opacity: 1;
+        }
+
+        .btn-close:hover {
+            color: white;
+            opacity: 0.8;
+        }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .animate-fadeInUp {
+            animation: fadeInUp 0.6s ease forwards;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 4.2rem;
+            }
+            .hero p {
+                font-size: 1rem;
+            }
+            .section-title h2 {
+                font-size: 5rem;
+            }
+        }
+        @media (min-width: 768px) and (max-width: 1024px) {
+  html {
+    font-size: 20px; /* чуть крупнее текста */
+  }
+  /* Можно увеличить заголовки */
+  h2 {
+    font-size: 3cqmax;
+  }
+  /* И т.д. */
+}
+@media (max-width: 1024px) {
+  .my-buttons .btn {
+    font-size: 0.85rem;
+    padding: 0.4rem 1rem;
+  }
+}
+
+
+         
+
+    </style>
 </head>
 <body>
     <!-- Navigation Bar -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand" href="#">Minu Portfoolio</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ml-auto">
-                <li class="nav-item">
-                    <a class="nav-link" href="#projects">Minu tööd</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#contact">Kontakt</a>
-                </li>
-            </ul>
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container">
+            <a class="navbar-brand" href="#">Minu Portfoolio</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#projects">Minu tööd</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#designs">Disainid</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Kontakt</a>
+                    </li>
+                </ul>
+            </div>
         </div>
     </nav>
 
     <!-- Hero Section -->
-    <header class="bg-primary text-white text-center py-5">
-        <h1>Olen algaja, kuid võimekas veebiarendaja!</h1>
+    <header class="hero">
+        <div class="container hero-content">
+            <h1 class="animate-fadeInUp">Olen algaja, kuid võimekas veebiarendaja!</h1>
+            <p class="animate-fadeInUp">Loon kaasaegseid, kasutajasõbralikke veebilehti ja kasutajaliideseid</p>
+            <a href="#projects" class="btn btn-light animate-fadeInUp">Vaata minu töid</a>
+        </div>
     </header>
 
     <!-- Projects Section -->
-    <div class="container mt-5" id="projects">
-        <h2 class="text-center mb-4">Minu tööd</h2>
-        <div class="row">
-            <div class="col-md-4 mb-4">
-                <div class="card">
-                    <div class="card-body">
-                        <h5 class="card-title">KinoBaza</h5>
-                        <p class="card-text">Перейти на сайт КиноБаза</p>
-                        <a href="KinoBaza/index.html" class="btn btn-outline-primary btn-block">Vaata lähemalt</a>
+    <section id="projects">
+        <div class="container">
+            <div class="section-title">
+                <h2>Minu tööd</h2>
+            </div>
+            <div class="row g-4">
+                <!-- KinoBaza -->
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">KinoBaza</h5>
+                            <p class="card-text">Перейти на сайт КиноБаза</p>
+                            <a href="KinoBaza/index.html" class="btn btn-outline-primary btn-block">Vaata lähemalt</a>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="col-md-4 mb-4">
-                <div class="card">
-                    <div class="card-body">
-                        <h5 class="card-title">GameTrack</h5>
-                        <p class="card-text">Перейти на сайт GameTrack</p>
-                        <a href="Site/index.html" class="btn btn-outline-primary btn-block">Vaata lähemalt</a>
+                <!-- GameTrack -->
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">GameTrack</h5>
+                            <p class="card-text">Перейти на сайт GameTrack</p>
+                            <a href="Site/index.html" class="btn btn-outline-primary btn-block">Vaata lähemalt</a>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="col-md-4 mb-4">
-                <div class="card">
-                    <div class="card-body">
-                        <h5 class="card-title">GameNews</h5>
-                        <p class="card-text">Перейти на сайт GameNews</p>
-                        <a href="Site2/index.html" class="btn btn-outline-primary btn-block">Vaata lähemalt</a>
+                <!-- GameNews -->
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">GameNews</h5>
+                            <p class="card-text">Перейти на сайт GameNews</p>
+                            <a href="Site2/index.html" class="btn btn-outline-primary btn-block">Vaata lähemalt</a>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="col-md-4 mb-4">
-                <div class="card">
-                    <div class="card-body">
-                        <h5 class="card-title">KinoBaza (BootStrap)</h5>
-                        <p class="card-text">Перейти на сайт KinoBaza 2</p>
-                        <a href="KinoBaza Bootstrap 2/index.html" class="btn btn-outline-primary btn-block">Vaata lähemalt</a>
+                <!-- KinoBaza (Bootstrap) -->
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">KinoBaza (BootStrap)</h5>
+                            <p class="card-text">Перейти на сайт KinoBaza 2</p>
+                            <a href="KinoBaza Bootstrap 2/index.html" class="btn btn-outline-primary btn-block">Vaata lähemalt</a>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="col-md-4 mb-4">
-                <div class="card">
-                    <div class="card-body">
-                        <h5 class="card-title">Arkanoid(game)</h5>
-                        <p class="card-text">Перейти на Arkanoid</p>
-                        <a href="Canvas/index.html" class="btn btn-outline-primary btn-block">Vaata lähemalt</a>
+                <!-- Arkanoid -->
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Arkanoid(game)</h5>
+                            <p class="card-text">Перейти на Arkanoid</p>
+                            <a href="Canvas/index.html" class="btn btn-outline-primary btn-block">Vaata lähemalt</a>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="col-md-4 mb-4">
-                <div class="card">
-                    <div class="card-body">
-                        <h5 class="card-title">Landing</h5>
-                        <p class="card-text">Перейти на Landing</p>
-                        <a href="Landing/index.html" class="btn btn-outline-primary btn-block">Vaata lähemalt</a>
+                <!-- Landing -->
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Landing</h5>
+                            <p class="card-text">Перейти на Landing</p>
+                            <a href="Landing/index.html" class="btn btn-outline-primary btn-block">Vaata lähemalt</a>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="col-md-4 mb-4">
-                <div class="card">
-                    <div class="card-body">
-                        <h5 class="card-title">Landing2</h5>
-                        <p class="card-text">Landing2</p>
-                        <a href="Landing2/index.html" class="btn btn-outline-primary btn-block">Vaata lähemalt</a>
+                <!-- Landing2 -->
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Landing2</h5>
+                            <p class="card-text">Landing2</p>
+                            <a href="Landing2/index.html" class="btn btn-outline-primary btn-block">Vaata lähemalt</a>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="col-md-4 mb-4">
-                <div class="card">
-                    <div class="card-body">
-                        <h5 class="card-title">wireframe</h5>
-                        <p class="card-text">wireframe</p>
-                        <a href="testware/index.html" class="btn btn-outline-primary btn-block">Vaata lähemalt</a>
+                <!-- wireframe -->
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">wireframe</h5>
+                            <p class="card-text">wireframe</p>
+                            <a href="testware/index.html" class="btn btn-outline-primary btn-block">Vaata lähemalt</a>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="col-md-4 mb-4">
-                <div class="card">
-                    <div class="card-body">
-                        <h5 class="card-title">Landing with figma</h5>
-                        <p class="card-text">Landing with figma</p>
-                        <a href="Landing with figma/index.html" class="btn btn-outline-primary btn-block">Vaata lähemalt</a>
+                <!-- Landing with figma -->
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Landing with figma</h5>
+                            <p class="card-text">Landing with figma</p>
+                            <a href="Landing with figma/index.html" class="btn btn-outline-primary btn-block mb-2">Vaata lähemalt</a>
+                            <button type="button" class="btn btn-outline-success btn-block mb-2" data-bs-toggle="modal"
+                                    data-bs-target="#figmaModalLandingFigmaDesign">
+                                Vaata disaini (Figma)
+                            </button>
+                            <button type="button" class="btn btn-outline-info btn-block" data-bs-toggle="modal"
+                                    data-bs-target="#figmaModalLandingFigmaProto">
+                                Vaata prototüüpi
+                            </button>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="col-md-4 mb-4">
-                <div class="card">
-                    <div class="card-body">
-                        <h5 class="card-title">Landing from dribble</h5>
-                        <p class="card-text">Landing from dribble</p>
-                        <a href="Farm_Landing/index.html" class="btn btn-outline-primary btn-block">Vaata lähemalt</a>
+                <!-- Landing from dribble -->
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Landing from dribble</h5>
+                            <p class="card-text">Landing from dribble</p>
+                            <a href="Farm_Landing/index.html" class="btn btn-outline-primary btn-block mb-2">Vaata lähemalt</a>
+                            <button type="button" class="btn btn-outline-success btn-block mb-2" data-bs-toggle="modal"
+                                    data-bs-target="#figmaModalDribbleDesign">
+                                Vaata disaini (Figma)
+                            </button>
+                            <button type="button" class="btn btn-outline-info btn-block" data-bs-toggle="modal"
+                                    data-bs-target="#figmaModalDribbleProto">
+                                Vaata prototüüpi
+                            </button>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="col-md-4 mb-4">
-                <div class="card">
-                    <div class="card-body">
-                        <h5 class="card-title">Landing </h5>
-                        <p class="card-text">Landing</p>
-                        <a href="Skyline_Contractors_Landing-main/index.html" class="btn btn-outline-primary btn-block">Vaata lähemalt</a>
+                <!-- Landing Skyline -->
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Landing Skyline</h5>
+                            <p class="card-text">Landing</p>
+                            <a href="Skyline_Contractors_Landing-main/index.html"
+                               class="btn btn-outline-primary btn-block mb-2">Vaata lähemalt</a>
+                            <button type="button" class="btn btn-outline-success btn-block mb-2" data-bs-toggle="modal"
+                                    data-bs-target="#figmaModalSkylineDesign">
+                                Vaata disaini (Figma)
+                            </button>
+                            <button type="button" class="btn btn-outline-info btn-block" data-bs-toggle="modal"
+                                    data-bs-target="#figmaModalSkylineProto">
+                                Vaata prototüüpi
+                            </button>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="col-md-4 mb-4">
-                <div class="card">
-                    <div class="card-body">
-                        <h5 class="card-title">SakuraDiningLanding</h5>
-                        <p class="card-text">SakuraDiningLanding</p>
-                        <a href="SakuraDiningLanding-main/index.html" class="btn btn-outline-primary btn-block">Vaata lähemalt</a>
+                <!-- SakuraDiningLanding -->
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">SakuraDiningLanding</h5>
+                            <p class="card-text">SakuraDiningLanding</p>
+                            <a href="SakuraDiningLanding-main/index.html" class="btn btn-outline-primary btn-block mb-2">
+                                Vaata lähemalt
+                            </a>
+                            <button type="button" class="btn btn-outline-success btn-block mb-2" data-bs-toggle="modal"
+                                    data-bs-target="#figmaModalSakuraDesign">
+                                Vaata disaini (Figma)
+                            </button>
+                            <button type="button" class="btn btn-outline-info btn-block" data-bs-toggle="modal"
+                                    data-bs-target="#figmaModalSakuraProto">
+                                Vaata prototüüpi
+                            </button>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="container mt-5" id="figma-projects">
-            <h2 class="text-center mb-4">Figma Projektid</h2>
-            <div class="row">
+    </section>
+
+    <!-- Designs Section -->
+    <section id="designs" class="bg-light">
+        <div class="container">
+            <div class="section-title">
+                <h2>Ainult disainid (Figma)</h2>
+            </div>
+            <div class="row g-4">
+                <!-- Food App -->
                 <div class="col-md-6 mb-4">
-                    <iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="100%" height="450" src="https://embed.figma.com/design/wkBMEG5QDuxh9eo3g7OFEE/Untitled?node-id=0-1&embed-host=share" allowfullscreen></iframe>
+                    <div class="card">
+                        <img src="./img_port/4.PNG" class="card-img-top" alt="Food App Preview">
+                        <div class="card-body">
+                            <h5 class="card-title">Food App – ainult disain</h5>
+                            <p class="card-text">Figma disain ja prototüüp mobiilirakendusele</p>
+                            <button type="button" class="btn btn-outline-success btn-block mb-2" data-bs-toggle="modal"
+                                    data-bs-target="#figmaModalFoodOnlyDesign">
+                                Vaata disaini
+                            </button>
+                            <button type="button" class="btn btn-outline-info btn-block" data-bs-toggle="modal"
+                                    data-bs-target="#figmaModalFoodOnlyProto">
+                                Vaata prototüüpi
+                            </button>
+                        </div>
+                    </div>
                 </div>
+                <!-- Gym UI -->
                 <div class="col-md-6 mb-4">
-                    <iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="100%" height="450" src="https://embed.figma.com/design/gWPGrmnqMCIMLshjIAlO0k/Untitled?embed-host=share" allowfullscreen></iframe>
+                    <div class="card">
+                        <img src="./img_port/2.PNG" class="card-img-top" alt="Gym UI Preview">
+                        <div class="card-body">
+                            <h5 class="card-title">Gym UI – ainult disain</h5>
+                            <p class="card-text">Teine Figma projekt (UI & prototüüp)</p>
+                            <button type="button" class="btn btn-outline-success btn-block mb-2" data-bs-toggle="modal"
+                                    data-bs-target="#figmaModalModernUIDesign">
+                                Vaata disaini
+                            </button>
+                            <button type="button" class="btn btn-outline-info btn-block" data-bs-toggle="modal"
+                                    data-bs-target="#figmaModalModernUIProto">
+                                Vaata prototüüpi
+                            </button>
+                        </div>
+                    </div>
                 </div>
+                <!-- Travel -->
                 <div class="col-md-6 mb-4">
-                    <iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="800" height="450" src="https://embed.figma.com/design/VaxROqzEooPgaTgnfooca6/Untitled?node-id=0-1&embed-host=share" allowfullscreen></iframe>
+                    <div class="card">
+                        <img src="./img_port/3.PNG" class="card-img-top" alt="Travel App Preview">
+                        <div class="card-body">
+                            <h5 class="card-title">Travel – ainult disain</h5>
+                            <p class="card-text">Kolmas Figma disain ja prototüüp</p>
+                            <button type="button" class="btn btn-outline-success btn-block mb-2" data-bs-toggle="modal"
+                                    data-bs-target="#figmaModalUILayoutDesign">
+                                Vaata disaini
+                            </button>
+                            <button type="button" class="btn btn-outline-info btn-block" data-bs-toggle="modal"
+                                    data-bs-target="#figmaModalUILayoutProto">
+                                Vaata prototüüpi
+                            </button>
+                        </div>
+                    </div>
                 </div>
+                <!-- Salats Website UI -->
                 <div class="col-md-6 mb-4">
-                    <iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="800" height="450" src="https://embed.figma.com/design/H9msBojI1tf6XIxtIp93Y1/Untitled?node-id=0-1&embed-host=share" allowfullscreen></iframe> 
+                    <div class="card">
+                        <img src="./img_port/1.PNG" class="card-img-top" alt="Salats Website UI Preview">
+                        <div class="card-body">
+                            <h5 class="card-title">Salats Website UI – ainult disain</h5>
+                            <p class="card-text">Neljas Figma disain ja prototüüp</p>
+                            <button type="button" class="btn btn-outline-success btn-block mb-2" data-bs-toggle="modal"
+                                    data-bs-target="#figmaModalCreativeDesign">
+                                Vaata disaini
+                            </button>
+                            <button type="button" class="btn btn-outline-info btn-block" data-bs-toggle="modal"
+                                    data-bs-target="#figmaModalCreativeProto">
+                                Vaata prototüüpi
+                            </button>
+                        </div>
+                    </div>
                 </div>
-                <div class="col-md-6 mb-4">
-                    <iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="800" height="450" src="https://embed.figma.com/design/5ZYM3acFXUqaUPkGQKSi6a/Untitled?node-id=0-1&embed-host=share" allowfullscreen></iframe>                </div>
             </div>
         </div>
-    </div>
-    <div class="container mt-5" id="figma-projects">
-        <h2 class="text-center mb-4">Figma prototüübid</h2>
-        <div class="row">
-            <div class="col-md-6 mb-4"><iframe width="100%" height="450" src="https://embed.figma.com/proto/wkBMEG5QDuxh9eo3g7OFEE/Untitled?node-id=1-4&scaling=scale-down&content-scaling=fixed&page-id=0%3A1&embed-host=share" allowfullscreen></iframe></div>
-            <div class="col-md-6 mb-4"><iframe width="100%" height="450" src="https://embed.figma.com/proto/VaxROqzEooPgaTgnfooca6/Untitled?node-id=1-25&starting-point-node-id=1%3A25&embed-host=share" allowfullscreen></iframe></div>
-            <div class="col-md-6 mb-4"><iframe width="100%" height="450" src="https://embed.figma.com/proto/H9msBojI1tf6XIxtIp93Y1/Untitled?node-id=1-4&scaling=scale-down&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=1%3A4&embed-host=share" allowfullscreen></iframe></div>
-            <div class="col-md-6 mb-4"><iframe width="100%" height="450" src="https://embed.figma.com/proto/Vz9gctd2dDaF7825uaaBwq/Untitled?node-id=1-3&p=f&scaling=min-zoom&content-scaling=fixed&page-id=0%3A1&embed-host=share" allowfullscreen></iframe></div>
-            
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact">
+        <div class="container">
+            <h4>Olen koostööks valmis!</h4>
+            <div class="social-icons">
+                <a href="#"><i class="fab fa-github"></i></a>
+                <a href="#"><i class="fab fa-linkedin"></i></a>
+                <a href="#"><i class="fab fa-dribbble"></i></a>
+                <a href="#"><i class="fab fa-behance"></i></a>
+            </div>
+            <a id="mailme" href="mailto:jura27k@gmail.com" class="btn">Kirjuta mulle!</a>
         </div>
-    </div>
-            
-    <footer class="bg-light text-center py-5 mt-5" id="contact">
-        <h4>Olen koostööks valmis!</h4>
-        <a id="mailme" href="mailto:jura27k@gmail.com" class="btn btn-primary mt-3">Kirjuta mulle!</a>
     </footer>
 
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <!-- ================================= MODALS ================================= -->
+    <!-- (скопированы все модалки из первого кода, но адаптированы под Bootstrap 5) -->
+
+    <!-- Modal: Dribble Design -->
+    <div class="modal fade" id="figmaModalDribbleDesign" tabindex="-1" aria-labelledby="figmaModalLabelDesign" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Landing from dribble – Figma disain</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Sulge"></button>
+                </div>
+                <div class="modal-body">
+                    <iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="100%" height="600"
+                            src="https://embed.figma.com/design/5ZYM3acFXUqaUPkGQKSi6a/Untitled?node-id=0-1&embed-host=share"
+                            allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Modal: Dribble Prototype -->
+    <div class="modal fade" id="figmaModalDribbleProto" tabindex="-1" aria-labelledby="figmaModalLabelProto" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Landing from dribble – Figma prototüüp</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Sulge"></button>
+                </div>
+                <div class="modal-body">
+                    <iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="100%" height="600"
+                            src="https://embed.figma.com/proto/5ZYM3acFXUqaUPkGQKSi6a/Untitled?node-id=3-4&p=f&scaling=min-zoom&content-scaling=fixed&page-id=0%3A1&embed-host=share"
+                            allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal: Skyline Design -->
+    <div class="modal fade" id="figmaModalSkylineDesign" tabindex="-1" aria-labelledby="figmaModalLabelDesign" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Landing Skyline – Figma disain</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Sulge"></button>
+                </div>
+                <div class="modal-body">
+                    <iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="100%" height="600"
+                            src="https://embed.figma.com/design/PTCWnnawNy8t5VHvvoBRIG/Untitled?embed-host=share"
+                            allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Modal: Skyline Prototype -->
+    <div class="modal fade" id="figmaModalSkylineProto" tabindex="-1" aria-labelledby="figmaModalLabelProto" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Landing Skyline – Figma prototüüp</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Sulge"></button>
+                </div>
+                <div class="modal-body">
+                    <iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="100%" height="600"
+                            src="https://embed.figma.com/proto/PTCWnnawNy8t5VHvvoBRIG/Untitled?scaling=min-zoom&content-scaling=fixed&page-id=0%3A1&node-id=1-2&embed-host=share"
+                            allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal: SakuraDiningLanding Design -->
+    <div class="modal fade" id="figmaModalSakuraDesign" tabindex="-1" aria-labelledby="figmaModalLabelSakuraDesign" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">SakuraDiningLanding – Figma disain</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Sulge"></button>
+                </div>
+                <div class="modal-body">
+                    <iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="100%" height="600"
+                            src="https://embed.figma.com/design/kNhFlcLgCeJyFssujsAX28/Untitled?node-id=0-1&embed-host=share"
+                            allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Modal: SakuraDiningLanding Prototype -->
+    <div class="modal fade" id="figmaModalSakuraProto" tabindex="-1" aria-labelledby="figmaModalLabelSakuraProto" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">SakuraDiningLanding – Figma prototüüp</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Sulge"></button>
+                </div>
+                <div class="modal-body">
+                    <iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="100%" height="600"
+                            src="https://embed.figma.com/proto/kNhFlcLgCeJyFssujsAX28/Untitled?node-id=1-2&scaling=min-zoom&content-scaling=fixed&page-id=0%3A1&embed-host=share"
+                            allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal: Landing with figma (Design) -->
+    <div class="modal fade" id="figmaModalLandingFigmaDesign" tabindex="-1" aria-labelledby="figmaModalLabelLandingFigmaDesign" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Landing with figma – Figma disain</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Sulge"></button>
+                </div>
+                <div class="modal-body">
+                    <iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="100%" height="600"
+                            src="https://embed.figma.com/design/Vz9gctd2dDaF7825uaaBwq/Untitled?node-id=0-1&embed-host=share"
+                            allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Modal: Landing with figma (Proto) -->
+    <div class="modal fade" id="figmaModalLandingFigmaProto" tabindex="-1" aria-labelledby="figmaModalLabelLandingFigmaProto" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Landing with figma – Figma prototüüp</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Sulge"></button>
+                </div>
+                <div class="modal-body">
+                    <iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="100%" height="600"
+                            src="https://embed.figma.com/proto/Vz9gctd2dDaF7825uaaBwq/Untitled?node-id=1-3&p=f&scaling=min-zoom&content-scaling=fixed&page-id=0%3A1&embed-host=share"
+                            allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal: Food App (Design) -->
+    <div class="modal fade" id="figmaModalFoodOnlyDesign" tabindex="-1" aria-labelledby="figmaModalLabelFoodOnlyDesign" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Food App – Figma disain</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Sulge"></button>
+                </div>
+                <div class="modal-body">
+                    <iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="100%" height="600"
+                            src="https://embed.figma.com/design/wkBMEG5QDuxh9eo3g7OFEE/Untitled?embed-host=share"
+                            allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Modal: Food App (Proto) -->
+    <div class="modal fade" id="figmaModalFoodOnlyProto" tabindex="-1" aria-labelledby="figmaModalLabelFoodOnlyProto" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Food App – Figma prototüüp</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Sulge"></button>
+                </div>
+                <div class="modal-body">
+                    <iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="100%" height="600"
+                            src="https://embed.figma.com/proto/wkBMEG5QDuxh9eo3g7OFEE/Untitled?scaling=scale-down&content-scaling=fixed&page-id=0%3A1&node-id=1-4&embed-host=share"
+                            allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal: Modern UI (Design) -->
+    <div class="modal fade" id="figmaModalModernUIDesign" tabindex="-1" aria-labelledby="figmaModalLabelModernUIDesign" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Modern UI – Figma disain</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Sulge"></button>
+                </div>
+                <div class="modal-body">
+                    <iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="100%" height="600"
+                            src="https://embed.figma.com/design/gWPGrmnqMCIMLshjIAlO0k/Untitled?embed-host=share"
+                            allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Modal: Modern UI (Proto) -->
+    <div class="modal fade" id="figmaModalModernUIProto" tabindex="-1" aria-labelledby="figmaModalLabelModernUIProto" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Modern UI – Figma prototüüp</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Sulge"></button>
+                </div>
+                <div class="modal-body">
+                    <iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="100%" height="600"
+                            src="https://embed.figma.com/proto/gWPGrmnqMCIMLshjIAlO0k/Untitled?scaling=scale-down&content-scaling=fixed&page-id=0%3A1&node-id=2-26&embed-host=share"
+                            allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal: UI Layout (Design) -->
+    <div class="modal fade" id="figmaModalUILayoutDesign" tabindex="-1" aria-labelledby="figmaModalLabelUILayoutDesign" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">UI Layout – Figma disain</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Sulge"></button>
+                </div>
+                <div class="modal-body">
+                    <iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="100%" height="600"
+                            src="https://embed.figma.com/design/H9msBojI1tf6XIxtIp93Y1/Untitled?embed-host=share"
+                            allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Modal: UI Layout (Proto) -->
+    <div class="modal fade" id="figmaModalUILayoutProto" tabindex="-1" aria-labelledby="figmaModalLabelUILayoutProto" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <!-- Обратите внимание: здесь в 1 коде заголовок был "Travel – Figma prototüüp" -->
+                    <h5 class="modal-title">Travel – Figma prototüüp</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Sulge"></button>
+                </div>
+                <div class="modal-body">
+                    <iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="100%" height="600"
+                            src="https://embed.figma.com/proto/H9msBojI1tf6XIxtIp93Y1/Untitled?scaling=scale-down&content-scaling=fixed&page-id=0%3A1&node-id=1-4&starting-point-node-id=1%3A4&embed-host=share"
+                            allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal: Creative Website (Design) -->
+    <div class="modal fade" id="figmaModalCreativeDesign" tabindex="-1" aria-labelledby="figmaModalLabelCreativeDesign" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Creative Website UI – Figma disain</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Sulge"></button>
+                </div>
+                <div class="modal-body">
+                    <iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="100%" height="600"
+                            src="https://embed.figma.com/design/VaxROqzEooPgaTgnfooca6/Untitled?embed-host=share"
+                            allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Modal: Creative Website (Proto) -->
+    <div class="modal fade" id="figmaModalCreativeProto" tabindex="-1" aria-labelledby="figmaModalLabelCreativeProto" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Creative Website UI – Figma prototüüp</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Sulge"></button>
+                </div>
+                <div class="modal-body">
+                    <iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="100%" height="600"
+                            src="https://embed.figma.com/proto/VaxROqzEooPgaTgnfooca6/Untitled?scaling=scale-down&content-scaling=fixed&page-id=0%3A1&node-id=1-25&starting-point-node-id=1%3A25&embed-host=share"
+                            allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ============================== END MODALS ============================== -->
+
+    <!-- Bootstrap 5 JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

@@ -6,60 +6,82 @@
 
 html {
     font-family: 'Roboto', sans-serif;
-    font-size: 50px;
-    text-align: center;
-    color: #ffffff;
-    background: #1d2b34; /* Dark teal background */
-}
-
-.container {
-    min-height: 800px;
-    background: url('blue-black-abstract-background_1340-17012.jpg') center/cover no-repeat;
-}
-
-.my_projects {
-    display: block;
-    left: 10px;
-}
-
-.my_projects a {
-    color: #20c997; /* Teal color */
-}
-
-#mailme {
+    font-size: 16px;
+    background-color: #1d2b34; /* темно-синий/зеленый фон */
     color: #ffffff;
 }
 
+body {
+    /* Можно добавить небольшие внутренние отступы */
+    margin: 0;
+    padding: 0;
+}
+
+
+
+/* Навигация */
 .navbar {
-    background-color: #20c997; /* Teal color */
+    background-color: #20c997; /* Teal */
 }
-
 .navbar-brand, .nav-link {
     color: #ffffff !important;
 }
 
+/* Hero Section */
 .bg-primary {
-    background-color: #20c997 !important; /* Teal color */
+    background-color: #20c997 !important;
 }
 
+/* Контейнер без фонового изображения */
+.container {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    /* Фон не задаем, пусть общий цвет body */
+}
+
+/* Заголовки в секциях */
+h2 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+/* Карточки */
 .card {
-    border: 1px solid #20c997; /* Teal border */
+    border: 1px solid #20c997;  /* Teal border, если хочется сохранить */
+    border-radius: .5rem;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    background-color: #fff;      /* белый фон карточек */
+    color: #333;                 /* тёмный текст внутри карточки */
+}
+.card-body h5 {
+    color: #20c997;  /* Teal заголовок */
+    text-align: left;
+}
+.card-body p {
+    text-align: left; /* Выравнивание по левому краю */
+    margin-bottom: 1rem;
 }
 
-.card-title {
-    color: #20c997; /* Teal color */
-}
-
+/* Кнопки */
 .btn-outline-primary {
     color: #20c997;
     border-color: #20c997;
 }
-
 .btn-outline-primary:hover {
     background-color: #20c997;
     color: #ffffff;
 }
 
+/* Подвал */
 footer {
-    background-color: #1d2b34; /* Dark teal background */
+    background-color: #1d2b34;
+    color: #ffffff;
+    padding: 2rem 0;
 }
+.card-img-top {
+    width: 100%;
+    height: 250px;       /* фиксированная высота, подберите под свой вкус */
+    object-fit: cover;   /* масштабирует и обрезает, сохраняя пропорции */
+    object-position: 50% 50%; /* центрируем обрезку (необязательно) */
+  }
+  
