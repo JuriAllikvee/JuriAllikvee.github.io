@@ -1,0 +1,192 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>PC-Components Store</title>
+  <script src="./js/script.js" defer></script>
+  <link rel="stylesheet" href="style.css"/>
+  <link rel="icon" href="icons/favicon%20icon.png" type="image/x-icon">
+</head>
+<body>
+
+<header class="header">
+  <div class="header-inner">
+
+    <!-- Логотип -->
+    <div class="header-left">
+      <div class="logo-bar"></div>
+      <img src="icons/logo.svg" alt="Circuit Hub" class="logo-img">
+    </div>
+
+    <!-- Гамбургер (для мобильных) -->
+    <div class="hamburger" id="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+
+    <!-- Главное меню -->
+    <nav class="header-nav" id="header-nav">
+      <ul class="nav-list">
+        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li><a href="product.html" class="nav-link">Products</a></li>
+        <li><a href="about.html" class="nav-link">About</a></li>
+        <li><a href="contact.html" class="nav-link">Contact</a></li>
+        <li><a href="" class="nav-link active">Cart</a></li>
+        <li><a href="review.html" class="nav-link">Reviews</a></li>
+      </ul>
+    </nav>
+
+    <!-- Иконки справа -->
+    <div class="header-right">
+      <button class="icon-btn" aria-label="Search">
+        <img src="icons/search.svg" alt="">
+      </button>
+      <button class="icon-btn" aria-label="Shopping Cart">
+        <img src="icons/cart_home.svg" alt="">
+      </button>
+      <button class="icon-btn" aria-label="Profile">
+        <img src="icons/profile.svg" alt="">
+      </button>
+    </div>
+
+  </div>
+</header>
+<div class="checkout-container">
+  <div class="checkout-left">
+    <h2>Shopping cart</h2>
+
+    <div class="cart-item">
+      <img src="./images/product_images/intel core i7-13700k.png" alt="Intel Core i7-13700K">
+      <div class="cart-item-details">
+        <div class="cart-item-title">Intel Core i7-13700K</div>
+        <div class="quantity-selector">
+          <button class="quantity-btn">-</button>
+          <input type="text" value="1" class="quantity-input">
+          <button class="quantity-btn">+</button>
+        </div>
+      </div>
+      <span class="remove-item">×</span>
+    </div>
+
+    <div class="cart-item">
+      <img src="./images/product_images/Asus GeForce RTX 4070.png" alt="Asus GeForce RTX 4070">
+      <div class="cart-item-details">
+        <div class="cart-item-title">Asus GeForce RTX 4070</div>
+        <div class="quantity-selector">
+          <button class="quantity-btn">-</button>
+          <input type="text" value="1" class="quantity-input">
+          <button class="quantity-btn">+</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="order-summary">
+      <h2>Order summary</h2>
+      <div class="summary-line"></div>
+      <div class="summary-row">
+        <div>Shipping</div>
+        <div class="price">30,99€</div>
+      </div>
+      <div class="summary-row total">
+        <div>Total</div>
+        <div class="price gold-text">800,99€</div>
+      </div>
+      <div class="shipping-date">Shipping 16. April</div>
+    </div>
+  </div>
+
+  <div class="checkout-right">
+    <div class="shipping-options">
+      <h2>Shipping Method</h2>
+
+      <div class="option-row">
+        <div class="option-left">
+          <label class="radio-container">
+            <input type="radio" name="shipping" value="standard">
+            <span class="radio-mark"></span>
+          </label>
+          <span>Standard Shipping</span>
+        </div>
+        <span class="gold-text">Free</span>
+      </div>
+
+      <div class="option-row">
+        <div class="option-left">
+          <label class="radio-container">
+            <input type="radio" name="shipping" value="expedited">
+            <span class="radio-mark"></span>
+          </label>
+          <span>Expedited Shipping</span>
+        </div>
+        <span class="gold-text">15,99€</span>
+      </div>
+
+      <div class="option-row">
+        <div class="option-left">
+          <label class="radio-container">
+            <input type="radio" name="shipping" value="express" checked>
+            <span class="radio-mark"></span>
+          </label>
+          <span>Express Shipping</span>
+        </div>
+        <span class="gold-text">30,99€</span>
+      </div>
+    </div>
+
+    <div class="payment-options">
+      <h2>Payment</h2>
+
+      <div class="option-row">
+        <div class="option-left">
+          <label class="radio-container">
+            <input type="radio" name="payment" value="creditcard" checked>
+            <span class="radio-mark"></span>
+          </label>
+          <span>Credit Card</span>
+        </div>
+      </div>
+
+      <div class="option-row">
+        <div class="option-left">
+          <label class="radio-container">
+            <input type="radio" name="payment" value="paypal">
+            <span class="radio-mark"></span>
+          </label>
+          <span>PayPal</span>
+        </div>
+      </div>
+    </div>
+
+    <button class="place-order-btn">Place Order</button>
+
+    <div class="customer-details">
+      <h2>Your Details</h2>
+
+      <div class="form-row">
+        <input type="text" class="form-input" placeholder="Full Name">
+      </div>
+
+      <div class="form-row">
+        <input type="email" class="form-input" placeholder="Email Address">
+      </div>
+
+      <div class="form-row">
+        <input type="text" class="form-input" placeholder="Address">
+      </div>
+
+      <div class="two-columns">
+        <div class="form-row">
+          <input type="text" class="form-input" placeholder="City">
+        </div>
+        <div class="form-row">
+          <input type="text" class="form-input" placeholder="Postal Code">
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</body>

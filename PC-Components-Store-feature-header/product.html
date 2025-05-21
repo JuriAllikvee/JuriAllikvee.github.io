@@ -1,0 +1,262 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>PC-Components Store</title>
+  <script src="/js/scriptproduct.js" defer></script>
+  <link rel="stylesheet" href="style.css"/>
+  <link rel="icon" href="icons/favicon%20icon.png" type="image/x-icon">
+</head>
+<body>
+
+<header class="header">
+  <div class="header-inner">
+
+    <!-- Логотип -->
+    <div class="header-left">
+      <div class="logo-bar"></div>
+      <img src="icons/logo.svg" alt="Circuit Hub" class="logo-img">
+    </div>
+
+    <!-- Гамбургер (для мобильных) -->
+    <div class="hamburger" id="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+
+    <!-- Главное меню -->
+    <nav class="header-nav" id="header-nav">
+      <ul class="nav-list">
+        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li><a href="" class="nav-link active">Products</a></li>
+        <li><a href="about.html" class="nav-link">About</a></li>
+        <li><a href="contact.html" class="nav-link">Contact</a></li>
+        <li><a href="shoppingcart.html" class="nav-link">Cart</a></li>
+        <li><a href="review.html" class="nav-link">Reviews</a></li>
+      </ul>
+    </nav>
+
+    <!-- Иконки справа -->
+    <div class="header-right">
+      <button class="icon-btn" aria-label="Search" id="search-toggle">
+        <img src="icons/search.svg" alt="Search">
+      </button>
+      <!-- Само поле поиска: скрыто по-умолчанию -->
+      <input
+              type="text"
+              id="search-input"
+              placeholder="Search..."
+              aria-label="Search products"
+              class="search-input"
+      />
+      <button class="icon-btn" aria-label="Shopping Cart">
+        <img src="icons/cart_home.svg" alt="">
+      </button>
+      <button class="icon-btn" aria-label="Profile">
+        <img src="icons/profile.svg" alt="">
+      </button>
+    </div>
+
+  </div>
+</header>
+
+<!-- Divider stripe -->
+<div class="divider"></div>
+
+
+
+
+
+<!-- Category Navigation -->
+<nav class="category-nav">
+  <a href="#" class="category-link">All</a>
+  <a href="#" class="category-link">Computers</a>
+  <a href="#" class="category-link active">Components</a>
+  <a href="#" class="category-link">Peripherals <img src="icons/chevron-down.svg" alt="" class="icon"></a>
+  <a href="#" class="category-link">Networking <img src="icons/chevron-down.svg" alt="" class="icon"></a>
+  <a href="#" class="category-link">Brands</a>
+</nav>
+
+<!-- Divider stripe -->
+<div class="divider"></div>
+
+<!-- Product Controls: Filter and Sort -->
+<div class="product-controls">
+  <button class="filter-button">Filter <img src="icons/filter.svg" alt=""></button>
+  <div class="sort-control">
+    <span>Sort by</span>
+    <span class="selected">Best Selling <img src="icons/chevron-down.svg" alt=""></span>
+  </div>
+</div>
+
+<!-- Product Grid -->
+<div class="product-grid">
+  <!-- Product 1 -->
+  <div class="product-card-info">
+    <div class="product-image">
+      <img src="images/product_images/NVIDIA%20GeForce%20RTX%204060%20Ti.png" alt="NVIDIA GeForce RTX 4060 Ti" class="special-img">
+    </div>
+    <div class="product-info">
+      <h3 class="product-name">NVIDIA GeForce RTX 4060 Ti</h3>
+      <div class="product-price">429,99€</div>
+      <div class="product-actions">
+        <button class="add-to-cart">Add to cart <img src="icons/shopping_cart.svg" alt=""></button>
+        <button class="buy-now">Buy Now</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Product 2 -->
+  <div class="product-card-info">
+    <div class="product-image">
+      <img src="images/product_images/Asus%20GeForce%20RTX%204070.png" alt="Asus GeForce RTX 4070">
+    </div>
+    <div class="product-info">
+      <h3 class="product-name">Asus GeForce RTX 4070</h3>
+      <div class="product-price">429,99€</div>
+      <div class="product-actions">
+        <button class="add-to-cart">Add to cart <img src="icons/shopping_cart.svg" alt=""></button>
+        <button class="buy-now">Buy Now</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Product 3 -->
+  <div class="product-card-info">
+    <div class="product-image">
+      <img src="images/product_images/ASUS%20GeForce%20RTX%205090%20TUF.png" alt="ASUS GeForce RTX 5090 TUF">
+    </div>
+    <div class="product-info">
+      <h3 class="product-name">ASUS GeForce RTX 5090 TUF</h3>
+      <div class="product-price">429,99€</div>
+      <div class="product-actions">
+        <button class="add-to-cart">Add to cart <img src="icons/shopping_cart.svg" alt=""></button>
+        <button class="buy-now">Buy Now</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Product 4 -->
+  <div class="product-card-info">
+    <div class="product-image">
+      <img src="images/product_images/AMD%20Ryzen%207%209800X3D.png" alt="AMD Ryzen 7 9800X3D">
+    </div>
+    <div class="product-info">
+      <h3 class="product-name">AMD Ryzen 7 9800X3D</h3>
+      <div class="product-price">429,99€</div>
+      <div class="product-actions">
+        <button class="add-to-cart">Add to cart <img src="icons/shopping_cart.svg" alt=""></button>
+        <button class="buy-now">Buy Now</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Product 5 -->
+  <div class="product-card-info">
+    <div class="product-image">
+      <img src="images/product_images/intel%20core%20i7-13700k.png" alt="Intel Core i7-13700K">
+    </div>
+    <div class="product-info">
+      <h3 class="product-name">Intel Core i7-13700K</h3>
+      <div class="product-price">429,99€</div>
+      <div class="product-actions">
+        <button class="add-to-cart">Add to cart <img src="icons/shopping_cart.svg" alt=""></button>
+        <button class="buy-now">Buy Now</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Product 6 -->
+  <div class="product-card-info">
+    <div class="product-image">
+      <img src="images/product_images/AMD%20Ryzen%209%209950X3D.png" alt="AMD Ryzen 9 9950X3D">
+    </div>
+    <div class="product-info">
+      <h3 class="product-name">AMD Ryzen 9 9950X3D</h3>
+      <div class="product-price">429,99€</div>
+      <div class="product-actions">
+        <button class="add-to-cart">Add to cart <img src="icons/shopping_cart.svg" alt=""></button>
+        <button class="buy-now">Buy Now</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Pagination -->
+<div class="pagination">
+  <span class="page-number active">01</span>
+  <span>—</span>
+  <span class="page-number">02</span>
+  <span class="page-number">03</span>
+  <span class="page-number">04</span>
+</div>
+
+<script>
+  // Hamburger menu toggle
+  document.getElementById('hamburger').addEventListener('click', function() {
+    document.getElementById('header-nav').classList.toggle('active');
+  });
+</script>
+</body>
+<footer class="footer">
+  <div class="footer-content">
+    <div class="footer-top">
+      <div class="footer-logo">
+        <!-- Circuit Hub Logo -->
+        <img src="./icons/Group 19.png" alt="Circuit Hub Logo">
+      </div>
+
+      <div class="footer-nav">
+        <div class="nav-column">
+          <h3>About</h3>
+          <ul>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="nav-column">
+          <h3>Shop</h3>
+          <ul>
+            <li><a href="#">Mobiles</a></li>
+            <li><a href="#">Laptop</a></li>
+            <li><a href="#">PC Components</a></li>
+          </ul>
+        </div>
+
+        <div class="nav-column">
+          <h3>Support</h3>
+          <ul>
+            <li><a href="#">FAQs</a></li>
+            <li><a href="#">Returns</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-newsletter">
+        <h3>Subscribe to our newsletter</h3>
+        <input type="email" placeholder="Email address">
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="social-icons">
+        <!-- Social Media Icons -->
+        <a href="#" class="social-icon">
+          <img src="./icons/fa.svg" alt="Facebook">
+        </a>
+        <a href="#" class="social-icon">
+          <img src="./icons/ins.svg" alt="Instagram">
+        </a>
+        <a href="#" class="social-icon">
+          <img src="./icons/tw.svg" alt="Twitter">
+        </a>
+      </div>
+    </div>
+  </div>
+</footer>
+</html>

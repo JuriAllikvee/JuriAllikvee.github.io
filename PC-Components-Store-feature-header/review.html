@@ -1,0 +1,345 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>PC-Components Store</title>
+  <script src="/js/script.js" defer></script>
+  <link rel="stylesheet" href="style.css"/>
+  <link rel="icon" href="icons/favicon%20icon.png" type="image/x-icon">
+</head>
+<body>
+
+<header class="header">
+  <div class="header-inner">
+
+    <!-- Логотип -->
+    <div class="header-left">
+      <div class="logo-bar"></div>
+      <img src="icons/logo.svg" alt="Circuit Hub" class="logo-img">
+    </div>
+
+    <!-- Гамбургер (для мобильных) -->
+    <div class="hamburger" id="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+
+    <!-- Главное меню -->
+    <nav class="header-nav" id="header-nav">
+      <ul class="nav-list">
+        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li><a href="product.html" class="nav-link">Products</a></li>
+        <li><a href="about.html" class="nav-link">About</a></li>
+        <li><a href="contact.html" class="nav-link">Contact</a></li>
+        <li><a href="shoppingcart.html" class="nav-link">Cart</a></li>
+        <li><a href="#" class="nav-link active">Reviews</a></li>
+      </ul>
+    </nav>
+
+    <!-- Иконки справа -->
+    <div class="header-right">
+      <button class="icon-btn" aria-label="Search">
+        <img src="icons/search.svg" alt="">
+      </button>
+      <button class="icon-btn" aria-label="Shopping Cart">
+        <img src="icons/cart_home.svg" alt="">
+      </button>
+      <button class="icon-btn" aria-label="Profile">
+        <img src="icons/profile.svg" alt="">
+      </button>
+    </div>
+
+  </div>
+</header>
+
+<div class="container">
+  <!-- Product Showcase Slider -->
+  <div class="product-slider-container">
+
+
+    <!-- Slider -->
+    <div class="product-slider">
+      <!-- Product Slide 1 -->
+      <div class="product-slide">
+        <div class="product-image">
+          <img src="./images/product_images/zt-b50700j-10p-image02-removebg-preview.png" alt="High-Performance Graphics Card">
+        </div>
+
+        <div class="product-details">
+          <h1 class="product-title">RTX 4080 Super Graphics Card</h1>
+          <p class="product-price_rev">$849.99</p>
+
+          <div class="product-rating">
+            <div class="rating-stars">★★★★★</div>
+            <span class="rating-count">(142 reviews)</span>
+          </div>
+
+          <p class="product-description">
+            Experience ultra-smooth graphics with our high-performance graphics card.
+            Featuring advanced cooling, real-time ray tracing, and lightning-fast speeds.
+            Perfect for gamers, creators, and tech enthusiasts alike.
+          </p>
+
+          <a href="#" class="cta-button">Add to Cart</a>
+        </div>
+      </div>
+
+      <!-- Product Slide 2 -->
+      <div class="product-slide">
+        <div class="product-image">
+          <img src="./images/product_images/slide2.png" alt="High-Performance CPU">
+        </div>
+
+        <div class="product-details">
+          <h1 class="product-title">Ryzen 9 7950X Processor</h1>
+          <p class="product-price">$499.99</p>
+
+          <div class="product-rating">
+            <div class="rating-stars">★★★★★</div>
+            <span class="rating-count">(98 reviews)</span>
+          </div>
+
+          <p class="product-description">
+            Power through demanding workloads with this high-performance CPU.
+            With 16 cores and 32 threads, it delivers exceptional processing power
+            for gaming, content creation, and professional applications.
+          </p>
+
+          <a href="#" class="cta-button">Add to Cart</a>
+        </div>
+      </div>
+
+      <!-- Product Slide 3 -->
+      <div class="product-slide">
+        <div class="product-image">
+          <img src="./images/product_images/2.png" alt="Gaming Motherboard">
+        </div>
+
+        <div class="product-details">
+          <h1 class="product-title">ROG Strix Z790-E Gaming Motherboard</h1>
+          <p class="product-price">$429.99</p>
+
+          <div class="product-rating">
+            <div class="rating-stars">★★★★☆</div>
+            <span class="rating-count">(76 reviews)</span>
+          </div>
+
+          <p class="product-description">
+            Build the ultimate gaming rig with this premium motherboard.
+            Featuring PCIe 5.0, WiFi 6E, and robust power delivery for
+            overclocking. Enhanced cooling and RGB lighting included.
+          </p>
+
+          <a href="#" class="cta-button">Add to Cart</a>
+        </div>
+      </div>
+
+      <!-- Product Slide 4 -->
+      <div class="product-slide">
+        <div class="product-image">
+          <img src="./images/product_images/5-removebg-preview.png" alt="NVMe SSD">
+        </div>
+
+        <div class="product-details">
+          <h1 class="product-title">2TB NVMe PCIe 4.0 SSD</h1>
+          <p class="product-price">$189.99</p>
+
+          <div class="product-rating">
+            <div class="rating-stars">★★★★★</div>
+            <span class="rating-count">(107 reviews)</span>
+          </div>
+
+          <p class="product-description">
+            Experience lightning-fast load times with this high-speed NVMe SSD.
+            With sequential read speeds up to 7,000MB/s and write speeds up to 5,500MB/s,
+            your system will boot and load applications in seconds.
+          </p>
+
+          <a href="#" class="cta-button">Add to Cart</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Slider Dots -->
+    <div class="slider-controls">
+      <div class="slider-dot active" data-index="0"></div>
+      <div class="slider-dot" data-index="1"></div>
+      <div class="slider-dot" data-index="2"></div>
+      <div class="slider-dot" data-index="3"></div>
+    </div>
+  </div>
+
+  <!-- Reviews Section -->
+  <div class="reviews-section">
+    <h2 class="reviews-title">Customer Reviews</h2>
+
+    <div class="reviews-grid">
+      <!-- Review 1 -->
+      <div class="review-card">
+        <div class="review-header">
+          <div class="avatar">AM</div>
+          <div class="reviewer-info">
+            <div class="reviewer-name">Alex Morgan</div>
+            <div class="review-date">May 15, 2025</div>
+          </div>
+        </div>
+        <div class="review-rating">★★★★★</div>
+        <p class="review-text">
+          Absolutely love this graphics card! The performance is exceptional and it has
+          exceeded all my expectations. The ray tracing is incredible and
+          the frame rates are impressive. Would definitely purchase again.
+        </p>
+      </div>
+
+      <!-- Review 2 -->
+      <div class="review-card">
+        <div class="review-header">
+          <div class="avatar">JR</div>
+          <div class="reviewer-info">
+            <div class="reviewer-name">Jamie Rodriguez</div>
+            <div class="review-date">May 12, 2025</div>
+          </div>
+        </div>
+        <div class="review-rating">★★★★☆</div>
+        <p class="review-text">
+          Great value for money. The component works exactly as described and
+          customer service was very helpful when I had questions about installation.
+          Would've given 5 stars if the software was a bit more intuitive.
+        </p>
+      </div>
+
+      <!-- Review 3 -->
+      <div class="review-card">
+        <div class="review-header">
+          <div class="avatar">TK</div>
+          <div class="reviewer-info">
+            <div class="reviewer-name">Taylor Kim</div>
+            <div class="review-date">May 10, 2025</div>
+          </div>
+        </div>
+        <div class="review-rating">★★★★★</div>
+        <p class="review-text">
+          I've been using this for a month now and it's made such a difference
+          in my gaming experience. Very impressed with the cooling system and design.
+          The performance is incredible and the noise level is surprisingly low.
+        </p>
+      </div>
+
+      <!-- Review 4 -->
+      <div class="review-card">
+        <div class="review-header">
+          <div class="avatar">JS</div>
+          <div class="reviewer-info">
+            <div class="reviewer-name">Jordan Smith</div>
+            <div class="review-date">May 8, 2025</div>
+          </div>
+        </div>
+        <div class="review-rating">★★★★★</div>
+        <p class="review-text">
+          Exactly what I was looking for! Fast shipping and the product arrived
+          in perfect condition. The performance boost to my system is amazing and it's
+          handled everything I've thrown at it. Would recommend to friends.
+        </p>
+      </div>
+
+      <!-- Review 5 -->
+      <div class="review-card">
+        <div class="review-header">
+          <div class="avatar">CW</div>
+          <div class="reviewer-info">
+            <div class="reviewer-name">Casey Wilson</div>
+            <div class="review-date">May 5, 2025</div>
+          </div>
+        </div>
+        <div class="review-rating">★★★★☆</div>
+        <p class="review-text">
+          Good component overall. There were a few minor issues with driver installation but once
+          configured it works great. Support team was responsive when I had questions.
+          Performance is excellent but the software could use some improvements.
+        </p>
+      </div>
+
+      <!-- Review 6 -->
+      <div class="review-card">
+        <div class="review-header">
+          <div class="avatar">RJ</div>
+          <div class="reviewer-info">
+            <div class="reviewer-name">Riley Johnson</div>
+            <div class="review-date">May 3, 2025</div>
+          </div>
+        </div>
+        <div class="review-rating">★★★★★</div>
+        <p class="review-text">
+          This is my second purchase from this brand and I'm just as impressed as the first time.
+          The quality is consistent and reliable. I especially appreciate the
+          improvements to the cooling system compared to the previous model.
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+</body>
+<footer class="footer">
+  <div class="footer-content">
+    <div class="footer-top">
+      <div class="footer-logo">
+        <!-- Circuit Hub Logo -->
+        <img src="./icons/Group 19.png" alt="Circuit Hub Logo">
+      </div>
+
+      <div class="footer-nav">
+        <div class="nav-column">
+          <h3>About</h3>
+          <ul>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="nav-column">
+          <h3>Shop</h3>
+          <ul>
+            <li><a href="#">Mobiles</a></li>
+            <li><a href="#">Laptop</a></li>
+            <li><a href="#">PC Components</a></li>
+          </ul>
+        </div>
+
+        <div class="nav-column">
+          <h3>Support</h3>
+          <ul>
+            <li><a href="#">FAQs</a></li>
+            <li><a href="#">Returns</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-newsletter">
+        <h3>Subscribe to our newsletter</h3>
+        <input type="email" placeholder="Email address">
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="social-icons">
+        <!-- Social Media Icons -->
+        <a href="#" class="social-icon">
+          <img src="./icons/fa.svg" alt="Facebook">
+        </a>
+        <a href="#" class="social-icon">
+          <img src="./icons/ins.svg" alt="Instagram">
+        </a>
+        <a href="#" class="social-icon">
+          <img src="./icons/tw.svg" alt="Twitter">
+        </a>
+      </div>
+    </div>
+  </div>
+</footer>
+</html>
